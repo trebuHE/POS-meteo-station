@@ -57,6 +57,42 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define GPS_WAKEUP_Pin GPIO_PIN_0
+#define GPS_WAKEUP_GPIO_Port GPIOC
+#define GPS_RESET_Pin GPIO_PIN_1
+#define GPS_RESET_GPIO_Port GPIOC
+#define UV_OUT_Pin GPIO_PIN_0
+#define UV_OUT_GPIO_Port GPIOA
+#define OUT_RX_Pin GPIO_PIN_1
+#define OUT_RX_GPIO_Port GPIOA
+#define GPS_RX_Pin GPIO_PIN_2
+#define GPS_RX_GPIO_Port GPIOA
+#define GPS_TX_Pin GPIO_PIN_3
+#define GPS_TX_GPIO_Port GPIOA
+#define RF_CS_Pin GPIO_PIN_4
+#define RF_CS_GPIO_Port GPIOA
+#define RF_SCK_Pin GPIO_PIN_5
+#define RF_SCK_GPIO_Port GPIOA
+#define RF_MISO_Pin GPIO_PIN_6
+#define RF_MISO_GPIO_Port GPIOA
+#define RF_MOSI_Pin GPIO_PIN_7
+#define RF_MOSI_GPIO_Port GPIOA
+#define RF_GDO0_Pin GPIO_PIN_4
+#define RF_GDO0_GPIO_Port GPIOC
+#define RF_GDO2_Pin GPIO_PIN_5
+#define RF_GDO2_GPIO_Port GPIOC
+#define TEST_LED_Pin GPIO_PIN_15
+#define TEST_LED_GPIO_Port GPIOB
+#define OUT_TX_Pin GPIO_PIN_10
+#define OUT_TX_GPIO_Port GPIOC
+#define PMS_SLEEP_Pin GPIO_PIN_4
+#define PMS_SLEEP_GPIO_Port GPIOB
+#define PMS_RESET_Pin GPIO_PIN_5
+#define PMS_RESET_GPIO_Port GPIOB
+#define PMS_RX_Pin GPIO_PIN_6
+#define PMS_RX_GPIO_Port GPIOB
+#define PMS_TX_Pin GPIO_PIN_7
+#define PMS_TX_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

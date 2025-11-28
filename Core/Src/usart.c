@@ -51,7 +51,9 @@ void MX_USART1_UART_Init(void)
   huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart1.Init.OverSampling = UART_OVERSAMPLING_16;
   huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_RXOVERRUNDISABLE_INIT|UART_ADVFEATURE_DMADISABLEONERROR_INIT;
+  huart1.AdvancedInit.OverrunDisable = UART_ADVFEATURE_OVERRUN_DISABLE;
+  huart1.AdvancedInit.DMADisableonRxError = UART_ADVFEATURE_DMA_DISABLEONRXERROR;
   if (HAL_UART_Init(&huart1) != HAL_OK)
   {
     Error_Handler();
@@ -82,7 +84,9 @@ void MX_USART2_UART_Init(void)
   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
   huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
-  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_RXOVERRUNDISABLE_INIT|UART_ADVFEATURE_DMADISABLEONERROR_INIT;
+  huart2.AdvancedInit.OverrunDisable = UART_ADVFEATURE_OVERRUN_DISABLE;
+  huart2.AdvancedInit.DMADisableonRxError = UART_ADVFEATURE_DMA_DISABLEONRXERROR;
   if (HAL_UART_Init(&huart2) != HAL_OK)
   {
     Error_Handler();
@@ -265,6 +269,9 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* uartHandle)
 
     /* USART1 DMA DeInit */
     HAL_DMA_DeInit(uartHandle->hdmarx);
+
+    /* USART1 interrupt Deinit */
+    HAL_NVIC_DisableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspDeInit 1 */
 
   /* USER CODE END USART1_MspDeInit 1 */

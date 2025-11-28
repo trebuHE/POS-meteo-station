@@ -31,6 +31,7 @@
 #include "UV.h"
 #include "gps.h"
 #include "PMS.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -87,6 +88,16 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
 		GPS_Full();
 	}
 }
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+    // If an Overrun occurs, we must clear the flag and restart DMA
+    if (huart->ErrorCode & HAL_UART_ERROR_ORE)
+    {
+        // 1. Clear the error flags (the sequence depends on MCU, HAL does this usually)
+        __HAL_UART_CLEAR_OREFLAG(huart);
+    }
+}
 /* USER CODE END 0 */
 
 /**
@@ -139,9 +150,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  data = PMS_Get_Data();
-	  status = PMS_Is_Data_Valid(data);
-	  EAQ_index_p = PMS_Get_Quality_Index(data);
+
+	  HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
 	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
@@ -181,7 +191,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV4;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV2;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
@@ -218,6 +228,9 @@ static void MX_NVIC_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* USART1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(USART1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(USART1_IRQn);
 }
 
 /* USER CODE BEGIN 4 */

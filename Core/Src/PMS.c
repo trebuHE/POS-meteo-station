@@ -6,7 +6,11 @@ static PMS_Data_t PMS_Data = { 0 };
 static European_Air_Quality_Index_t PMS_Air_Quality_Index;
 
 HAL_StatusTypeDef PMS_Init(UART_HandleTypeDef *pms_uart) {
-	return HAL_UART_Receive_DMA(pms_uart, (uint8_t*) pms_data, PMS_DATA_SIZE);
+	HAL_StatusTypeDef status = HAL_UART_Receive_DMA(pms_uart, (uint8_t*) pms_data, PMS_DATA_SIZE);
+	HAL_Delay(50);
+	HAL_GPIO_WritePin(PMS_SLEEP_GPIO_Port, PMS_SLEEP_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(PMS_RESET_GPIO_Port, PMS_RESET_Pin, GPIO_PIN_SET);
+	return status;
 }
 
 PMS_Data_t* PMS_Get_Data() {

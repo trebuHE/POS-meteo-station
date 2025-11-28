@@ -56,10 +56,7 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(RF_CS_GPIO_Port, RF_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, PMS_SLEEP_Pin|PMS_RESET_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, TEST_LED_Pin|PMS_SLEEP_Pin|PMS_RESET_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : GPS_WAKEUP_Pin GPS_RESET_Pin */
   GPIO_InitStruct.Pin = GPS_WAKEUP_Pin|GPS_RESET_Pin;

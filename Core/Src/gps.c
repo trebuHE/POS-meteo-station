@@ -37,10 +37,10 @@
 #include "gps.h"
 
 
-UART_HandleTypeDef* p_gps_huart;
+static UART_HandleTypeDef* p_gps_huart;
 
-uint8_t dma_rx_buffer[GPS_BUF_SIZE] = {0};
-uint8_t parsing_buffer[(GPS_BUF_SIZE/2)] = {0};
+static volatile uint8_t dma_rx_buffer[GPS_BUF_SIZE] = {0};
+static uint8_t parsing_buffer[(GPS_BUF_SIZE/2)] = {0};
 
 GPS_t GPS;
 
@@ -54,7 +54,7 @@ void GPS_Init(UART_HandleTypeDef* gps_uart) {
 	GPS_Append_NMEA_Checksum(msg, sizeof(msg));
 	HAL_UART_Transmit(gps_uart, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 	HAL_Delay(50);
-	HAL_UART_Receive_DMA(p_gps_huart, dma_rx_buffer, GPS_BUF_SIZE);
+	HAL_UART_Receive_DMA(p_gps_huart, (uint8_t*)dma_rx_buffer, GPS_BUF_SIZE);
 }
 
 void GPS_Append_NMEA_Checksum(char *str, size_t size) {
@@ -81,13 +81,13 @@ void GPS_Append_NMEA_Checksum(char *str, size_t size) {
 
 
 void GPS_Half() {
-	memcpy(parsing_buffer, dma_rx_buffer, GPS_BUF_SIZE/2 - 1);
+	memcpy(parsing_buffer, (uint8_t*)(dma_rx_buffer), GPS_BUF_SIZE/2 - 1);
 
 	GPS_process_data();
 }
 
 void GPS_Full() {
-	memcpy(parsing_buffer, dma_rx_buffer + GPS_BUF_SIZE/2, GPS_BUF_SIZE/2 - 1);
+	memcpy(parsing_buffer, (uint8_t*)(dma_rx_buffer + GPS_BUF_SIZE/2), GPS_BUF_SIZE/2 - 1);
 
 	GPS_process_data();
 }

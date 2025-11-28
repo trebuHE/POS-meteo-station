@@ -56,7 +56,10 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(RF_CS_GPIO_Port, RF_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, TEST_LED_Pin|PMS_SLEEP_Pin|PMS_RESET_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, PMS_SLEEP_Pin|PMS_RESET_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pins : GPS_WAKEUP_Pin GPS_RESET_Pin */
   GPIO_InitStruct.Pin = GPS_WAKEUP_Pin|GPS_RESET_Pin;
@@ -78,9 +81,16 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : TEST_LED_Pin PMS_SLEEP_Pin PMS_RESET_Pin */
-  GPIO_InitStruct.Pin = TEST_LED_Pin|PMS_SLEEP_Pin|PMS_RESET_Pin;
+  /*Configure GPIO pin : TEST_LED_Pin */
+  GPIO_InitStruct.Pin = TEST_LED_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(TEST_LED_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : PMS_SLEEP_Pin PMS_RESET_Pin */
+  GPIO_InitStruct.Pin = PMS_SLEEP_Pin|PMS_RESET_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);

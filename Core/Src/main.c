@@ -30,6 +30,7 @@
 #include "BME280_STM32.h"
 #include "UV.h"
 #include "gps.h"
+#include "PMS.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,7 +60,11 @@ UV_Config_t UV_config = {
 		.index_thresholds_mV = {50, 227, 318, 408, 503, 606, 696, 795, 881, 976, 1069}
 };
 
-UV_Index_t* index_p;
+UV_Index_t* UV_index_p;
+
+PMS_Data_t* data;
+uint8_t status;
+European_Air_Quality_Index_t* EAQ_index_p;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -127,13 +132,17 @@ int main(void)
   BME280_Init();
   UV_Init(&UV_config);
   GPS_Init(&huart2);
+  PMS_Init(&huart1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_Delay(50);
+	  data = PMS_Get_Data();
+	  status = PMS_Is_Data_Valid(data);
+	  EAQ_index_p = PMS_Get_Quality_Index(data);
+	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

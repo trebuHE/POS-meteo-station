@@ -5,7 +5,7 @@
  *      Author: Bulanov Konstantin
  */
 
-#define GPS_BUF_SIZE  512 // Must be an even number!
+#define GPS_BUF_SIZE  128 // Must be an even number!
 
 typedef struct{
     float utc_time;

@@ -46,11 +46,11 @@ GPS_t GPS;
 
 void GPS_Init(UART_HandleTypeDef* gps_uart) {
 	p_gps_huart = gps_uart;
-	char gps[80] = "$PCAS04,7";
+	char gps[80] = "$PCAS04,1";
 	GPS_Append_NMEA_Checksum(gps, sizeof(gps));
 	HAL_UART_Transmit(gps_uart, (uint8_t*)gps, strlen(gps), HAL_MAX_DELAY);
 	HAL_Delay(200);
-	char msg[80] = "$PCAS03,0,0,0,0,0,0,1,0,0,0,,,0,0";
+	char msg[80] = "$PCAS03,0,0,0,0,0,0,1,0,0,0,0,0,0";
 	GPS_Append_NMEA_Checksum(msg, sizeof(msg));
 	HAL_UART_Transmit(gps_uart, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 	HAL_Delay(50);
@@ -72,7 +72,7 @@ void GPS_Append_NMEA_Checksum(char *str, size_t size) {
     while (*ptr && *ptr != '*')
         checksum ^= (uint8_t)*ptr++;
 
-    int written = snprintf(str + len, size - len, "*%02X\n\r", checksum);
+    int written = snprintf(str + len, size - len, "*%02X\r\n", checksum);
 
     if (written < 0 || (size_t)written >= size - len)
         str[size - 1] = '\0';
@@ -102,6 +102,9 @@ void GPS_process_data() {
 		} else if(parsing_buffer[i] == '\n') {
 			in_line = 0;
 			if(GPS_validate((char*)line)) {
+//				HAL_UART_Transmit(&huart4, line, sizeof(line), HAL_MAX_DELAY);
+//				char nl = '\n';
+//				HAL_UART_Transmit(&huart4, &nl, sizeof(nl), HAL_MAX_DELAY);
 				GPS_parse((char*)line);
 				memset(line, 0, 100);
 				line_index = 0;
@@ -153,7 +156,7 @@ int GPS_validate(char *nmeastr){
 }
 
 void GPS_parse(char *GPSstrParse){
-    if (!strncmp(GPSstrParse, "$GNZDA", 6)){
-    	sscanf(GPSstrParse, "$GNZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year);
+    if (!strncmp(GPSstrParse, "$GPZDA", 6)){
+    	sscanf(GPSstrParse, "$GPZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year);
 	}
 }

@@ -28,6 +28,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "BME280_STM32.h"
+#include "UV.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,6 +50,15 @@
 
 /* USER CODE BEGIN PV */
 BME280_Data_t* BME_data_p;
+
+UV_Config_t UV_config = {
+		.adc_max_value = 4095,
+		.adc_max_voltage = 3.3f,
+		.adc_p = &hadc,
+		.index_thresholds_mV = {50, 227, 318, 408, 503, 606, 696, 795, 881, 976, 1069}
+};
+
+UV_Index_t* index_p;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -100,12 +110,15 @@ int main(void)
   MX_USART4_UART_Init();
   /* USER CODE BEGIN 2 */
   BME280_Init();
+  UV_Init(&UV_config);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  index_p = UV_Get_Index();
+	  HAL_Delay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

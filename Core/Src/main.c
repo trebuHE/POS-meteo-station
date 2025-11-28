@@ -31,6 +31,7 @@
 #include "UV.h"
 #include "gps.h"
 #include "PMS.h"
+#include "CC1101_BSP.h"
 #include <stdio.h>
 /* USER CODE END Includes */
 
@@ -144,6 +145,7 @@ int main(void)
   UV_Init(&UV_config);
   GPS_Init(&huart2);
   PMS_Init(&huart1);
+  CC1101_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */

@@ -29,6 +29,7 @@
 /* USER CODE BEGIN Includes */
 #include "BME280_STM32.h"
 #include "UV.h"
+#include "gps.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,13 +64,24 @@ UV_Index_t* index_p;
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+static void MX_NVIC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void HAL_UART_RxHalfCpltCallback(UART_HandleTypeDef *huart) {
+	if (huart->Instance == USART2) {
+		GPS_Half();
+	}
+}
 
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+	if (huart->Instance == USART2){
+		GPS_Full();
+	}
+}
 /* USER CODE END 0 */
 
 /**
@@ -108,17 +120,20 @@ int main(void)
   MX_USART1_UART_Init();
   MX_USART2_UART_Init();
   MX_USART4_UART_Init();
+
+  /* Initialize interrupts */
+  MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
   BME280_Init();
   UV_Init(&UV_config);
+  GPS_Init(&huart2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  index_p = UV_Get_Index();
-	  HAL_Delay(200);
+	  HAL_Delay(50);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -174,6 +189,26 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief NVIC Configuration.
+  * @retval None
+  */
+static void MX_NVIC_Init(void)
+{
+  /* USART2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(USART2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(USART2_IRQn);
+  /* DMA1_Channel4_5_6_7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel4_5_6_7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel4_5_6_7_IRQn);
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
+  /* DMA1_Channel1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 }
 
 /* USER CODE BEGIN 4 */

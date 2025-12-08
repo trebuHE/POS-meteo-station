@@ -23,8 +23,9 @@ typedef enum {
 
 void FSM_Run(void);
 
-static uint8_t Init(UV_Config_t* uv_config_p);
-static uint8_t modules_sleep(void);
-static uint8_t modules_wakeup(void);
+uint8_t Init(UV_Config_t* uv_config_p);
+uint8_t modules_sleep(void);
+uint8_t modules_wakeup(void);
+void Debug_Radio_Data(UART_HandleTypeDef *huart, Radio_Data_t *data);
 
 #endif /* INC_FSM_H_ */

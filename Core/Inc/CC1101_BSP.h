@@ -70,7 +70,6 @@ extern SPI_HandleTypeDef hspi1;
 
 
 typedef struct {
-	uint8_t len;
 	uint8_t id;
 	uint32_t utc;
 	uint32_t date;
@@ -93,5 +92,6 @@ void CC1101_Transmit(uint8_t *data, uint8_t length);
 uint8_t CC1101_Receive(uint8_t *data); // Returns length, 0 if no packet
 void CC1101_SetRx(void); // Enter RX mode
 uint8_t CC1101_GetState(void);
+void CC1101_CommandStrobe(uint8_t cmd);
 
 #endif // CC1101_H

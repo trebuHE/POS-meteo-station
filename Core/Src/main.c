@@ -27,12 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "BME280_STM32.h"
-#include "UV.h"
-#include "gps.h"
-#include "PMS.h"
-#include "CC1101_BSP.h"
-#include <stdio.h>
+#include "FSM.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,20 +48,6 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-BME280_Data_t* BME_data_p;
-
-UV_Config_t UV_config = {
-		.adc_max_value = 4095,
-		.adc_max_voltage = 3.3f,
-		.adc_p = &hadc,
-		.index_thresholds_mV = {50, 227, 318, 408, 503, 606, 696, 795, 881, 976, 1069}
-};
-
-UV_Index_t* UV_index_p;
-
-PMS_Data_t* data;
-uint8_t status;
-European_Air_Quality_Index_t* EAQ_index_p;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -141,11 +122,7 @@ int main(void)
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
-  BME280_Init();
-  UV_Init(&UV_config);
-  GPS_Init(&huart2);
-  PMS_Init(&huart1);
-  CC1101_Init();
+  FSM_Run();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -153,8 +130,6 @@ int main(void)
   while (1)
   {
 
-	  HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
-	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

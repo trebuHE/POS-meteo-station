@@ -53,6 +53,7 @@ extern SPI_HandleTypeDef hspi1;
 #define CC1101_SFRX         0x3A // Flush RX FIFO
 #define CC1101_SFTX         0x3B // Flush TX FIFO
 #define CC1101_SNOP         0x3D
+#define CC1101_SPWD			0x39 // Sleep Mode
 
 // --- Status & FIFO ---
 #define CC1101_PARTNUM      0x30
@@ -66,6 +67,22 @@ extern SPI_HandleTypeDef hspi1;
 // --- Expected Values ---
 #define CC1101_PARTNUM_VAL  0x00
 #define CC1101_VERSION_VAL  0x14
+
+
+typedef struct {
+	uint8_t len;
+	uint8_t id;
+	uint32_t utc;
+	uint32_t date;
+	int16_t temp;
+	uint16_t humidity;
+	uint16_t pressure;
+	uint16_t pm25;
+	uint16_t pm10;
+	uint8_t uv_index;
+}Radio_Data_t;
+
+
 
 // --- Function Prototypes ---
 uint8_t CC1101_Init(void); // Reset + Config

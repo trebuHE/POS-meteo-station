@@ -23,3 +23,10 @@ void GPS_Half(void);
 void GPS_Full(void);
 void GPS_process_data(void);
 
+uint8_t GPS_get_hours();
+uint8_t GPS_get_minutes();
+uint8_t GPS_get_seconds();
+uint8_t GPS_get_day();
+uint8_t GPS_get_month();
+uint8_t GPS_get_year();
+

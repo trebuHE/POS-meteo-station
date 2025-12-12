@@ -22,7 +22,8 @@ UV_Index_t* UV_index_p;
 PMS_Data_t* PMS_data_p;
 Radio_Data_t radio_data = {0};
 uint8_t measure_period_min = 15;
-uint8_t enable_gps = 0;
+uint8_t enable_gps = 1;
+uint8_t sleep_time_min = 1;
 
 RTC_DateTypeDef RTC_date;
 RTC_TimeTypeDef RTC_time;
@@ -35,7 +36,7 @@ void FSM_Run() {
 		case IDLE:
 			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
 			__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG();
-			HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS);
+			HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, (sleep_time_min * 60), RTC_WAKEUPCLOCK_CK_SPRE_16BITS);
 
 			HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
 			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
@@ -58,7 +59,7 @@ void FSM_Run() {
 		case MEASURE:
 
 
-			for (uint8_t i = 0; i < 4; ++i) {
+			for (uint8_t i = 0; i < 30; ++i) {
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
 				HAL_Delay(500);
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
@@ -82,14 +83,8 @@ void FSM_Run() {
 			}
 			break;
 		case SYNC_TIME:
-
-			for (uint8_t i = 0; i < 2; ++i) {
-				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
-				HAL_Delay(250);
-				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
-				HAL_Delay(250);
-			}
-
+			RTC_set_time(GPS_get_hours(), GPS_get_minutes(), GPS_get_seconds());
+			RTC_set_date(GPS_get_day(), GPS_get_month(), (GPS_get_year() - 2000));
 			state = PROCESS_DATA;
 
 			break;
@@ -166,19 +161,19 @@ void RTC_set_time(uint8_t h, uint8_t m, uint8_t s) {
 	sTime.StoreOperation = RTC_STOREOPERATION_RESET;
 	if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
 	{
-		Error_Handler();
+		//Error_Handler();
 	}
 }
 
-void RTC_set_date(uint8_t weekday, uint8_t d,  uint8_t m, uint8_t y) {
+void RTC_set_date(uint8_t d,  uint8_t m, uint8_t y) {
 	RTC_DateTypeDef sDate = {0};
-	sDate.WeekDay = weekday;
+	sDate.WeekDay = 1;
 	sDate.Month = m;
 	sDate.Date = d;
 	sDate.Year = y;
 	if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN) != HAL_OK)
 	{
-		Error_Handler();
+		//Error_Handler();
 	}
 }
 

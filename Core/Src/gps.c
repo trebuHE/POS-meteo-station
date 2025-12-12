@@ -42,7 +42,12 @@ static UART_HandleTypeDef* p_gps_huart;
 static volatile uint8_t dma_rx_buffer[GPS_BUF_SIZE] = {0};
 static uint8_t parsing_buffer[(GPS_BUF_SIZE/2)] = {0};
 
-GPS_t GPS;
+static GPS_t GPS = {
+					.day=28,
+					.month=01,
+					.year=2003,
+					.utc_time=120000,
+};
 
 void GPS_Init(UART_HandleTypeDef* gps_uart) {
 	p_gps_huart = gps_uart;
@@ -159,4 +164,28 @@ void GPS_parse(char *GPSstrParse){
     if (!strncmp(GPSstrParse, "$GPZDA", 6)){
     	sscanf(GPSstrParse, "$GPZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year);
 	}
+}
+
+uint8_t GPS_get_hours() {
+    return (uint8_t)((uint32_t)GPS.utc_time / 10000);
+}
+
+uint8_t GPS_get_minutes() {
+    return (uint8_t)(((uint32_t)GPS.utc_time / 100) % 100);
+}
+
+uint8_t GPS_get_seconds() {
+    return (uint8_t)((uint32_t)GPS.utc_time % 100);
+}
+
+uint8_t GPS_get_day() {
+	return (uint8_t)GPS.day;
+}
+
+uint8_t GPS_get_month() {
+	return (uint8_t)GPS.month;
+}
+
+uint8_t GPS_get_year() {
+	return (uint8_t)GPS.year;
 }

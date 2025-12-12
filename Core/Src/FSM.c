@@ -1,16 +1,14 @@
 #include "FSM.h"
 
-
-
 extern ADC_HandleTypeDef hadc;
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
 extern UART_HandleTypeDef huart4;
+extern RTC_HandleTypeDef hrtc;
 
 extern GPS_t GPS;
 
 FSM_State_t state = WAKEUP;
-
 
 UV_Config_t UV_config = {
 		.adc_max_value = 4095,
@@ -20,16 +18,14 @@ UV_Config_t UV_config = {
 };
 
 BME280_Data_t* BME_data_p;
-
 UV_Index_t* UV_index_p;
-
 PMS_Data_t* PMS_data_p;
-
 Radio_Data_t radio_data = {0};
-
 uint8_t measure_period_min = 15;
+uint8_t enable_gps = 0;
 
-uint8_t enable_gps = 1;
+RTC_DateTypeDef RTC_date;
+RTC_TimeTypeDef RTC_time;
 
 void FSM_Run() {
 
@@ -37,17 +33,32 @@ void FSM_Run() {
 
 		switch (state) {
 		case IDLE:
+			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
+			__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG();
+			HAL_RTCEx_SetWakeUpTimer_IT(&hrtc, 30, RTC_WAKEUPCLOCK_CK_SPRE_16BITS);
+
+			HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
+			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
+			HAL_SuspendTick();
+			HAL_PWR_EnterSTOPMode(PWR_LOWPOWERREGULATOR_ON, PWR_STOPENTRY_WFI);
+			state = WAKEUP;
 			break;
 		case WAKEUP:
+			SystemClock_Config();
+			HAL_ResumeTick();
+			HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
+			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
+			__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG();
 			modules_wakeup();
 			HAL_Delay(100);
 			Init(&UV_config);
-
+			HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
 			state = MEASURE;
 			break;
 		case MEASURE:
 
-			for (uint8_t i = 0; i < 30; ++i) {
+
+			for (uint8_t i = 0; i < 4; ++i) {
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
 				HAL_Delay(500);
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
@@ -72,7 +83,7 @@ void FSM_Run() {
 			break;
 		case SYNC_TIME:
 
-			for (uint8_t i = 0; i < 6; ++i) {
+			for (uint8_t i = 0; i < 2; ++i) {
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_RESET);
 				HAL_Delay(250);
 				HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
@@ -84,8 +95,9 @@ void FSM_Run() {
 			break;
 		case PROCESS_DATA:
 			radio_data.id = 0x01;
-			radio_data.utc = (uint32_t)GPS.utc_time;
-			radio_data.date = GPS.day * 1000000 + GPS.month * 10000 + GPS.year; // ddmmyyyy
+			RTC_get_time_date(&RTC_date, &RTC_time);
+			radio_data.utc = RTC_time.Hours * 10000 + RTC_time.Minutes * 100 + RTC_time.Seconds; //hhmmss
+			radio_data.date = RTC_date.Date* 1000000 + RTC_date.Month * 10000 + RTC_date.Year + 2000; // ddmmyyyy
 			radio_data.temp = (int16_t)(BME_data_p->temperature * 10.0f);
 			radio_data.humidity = (uint16_t)(BME_data_p->humidity * 10.0f);
 			radio_data.pressure = (uint16_t)(BME_data_p->pressure/100.0f);
@@ -98,7 +110,7 @@ void FSM_Run() {
 			CC1101_Transmit((uint8_t*)(&radio_data), sizeof(radio_data));
 			HAL_Delay(200);
 			Debug_Radio_Data(&huart4, &radio_data);
-			state = WAKEUP;
+			state = IDLE;
 			break;
 		case RX:
 			break;
@@ -123,6 +135,7 @@ uint8_t modules_sleep() {
 	HAL_GPIO_WritePin(PMS_SLEEP_GPIO_Port, PMS_SLEEP_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPS_WAKEUP_GPIO_Port, GPS_WAKEUP_Pin, GPIO_PIN_RESET);
 
+
 	CC1101_CommandStrobe(CC1101_SIDLE);
 	HAL_Delay(10);
 	CC1101_CommandStrobe(CC1101_SPWD);
@@ -142,6 +155,36 @@ uint8_t modules_wakeup() {
 	HAL_Delay(10);
 
 	return 0;
+}
+
+void RTC_set_time(uint8_t h, uint8_t m, uint8_t s) {
+	RTC_TimeTypeDef sTime = {0};
+	sTime.Hours = h;
+	sTime.Minutes = m;
+	sTime.Seconds = s;
+	sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
+	sTime.StoreOperation = RTC_STOREOPERATION_RESET;
+	if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
+	{
+		Error_Handler();
+	}
+}
+
+void RTC_set_date(uint8_t weekday, uint8_t d,  uint8_t m, uint8_t y) {
+	RTC_DateTypeDef sDate = {0};
+	sDate.WeekDay = weekday;
+	sDate.Month = m;
+	sDate.Date = d;
+	sDate.Year = y;
+	if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN) != HAL_OK)
+	{
+		Error_Handler();
+	}
+}
+
+void RTC_get_time_date(RTC_DateTypeDef* date_p, RTC_TimeTypeDef* time_p) {
+	HAL_RTC_GetTime(&hrtc, time_p, RTC_FORMAT_BIN);
+	HAL_RTC_GetDate(&hrtc, date_p, RTC_FORMAT_BIN);
 }
 
 void Debug_Radio_Data(UART_HandleTypeDef *huart, Radio_Data_t *data) {

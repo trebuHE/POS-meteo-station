@@ -26,6 +26,7 @@ extern SPI_HandleTypeDef hspi1;
 #define CC1101_FIFOTHR      0x03
 #define CC1101_PKTCTRL1     0x07
 #define CC1101_PKTCTRL0     0x08
+#define CC1101_ADDR			0x09
 #define CC1101_FSCTRL1      0x0B
 #define CC1101_FREQ2        0x0D
 #define CC1101_FREQ1        0x0E
@@ -35,6 +36,7 @@ extern SPI_HandleTypeDef hspi1;
 #define CC1101_MDMCFG2      0x12
 #define CC1101_DEVIATN      0x15
 #define CC1101_MCSM0        0x18
+#define CC1101_MCSM1		0x17
 #define CC1101_FOCCFG       0x19
 #define CC1101_WORCTRL      0x20
 #define CC1101_FSCAL3       0x23
@@ -93,5 +95,7 @@ uint8_t CC1101_Receive(uint8_t *data); // Returns length, 0 if no packet
 void CC1101_SetRx(void); // Enter RX mode
 uint8_t CC1101_GetState(void);
 void CC1101_CommandStrobe(uint8_t cmd);
+uint8_t CC1101_GetTXBytes(void);
+void debug_radio_state();
 
 #endif // CC1101_H

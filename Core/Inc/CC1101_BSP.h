@@ -72,7 +72,7 @@ extern SPI_HandleTypeDef hspi1;
 
 
 typedef struct {
-	uint8_t id;
+	uint8_t address;
 	uint32_t utc;
 	uint32_t date;
 	int16_t temp;

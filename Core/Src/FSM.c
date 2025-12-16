@@ -22,7 +22,8 @@ UV_Index_t* UV_index_p;
 PMS_Data_t* PMS_data_p;
 Radio_Data_t radio_data = {0};
 uint8_t measure_period_min = 15;
-uint8_t enable_gps = 1;
+uint8_t enable_gps = 0;
+uint8_t gps_counter = 3;
 uint8_t sleep_time_min = 1;
 
 RTC_DateTypeDef RTC_date;
@@ -50,6 +51,9 @@ void FSM_Run() {
 			HAL_RTCEx_DeactivateWakeUpTimer(&hrtc);
 			__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(&hrtc, RTC_FLAG_WUTF);
 			__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG();
+			if (gps_counter-- == 0) {
+				enable_gps = 1;
+			}
 			modules_wakeup();
 			HAL_Delay(100);
 			Init(&UV_config);
@@ -85,11 +89,13 @@ void FSM_Run() {
 		case SYNC_TIME:
 			RTC_set_time(GPS_get_hours(), GPS_get_minutes(), GPS_get_seconds());
 			RTC_set_date(GPS_get_day(), GPS_get_month(), (GPS_get_year() - 2000));
+			enable_gps = 0;
+			gps_counter = 3;
 			state = PROCESS_DATA;
 
 			break;
 		case PROCESS_DATA:
-			radio_data.id = 0x01;
+			radio_data.address = 0x05;
 			RTC_get_time_date(&RTC_date, &RTC_time);
 			radio_data.utc = RTC_time.Hours * 10000 + RTC_time.Minutes * 100 + RTC_time.Seconds; //hhmmss
 			radio_data.date = RTC_date.Date* 1000000 + RTC_date.Month * 10000 + RTC_date.Year + 2000; // ddmmyyyy
@@ -190,7 +196,7 @@ void Debug_Radio_Data(UART_HandleTypeDef *huart, Radio_Data_t *data) {
     // \r\n creates a new line in serial terminals
     len = snprintf(buff, sizeof(buff),
         "--- Sensor Report ---\r\n"
-        "ID       : %u\r\n"
+        "Address  : %u\r\n"
         "UTC      : %lu\r\n"
         "Date     : %lu\r\n"
         "Temp     : %d\r\n"
@@ -200,7 +206,7 @@ void Debug_Radio_Data(UART_HandleTypeDef *huart, Radio_Data_t *data) {
         "PM10     : %u\r\n"
         "UV Index : %u\r\n"
         "---------------------\r\n\n",
-        data->id,
+        data->address,
         data->utc,
         data->date,
         data->temp,

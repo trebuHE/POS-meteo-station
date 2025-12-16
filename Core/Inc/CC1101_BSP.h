@@ -75,6 +75,7 @@ typedef struct {
 	uint8_t address;
 	uint32_t utc;
 	uint32_t date;
+	uint8_t gps_valid;
 	int16_t temp;
 	uint16_t humidity;
 	uint16_t pressure;

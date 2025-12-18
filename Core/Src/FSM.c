@@ -9,6 +9,7 @@ extern RTC_HandleTypeDef hrtc;
 extern GPS_t GPS;
 
 static const uint16_t GPS_COUNTER_MAX = 1;
+static const uint8_t RX_COUNTER_MAX = 30;
 
 FSM_State_t state = WAKEUP;
 
@@ -23,6 +24,7 @@ BME280_Data_t* BME_data_p;
 UV_Index_t* UV_index_p;
 PMS_Data_t* PMS_data_p;
 Radio_Data_t radio_data = {0};
+Radio_Config_t radio_config = {0};
 uint8_t measure_period_min = 15;
 uint8_t enable_gps = 0;
 uint8_t gps_counter = GPS_COUNTER_MAX;
@@ -121,9 +123,21 @@ void FSM_Run() {
 			CC1101_Transmit((uint8_t*)(&radio_data), sizeof(radio_data));
 			HAL_Delay(200);
 			Debug_Radio_Data(&huart4, &radio_data);
-			state = IDLE;
+			state = RX;
 			break;
 		case RX:
+			uint8_t counter = 0;
+
+			while (++counter < RX_COUNTER_MAX) {
+				HAL_GPIO_TogglePin(TEST_LED_GPIO_Port, TEST_LED_Pin);
+				HAL_Delay(100);
+				if (CC1101_Receive((uint8_t*)&radio_config) != 0) {
+					sleep_time_min = radio_config.interval;
+					break;
+				}
+			}
+
+			state = IDLE;
 			break;
 		default:
 			break;

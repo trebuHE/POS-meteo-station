@@ -84,6 +84,11 @@ typedef struct {
 	uint8_t uv_index;
 }Radio_Data_t;
 
+typedef struct {
+	uint8_t address;
+	uint8_t interval;
+}Radio_Config_t;
+
 
 
 // --- Function Prototypes ---

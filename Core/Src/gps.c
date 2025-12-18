@@ -47,6 +47,7 @@ static GPS_t GPS = {
 					.month=01,
 					.year=2003,
 					.utc_time=120000,
+					.data_valid=0,
 };
 
 void GPS_Init(UART_HandleTypeDef* gps_uart) {
@@ -162,7 +163,7 @@ int GPS_validate(char *nmeastr){
 
 void GPS_parse(char *GPSstrParse){
     if (!strncmp(GPSstrParse, "$GPZDA", 6)){
-    	sscanf(GPSstrParse, "$GPZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year);
+    	sscanf(GPSstrParse, "$GPZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year) ? GPS.data_valid = 1 : 0;
 	}
 }
 
@@ -188,4 +189,12 @@ uint8_t GPS_get_month() {
 
 uint8_t GPS_get_year() {
 	return (uint8_t)GPS.year;
+}
+
+uint8_t GPS_is_data_valid() {
+	return GPS.data_valid;
+}
+
+void GPS_invalidate() {
+	GPS.data_valid = 0;
 }

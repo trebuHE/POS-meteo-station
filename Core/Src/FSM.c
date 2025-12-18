@@ -62,6 +62,7 @@ void FSM_Run() {
 			HAL_Delay(100);
 			Init(&UV_config);
 			HAL_GPIO_WritePin(TEST_LED_GPIO_Port, TEST_LED_Pin, GPIO_PIN_SET);
+			GPS_invalidate();
 			state = MEASURE;
 			break;
 		case MEASURE:
@@ -97,8 +98,11 @@ void FSM_Run() {
 				HAL_Delay(250);
 			}
 
-			RTC_set_time(GPS_get_hours(), GPS_get_minutes(), GPS_get_seconds());
-			RTC_set_date(GPS_get_day(), GPS_get_month(), (GPS_get_year() - 2000));
+			if (GPS_is_data_valid()) {
+				RTC_set_time(GPS_get_hours(), GPS_get_minutes(), GPS_get_seconds());
+				RTC_set_date(GPS_get_day(), GPS_get_month(), (GPS_get_year() - 2000));
+			}
+
 			enable_gps = 0;
 			gps_counter = GPS_COUNTER_MAX;
 			HAL_GPIO_WritePin(GPS_WAKEUP_GPIO_Port, GPS_WAKEUP_Pin, GPIO_PIN_RESET);
@@ -110,7 +114,7 @@ void FSM_Run() {
 			RTC_get_time_date(&RTC_date, &RTC_time);
 			radio_data.utc = RTC_time.Hours * 10000 + RTC_time.Minutes * 100 + RTC_time.Seconds; //hhmmss
 			radio_data.date = RTC_date.Date* 1000000 + RTC_date.Month * 10000 + RTC_date.Year + 2000; // ddmmyyyy
-			radio_data.gps_valid = 1;
+			radio_data.gps_valid = GPS_is_data_valid();
 			radio_data.temp = (int16_t)(BME_data_p->temperature * 10.0f);
 			radio_data.humidity = (uint16_t)(BME_data_p->humidity * 10.0f);
 			radio_data.pressure = (uint16_t)(BME_data_p->pressure/100.0f);

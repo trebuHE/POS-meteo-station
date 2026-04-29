@@ -42,12 +42,12 @@ Zidentyfikowano następujące strony zainteresowane projektem:
 
 ### Wymagania
 
-W oparciu o analizę potrzeb interesariuszy oraz założeń projektowych sformułowano wymagania funkcjonalne i pozafunkcjonalne. Kompletny wykaz wymagań znajduje się w [`/specs/reqs`](./specs/reqs/).
+W oparciu o analizę potrzeb interesariuszy oraz założeń projektowych sformułowano wymagania funkcjonalne i pozafunkcjonalne. Kompletny wykaz wymagań znajduje się w specyfikacji funkcjonalnej systemu [`/specs/func`](./specs/func/).
 
 ## Zawartość repozytorium
 
 - [`/docs`](./docs/) zawiera dokumentację kodu wygenerowaną przy użyciu narzędzia Doxygen.
-- [`/specs/reqs`](./specs/reqs) zawiera wykaz wymagań funkcjonalnych oraz pozafunkcjonalnych i specyfikację funkcjonalną systemu.
+- [`/specs/func`](./specs/reqs) zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.
 - [`/specs/tech`](./specs/tech/) zawiera dokumentację techniczną systemu.
 - [`/src/firmware`](./src/firmware/) zawiera kod urządzenia pomiarowego opartego o mikrokontroler STM32L073RZT6. Kod rozwijano z zastosowaniem CubeIDE.
 

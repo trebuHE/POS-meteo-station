@@ -1,0 +1,2 @@
+# Struktura systemu
+

@@ -47,7 +47,7 @@ W oparciu o analizę potrzeb interesariuszy oraz założeń projektowych sformu�
 ## Zawartość repozytorium
 
 - [`/docs`](./docs/) zawiera dokumentację kodu wygenerowaną przy użyciu narzędzia Doxygen.
-- [`/specs/func`](./specs/reqs) zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.
+- [`/specs/func`](./specs/func) zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.
 - [`/specs/tech`](./specs/tech/) zawiera dokumentację techniczną systemu.
 - [`/src/firmware`](./src/firmware/) zawiera kod urządzenia pomiarowego opartego o mikrokontroler STM32L073RZT6. Kod rozwijano z zastosowaniem CubeIDE.
 

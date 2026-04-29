@@ -1,6 +1,6 @@
 # Specyfikacja Funkcjonalna
 
-## 1. [Cel systemu](./goal.md)
+## 1. [Cel systemu](./system_goal.md)
 
 ## 2. Analiza wymagań
 

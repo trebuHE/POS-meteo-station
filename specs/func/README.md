@@ -1,3 +1,11 @@
-# Wymagania
+# Specyfikacja Funkcjonalna
 
-W tym miejscu określono wymagania [funkcjonalne](./FRs.md) oraz [pozafunkcjonalne](./NFRs.md) systemu.
+## 1. [Cel systemu](./goal.md)
+
+## 2. Analiza wymagań
+
+### 2.1. [Interesariusze](./stakeholders.md)
+
+### 2.2. [Wymagania funkcjonalne](./FRs.md)
+
+### 2.3. [Wymagania pozafunkcjonalne](./NFRs.md)

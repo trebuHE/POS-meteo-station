@@ -3,9 +3,9 @@
 Wymagania funkcjonalne systemu sformułowano w oparciu o analizę potrzeb i oczekiwań interesariuszy oraz założeń projektowych. 
 
 Wymagania podzielono, przydzielając im ID, w zależności od tego do jakiej części systemu się odnoszą:
-- **WP-x** - Węzeł pomiarowy
-- **UC-x** - Urządzenie centralne
-- **INT-x** - Interfejsy
+- **WP-x** - węzeł pomiarowy,
+- **UC-x** - urządzenie centralne,
+- **INT-x** - interfejsy.
 
 Wyróżniono trzy poziomy priorytetu:
 1. **ma** - wymaganie o krytycznym znaczeniu,

@@ -24,4 +24,4 @@ graph TD
 
     WebServer --> Browser[Przeglądarka - Działkowicz]
     AdminApp --> Manager[Zarządca ROD]
-    ```
+    

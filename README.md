@@ -44,7 +44,7 @@ Zidentyfikowano następujące strony zainteresowane projektem:
 
 W oparciu o analizę potrzeb interesariuszy oraz założeń projektowych sformułowano wymagania funkcjonalne i pozafunkcjonalne. Kompletny wykaz wymagań znajduje się w specyfikacji funkcjonalnej systemu [`/specs/func`](./specs/func/).
 
-## Model systemu
+### Model systemu
 
 System został zaprojektowany w architekturze rozproszonej typu klient-serwer, z podziałem na warstwę zbierania danych (Edge), przetwarzania i składowania (Backend) oraz prezentacji (Frontend).
 

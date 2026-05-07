@@ -61,5 +61,6 @@ Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfik
 
 ## Autorzy
 
-- Adrian Czekański, 193216, EiT
-- Hubert Mucha, 193152, EiT
+- Adrian Czekański, czekanski.adrian@wp.pl, 193216, EiT
+- Hubert Mucha, hu_mu@wp.pl, 193152, EiT
+

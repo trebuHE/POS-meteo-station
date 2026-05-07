@@ -43,7 +43,7 @@ Zidentyfikowano następujące główne przypadki użycia, pokrywające wymagania
     3. Dodaje nowego użytkownika, przypisując mu odpowiednią rolę oraz węzeł pomiarowy
     4. System zapisuje zmiany w bazie danych
 
-## UC-05: Przeglądanie danych pogodowych
+## UC-05: Gromadzenie danych pogodowych
 * **Główny Aktor:** Węzeł pomiarowy
 * **Cel:** Cykliczne dostarczanie surowych danych do jednostki centralnej
 * **Wymagania powiązane:** WP-01 do WP-06

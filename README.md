@@ -58,6 +58,7 @@ Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfik
 - [`/specs/func`](./specs/func) zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.
 - [`/specs/tech`](./specs/tech/) zawiera dokumentację techniczną systemu.
 - [`/src/firmware`](./src/firmware/) zawiera kod urządzenia pomiarowego opartego o mikrokontroler STM32L073RZT6. Kod rozwijano z zastosowaniem CubeIDE.
+- [`/src/gateway`](./src/gateway/) zawiera kod urządzenia centranego w języku Python. Pozwala na odbieranie danych pomiarowych i obsługę bazy danych.
 
 ## Autorzy
 

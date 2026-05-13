@@ -63,6 +63,8 @@ Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfik
 - [`/src/gui`](./src/gui/) zawiera kod w jęzuku Python aplikacji okienkowej do obsługi systemu.
 - [`/src/web/backend`](./src/web/backend/) zawiera kod w jęzuku Python składający się na backend aplikacji webowej. Zastosowano *Flask*.
 - [`/src/web/frontend`](./src/web/frontend/) zawiera kod składający się na frontend aplikacji webowej. Zastosowano *Jinja* oraz *Chart.js*.
+- [`tests/firmware`](./tests/firmware/) zawiera testy jednostkowe kodu węzła pomiarowego.
+- [`tests/gateway`](./tests/gateway/) zawiera testy jednostkowe kodu urządzenia centralnego.
 
 ## Autorzy
 

@@ -60,6 +60,7 @@ Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfik
 - [`/src/firmware`](./src/firmware/) zawiera kod urządzenia pomiarowego opartego o mikrokontroler STM32L073RZT6. Kod rozwijano z zastosowaniem CubeIDE.
 - [`/src/gateway`](./src/gateway/) zawiera kod urządzenia centranego w języku Python. Pozwala na odbieranie danych pomiarowych i obsługę bazy danych.
 - [`/src/gui`](./src/gui/) zawiera kod w jęzuku Python aplikacji okienkowej do obsługi systemu.
+- [`/src/web/backend`](./src/web/backend/) zawiera kod w jęzuku Python składający się na backend aplikacji webowej. Zastosowano *Flask*.
 
 ## Autorzy
 

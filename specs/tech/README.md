@@ -9,6 +9,6 @@
 
 ## 4. [Backend aplikacji webowej](./web_backend.md)
 
-## 5. **[Frontend aplikacji webowej](./web_frontend.md)
+## 5. [Frontend aplikacji webowej](./web_frontend.md)
 
 ## 6. [Aplikacja okienkowa (GUI)](./gui.md)

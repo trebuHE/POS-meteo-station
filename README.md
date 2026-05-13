@@ -55,6 +55,7 @@ Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfik
 ## Zawartość repozytorium
 
 - [`/docs`](./docs/) zawiera dokumentację kodu wygenerowaną przy użyciu narzędzia Doxygen.
+- [`/meta`](./meta/) zawiera dokumentację wewnętrzną projektu oraz pliki pomocne w jego realizacji.
 - [`/specs/func`](./specs/func) zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.
 - [`/specs/tech`](./specs/tech/) zawiera dokumentację techniczną systemu.
 - [`/src/database`](./src/database/) zawiera bazę danych pomiarowych opartą o *SQLite*.

@@ -52,6 +52,10 @@ Podstawowe scenariusze użycia to m.in. przeglądanie danych pogodowych przez dz
 
 Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfikacji funkcjonalnej systemu [`/specs/func`](./specs/func/).
 
+## Plan realizacji projektu
+
+W celu profesjonalnej i terminowej realizacji projektu opracowano skład zespołu projektowego z podziałem na role i wyszczególniono odpowiedzialność każdej z nich. Przygotowano harmonogram prac z podziałem na kamienie milowe składające się z zadań; czas realizacji określono w tygodniach. Szczegółowy plan realizacji projektu znajduje się w [`/meta/project_plan`](/meta/project_plan.md).
+
 ## Zawartość repozytorium
 
 - [`/docs`](./docs/) zawiera dokumentację kodu wygenerowaną przy użyciu narzędzia Doxygen.

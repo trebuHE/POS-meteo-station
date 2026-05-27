@@ -92,14 +92,17 @@ $(function(){initNavTree('FSM_8c.html','',''); });
   <div class="headertitle"><div class="title">FSM.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Application finite state machine implementation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="FSM_8h_source.html">FSM.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for FSM.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c__incl.png" border="0" usemap="#aCore_2Src_2FSM_8c" loading="lazy" alt=""/></div>
 <map name="aCore_2Src_2FSM_8c" id="aCore_2Src_2FSM_8c">
-<area shape="rect" title=" " alt="" coords="225,5,341,32"/>
-<area shape="rect" href="FSM_8h.html" title=" " alt="" coords="253,80,313,107"/>
+<area shape="rect" title="Application finite state machine implementation." alt="" coords="225,5,341,32"/>
+<area shape="rect" href="FSM_8h.html" title="Application finite state machine." alt="" coords="253,80,313,107"/>
 <area shape="poly" title=" " alt="" coords="284,30,285,65,280,63,282,35"/>
 <area shape="rect" href="main_8h.html" title=": Header for main.c file." alt="" coords="177,229,237,256"/>
 <area shape="poly" title=" " alt="" coords="250,98,193,106,121,117,56,133,32,144,17,156,9,173,12,187,26,200,47,210,103,226,163,236,159,239,102,231,45,215,23,204,8,190,3,173,13,153,29,140,54,128,120,111,192,100,254,95"/>
@@ -107,7 +110,7 @@ Include dependency graph for FSM.c:</div>
 <area shape="poly" title=" " alt="" coords="250,108,141,151,138,146,254,104"/>
 <area shape="rect" href="UV_8h.html" title="UV index sensor driver (ADC&#45;based)." alt="" coords="182,155,232,181"/>
 <area shape="poly" title=" " alt="" coords="271,105,232,146,229,142,267,109"/>
-<area shape="rect" href="gps_8h.html" title=" " alt="" coords="256,155,309,181"/>
+<area shape="rect" href="gps_8h.html" title="GPS NMEA parser driver (UART&#45;based)." alt="" coords="256,155,309,181"/>
 <area shape="poly" title=" " alt="" coords="284,105,285,140,280,138,281,110"/>
 <area shape="rect" href="PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="333,155,395,181"/>
 <area shape="poly" title=" " alt="" coords="297,105,341,144,336,144,296,110"/>
@@ -129,13 +132,21 @@ Include dependency graph for FSM.c:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a7039f5d1436df50c26e07fa8af006d49" id="r_a7039f5d1436df50c26e07fa8af006d49"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7039f5d1436df50c26e07fa8af006d49">FSM_Run</a> ()</td></tr>
+<tr class="memdesc:a7039f5d1436df50c26e07fa8af006d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main FSM loop (runs forever, never returns).  <br /></td></tr>
 <tr class="memitem:a3ac6313822b618d6d840e62b50b27300" id="r_a3ac6313822b618d6d840e62b50b27300"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a3ac6313822b618d6d840e62b50b27300">Init</a> (<a class="el" href="structUV__Config__t.html">UV_Config_t</a> *uv_config_p)</td></tr>
+<tr class="memdesc:a3ac6313822b618d6d840e62b50b27300"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise all sensor modules.  <br /></td></tr>
 <tr class="memitem:a893b00a605ab03c1da247e3aa2d4ddd9" id="r_a893b00a605ab03c1da247e3aa2d4ddd9"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a893b00a605ab03c1da247e3aa2d4ddd9">modules_sleep</a> ()</td></tr>
+<tr class="memdesc:a893b00a605ab03c1da247e3aa2d4ddd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put all sensor modules into sleep/low-power mode.  <br /></td></tr>
 <tr class="memitem:abf1b3875cc65a3a80f7384e8a49c880f" id="r_abf1b3875cc65a3a80f7384e8a49c880f"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#abf1b3875cc65a3a80f7384e8a49c880f">modules_wakeup</a> ()</td></tr>
+<tr class="memdesc:abf1b3875cc65a3a80f7384e8a49c880f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake all sensor modules from sleep.  <br /></td></tr>
 <tr class="memitem:a6394cfb21b4df9ee2857af8482755fc5" id="r_a6394cfb21b4df9ee2857af8482755fc5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6394cfb21b4df9ee2857af8482755fc5">RTC_set_time</a> (uint8_t h, uint8_t m, uint8_t s)</td></tr>
+<tr class="memdesc:a6394cfb21b4df9ee2857af8482755fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RTC time.  <br /></td></tr>
 <tr class="memitem:a1477e04f668cfe6aa256997715fbd752" id="r_a1477e04f668cfe6aa256997715fbd752"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1477e04f668cfe6aa256997715fbd752">RTC_set_date</a> (uint8_t d, uint8_t m, uint8_t y)</td></tr>
+<tr class="memdesc:a1477e04f668cfe6aa256997715fbd752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the RTC date.  <br /></td></tr>
 <tr class="memitem:aee5a480c2a2f0e60dbc40eef9c438a7d" id="r_aee5a480c2a2f0e60dbc40eef9c438a7d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee5a480c2a2f0e60dbc40eef9c438a7d">RTC_get_time_date</a> (RTC_DateTypeDef *date_p, RTC_TimeTypeDef *time_p)</td></tr>
+<tr class="memdesc:aee5a480c2a2f0e60dbc40eef9c438a7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current RTC time and date.  <br /></td></tr>
 <tr class="memitem:ada691d3b91a2519660a91670ffbee284" id="r_ada691d3b91a2519660a91670ffbee284"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ada691d3b91a2519660a91670ffbee284">Debug_Radio_Data</a> (UART_HandleTypeDef *huart, <a class="el" href="structRadio__Data__t.html">Radio_Data_t</a> *<a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a>)</td></tr>
+<tr class="memdesc:ada691d3b91a2519660a91670ffbee284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print radio packet data over UART for debugging.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -161,7 +172,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a6e67cec31ed2bd96315762cf14df0423" id="r_a6e67cec31ed2bd96315762cf14df0423"><td class="memItemLeft">RTC_DateTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a6e67cec31ed2bd96315762cf14df0423">RTC_date</a></td></tr>
 <tr class="memitem:a1535c3c47dc1f88e58c6d57fdf914a3d" id="r_a1535c3c47dc1f88e58c6d57fdf914a3d"><td class="memItemLeft">RTC_TimeTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a1535c3c47dc1f88e58c6d57fdf914a3d">RTC_time</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Application finite state machine implementation. </p>
+<dl class="section author"><dt>Author</dt><dd>POS Meteo Station Team </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ada691d3b91a2519660a91670ffbee284" name="ada691d3b91a2519660a91670ffbee284"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada691d3b91a2519660a91670ffbee284">&#9670;&#160;</a></span>Debug_Radio_Data()</h2>
 
@@ -181,14 +198,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00220">220</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Print radio packet data over UART for debugging. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">huart</td><td>UART handle for output </td></tr>
+    <tr><td class="paramname"><a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a></td><td>Pointer to radio data to print </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00235">235</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_ada691d3b91a2519660a91670ffbee284_icgraph.png" border="0" usemap="#aFSM_8c_ada691d3b91a2519660a91670ffbee284_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_ada691d3b91a2519660a91670ffbee284_icgraph" id="aFSM_8c_ada691d3b91a2519660a91670ffbee284_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,366,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Print radio packet data over UART for debugging." alt="" coords="231,5,366,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -212,52 +238,54 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00036">36</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Main FSM loop (runs forever, never returns). </p>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00044">44</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a7039f5d1436df50c26e07fa8af006d49_cgraph.png" border="0" usemap="#aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_cgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_cgraph" id="aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_cgraph">
-<area shape="rect" title=" " alt="" coords="5,784,86,811"/>
+<area shape="rect" title="Main FSM loop (runs forever, never returns)." alt="" coords="5,784,86,811"/>
 <area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="139,193,274,220"/>
 <area shape="poly" title=" " alt="" coords="44,783,47,707,58,585,69,514,84,440,104,366,131,296,153,260,181,229,179,234,157,263,136,298,110,368,89,441,74,515,63,585,52,707,49,784"/>
 <area shape="rect" href="CC1101__BSP_8c.html#ab7dbca39fc858732abd03cd1e99b970e" title="Receive a packet (non&#45;blocking, checks FIFO)." alt="" coords="330,881,454,908"/>
 <area shape="poly" title=" " alt="" coords="51,808,65,834,82,864,105,893,135,915,160,925,187,931,243,932,296,924,345,912,341,915,297,929,243,938,186,936,159,930,132,920,102,897,78,867,60,837,52,814"/>
 <area shape="rect" href="CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title="Transmit a packet." alt="" coords="550,375,677,401"/>
 <area shape="poly" title=" " alt="" coords="45,783,49,693,62,558,73,488,88,424,107,373,119,354,132,339,157,321,185,308,244,292,306,288,368,295,429,309,485,327,575,366,570,368,483,332,427,314,367,301,305,294,244,297,187,313,160,326,135,343,123,357,112,375,93,426,79,489,67,558,54,693,50,784"/>
-<area shape="rect" href="FSM_8c.html#ada691d3b91a2519660a91670ffbee284" title=" " alt="" coords="139,404,274,431"/>
+<area shape="rect" href="FSM_8c.html#ada691d3b91a2519660a91670ffbee284" title="Print radio packet data over UART for debugging." alt="" coords="139,404,274,431"/>
 <area shape="poly" title=" " alt="" coords="46,783,56,712,73,610,99,509,114,469,132,441,137,438,135,443,136,444,119,471,104,510,79,611,61,713,51,784"/>
-<area shape="rect" href="gps_8c.html#a23451e108a5ed8beac81f16f623be6ae" title=" " alt="" coords="155,455,258,481"/>
+<area shape="rect" href="gps_8c.html#a23451e108a5ed8beac81f16f623be6ae" title="Get day from parsed GPS data." alt="" coords="155,455,258,481"/>
 <area shape="poly" title=" " alt="" coords="44,783,46,730,57,652,68,610,83,567,104,527,132,492,143,484,140,489,136,495,109,530,88,569,73,611,62,653,51,730,49,784"/>
-<area shape="rect" href="gps_8c.html#adce5fc1c4195a1dd0526172b6c1764c3" title=" " alt="" coords="150,505,263,532"/>
+<area shape="rect" href="gps_8c.html#adce5fc1c4195a1dd0526172b6c1764c3" title="Get hours from parsed UTC time." alt="" coords="150,505,263,532"/>
 <area shape="poly" title=" " alt="" coords="45,783,50,738,63,674,89,604,108,571,132,542,138,539,136,543,136,546,112,574,94,606,68,675,55,739,50,784"/>
-<area shape="rect" href="gps_8c.html#a08e0b5af1b1f641eb7a557def097af3a" title=" " alt="" coords="143,556,270,583"/>
+<area shape="rect" href="gps_8c.html#a08e0b5af1b1f641eb7a557def097af3a" title="Get minutes from parsed UTC time." alt="" coords="143,556,270,583"/>
 <area shape="poly" title=" " alt="" coords="46,783,54,745,70,695,95,640,112,615,132,593,139,589,136,594,136,597,116,618,99,643,74,697,59,747,52,784"/>
-<area shape="rect" href="gps_8c.html#a60646ec8455568bf0ef099fa527bf33b" title=" " alt="" coords="148,607,265,633"/>
+<area shape="rect" href="gps_8c.html#a60646ec8455568bf0ef099fa527bf33b" title="Get month from parsed GPS data." alt="" coords="148,607,265,633"/>
 <area shape="poly" title=" " alt="" coords="49,783,76,717,101,677,132,643,140,639,138,644,135,647,105,681,81,719,54,784"/>
-<area shape="rect" href="gps_8c.html#ae99a2ed7099484c1401f85fbc178ac7b" title=" " alt="" coords="141,657,272,684"/>
+<area shape="rect" href="gps_8c.html#ae99a2ed7099484c1401f85fbc178ac7b" title="Get seconds from parsed UTC time." alt="" coords="141,657,272,684"/>
 <area shape="poly" title=" " alt="" coords="53,782,84,739,107,715,132,694,143,689,140,693,135,698,110,719,89,742,58,785"/>
-<area shape="rect" href="gps_8c.html#a054218ae029029e070b02df987cc3b54" title=" " alt="" coords="153,708,260,735"/>
+<area shape="rect" href="gps_8c.html#a054218ae029029e070b02df987cc3b54" title="Get year from parsed GPS data." alt="" coords="153,708,260,735"/>
 <area shape="poly" title=" " alt="" coords="66,782,132,744,149,739,146,743,135,749,70,785"/>
-<area shape="rect" href="gps_8c.html#a0b37e487c9a032dc57f727caad18e2b4" title=" " alt="" coords="151,759,262,785"/>
+<area shape="rect" href="gps_8c.html#a0b37e487c9a032dc57f727caad18e2b4" title="Invalidate the GPS data flag." alt="" coords="151,759,262,785"/>
 <area shape="poly" title=" " alt="" coords="84,789,137,781,134,785,88,793"/>
-<area shape="rect" href="gps_8c.html#a16c04c31667c0045fe7984b49cb3b261" title=" " alt="" coords="140,809,272,836"/>
+<area shape="rect" href="gps_8c.html#a16c04c31667c0045fe7984b49cb3b261" title="Check if GPS data is currently valid." alt="" coords="140,809,272,836"/>
 <area shape="poly" title=" " alt="" coords="85,801,127,808,123,812,87,806"/>
-<area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="187,353,226,380"/>
+<area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title="Initialise all sensor modules." alt="" coords="187,353,226,380"/>
 <area shape="poly" title=" " alt="" coords="45,783,54,704,70,586,96,469,112,423,132,390,150,377,173,369,170,373,152,381,136,394,117,425,101,471,76,587,59,704,51,784"/>
-<area shape="rect" href="FSM_8c.html#a893b00a605ab03c1da247e3aa2d4ddd9" title=" " alt="" coords="338,755,446,781"/>
+<area shape="rect" href="FSM_8c.html#a893b00a605ab03c1da247e3aa2d4ddd9" title="Put all sensor modules into sleep/low&#45;power mode." alt="" coords="338,755,446,781"/>
 <area shape="poly" title=" " alt="" coords="54,809,87,852,109,873,135,890,174,904,206,909,239,904,278,890,309,871,335,846,377,793,374,797,339,849,312,875,280,894,240,909,206,914,172,909,132,894,106,878,83,855,55,814"/>
-<area shape="rect" href="FSM_8c.html#abf1b3875cc65a3a80f7384e8a49c880f" title=" " alt="" coords="331,539,453,565"/>
+<area shape="rect" href="FSM_8c.html#abf1b3875cc65a3a80f7384e8a49c880f" title="Wake all sensor modules from sleep." alt="" coords="331,539,453,565"/>
 <area shape="poly" title=" " alt="" coords="65,809,110,834,166,858,195,864,225,866,252,860,277,846,301,820,312,793,314,764,311,735,306,704,305,671,309,637,325,601,355,572,352,577,329,604,314,638,310,671,312,703,316,734,319,764,317,794,306,822,281,850,254,865,225,871,195,870,164,863,108,839,67,814"/>
 <area shape="rect" href="PMS_8c.html#a4739686c4fd62daff0eed5fe121ff232" title="Get the latest sensor data (converts from DMA buffer)." alt="" coords="150,1012,263,1039"/>
 <area shape="poly" title=" " alt="" coords="49,808,61,846,76,894,101,946,136,991,150,1004,145,1005,132,995,97,948,72,896,55,847,50,814"/>
 <area shape="rect" href="PMS_8c.html#a969aa1ca5b51f5a42abc575e17eb0109" title="Validate a PMS5003 frame using its checksum." alt="" coords="137,1063,276,1089"/>
 <area shape="poly" title=" " alt="" coords="48,808,55,856,68,920,94,988,112,1020,136,1049,139,1053,134,1054,132,1052,108,1023,89,991,63,921,50,857,47,814"/>
-<area shape="rect" href="FSM_8c.html#aee5a480c2a2f0e60dbc40eef9c438a7d" title=" " alt="" coords="138,1113,275,1140"/>
+<area shape="rect" href="FSM_8c.html#aee5a480c2a2f0e60dbc40eef9c438a7d" title="Get the current RTC time and date." alt="" coords="138,1113,275,1140"/>
 <area shape="poly" title=" " alt="" coords="47,809,51,864,62,941,73,983,88,1025,109,1065,136,1100,139,1104,134,1105,132,1103,104,1067,83,1027,68,985,57,942,46,865,46,814"/>
-<area shape="rect" href="FSM_8c.html#a1477e04f668cfe6aa256997715fbd752" title=" " alt="" coords="154,1164,259,1191"/>
+<area shape="rect" href="FSM_8c.html#a1477e04f668cfe6aa256997715fbd752" title="Set the RTC date." alt="" coords="154,1164,259,1191"/>
 <area shape="poly" title=" " alt="" coords="49,809,61,882,79,984,104,1084,119,1124,136,1150,143,1158,138,1158,132,1154,114,1126,99,1086,73,985,56,883,48,814"/>
-<area shape="rect" href="FSM_8c.html#a6394cfb21b4df9ee2857af8482755fc5" title=" " alt="" coords="154,1215,259,1241"/>
+<area shape="rect" href="FSM_8c.html#a6394cfb21b4df9ee2857af8482755fc5" title="Set the RTC time." alt="" coords="154,1215,259,1241"/>
 <area shape="poly" title=" " alt="" coords="48,808,59,890,76,1007,101,1124,117,1170,136,1201,143,1209,138,1209,132,1204,112,1172,96,1126,70,1008,54,891,48,814"/>
 <area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="134,1265,279,1292"/>
 <area shape="poly" title=" " alt="" coords="48,808,57,899,73,1031,84,1100,98,1164,115,1216,136,1252,138,1256,133,1255,132,1255,111,1218,93,1165,79,1101,67,1032,52,899,48,814"/>
@@ -309,7 +337,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="225,354,354,284,351,289,229,358"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="346,471,439,497"/>
 <area shape="poly" title=" " alt="" coords="225,368,253,376,280,390,296,402,306,415,329,441,357,461,351,463,325,445,302,418,292,406,278,394,251,381,228,373"/>
-<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="355,615,429,641"/>
+<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title="Initialise the GPS module (configure NMEA messages + start DMA)." alt="" coords="355,615,429,641"/>
 <area shape="poly" title=" " alt="" coords="225,366,255,373,281,390,298,414,307,437,310,481,311,527,316,551,329,576,356,605,351,606,325,579,311,552,305,527,304,482,302,438,293,416,277,394,252,378,227,371"/>
 <area shape="rect" href="PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="354,353,430,380"/>
 <area shape="poly" title=" " alt="" coords="225,364,341,365,337,368,228,369"/>
@@ -328,7 +356,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="670,448,723,468,738,480,748,491,757,502,771,512,784,520,779,521,768,517,753,506,744,494,734,484,720,473,671,453"/>
 <area shape="poly" title=" " alt="" coords="670,448,777,471,772,473,671,453"/>
 <area shape="poly" title=" " alt="" coords="669,436,778,437,774,440,672,441"/>
-<area shape="rect" href="gps_8c.html#a9bcf98899e28ae08e0d941388372be47" title=" " alt="" coords="505,628,722,655"/>
+<area shape="rect" href="gps_8c.html#a9bcf98899e28ae08e0d941388372be47" title="Append NMEA checksum and CRLF to a command string." alt="" coords="505,628,722,655"/>
 <area shape="poly" title=" " alt="" coords="429,628,492,633,487,635,431,633"/>
 <area shape="poly" title=" " alt="" coords="424,752,505,721,538,713,568,708,620,705,644,702,668,696,693,684,720,665,731,653,738,641,743,616,749,589,756,576,768,563,777,559,773,563,771,567,760,579,754,591,748,617,743,643,735,656,723,669,696,688,670,701,645,707,621,710,569,714,539,718,506,727,427,756"/>
 <area shape="poly" title=" " alt="" coords="453,548,756,541,752,544,455,553"/>
@@ -341,7 +369,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a7039f5d1436df50c26e07fa8af006d49_icgraph.png" border="0" usemap="#aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_icgraph" id="aFSM_8c_a7039f5d1436df50c26e07fa8af006d49_icgraph">
-<area shape="rect" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
 </map>
@@ -364,18 +392,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00152">152</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Initialise all sensor modules. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uv_config_p</td><td>Pointer to UV configuration </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00161">161</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a3ac6313822b618d6d840e62b50b27300_cgraph.png" border="0" usemap="#aFSM_8c_a3ac6313822b618d6d840e62b50b27300_cgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a3ac6313822b618d6d840e62b50b27300_cgraph" id="aFSM_8c_a3ac6313822b618d6d840e62b50b27300_cgraph">
-<area shape="rect" title=" " alt="" coords="5,208,45,235"/>
+<area shape="rect" title="Initialise all sensor modules." alt="" coords="5,208,45,235"/>
 <area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="93,56,189,83"/>
 <area shape="poly" title=" " alt="" coords="34,206,120,92,120,98,39,209"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="94,157,188,184"/>
 <area shape="poly" title=" " alt="" coords="43,211,96,189,93,193,47,215"/>
-<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="104,208,178,235"/>
+<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title="Initialise the GPS module (configure NMEA messages + start DMA)." alt="" coords="104,208,178,235"/>
 <area shape="poly" title=" " alt="" coords="44,219,90,219,86,223,46,224"/>
 <area shape="rect" href="PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="103,259,178,285"/>
 <area shape="poly" title=" " alt="" coords="45,227,97,250,92,253,45,232"/>
@@ -408,7 +445,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="652,168,717,170,712,171,653,173"/>
 <area shape="poly" title=" " alt="" coords="643,255,714,240,719,238,644,261"/>
 <area shape="poly" title=" " alt="" coords="650,256,673,244,688,233,697,220,706,207,721,194,728,192,733,190,724,198,710,211,701,223,692,236,676,249,652,261"/>
-<area shape="rect" href="gps_8c.html#a9bcf98899e28ae08e0d941388372be47" title=" " alt="" coords="237,360,453,387"/>
+<area shape="rect" href="gps_8c.html#a9bcf98899e28ae08e0d941388372be47" title="Append NMEA checksum and CRLF to a command string." alt="" coords="237,360,453,387"/>
 <area shape="poly" title=" " alt="" coords="174,233,191,245,208,270,214,295,221,317,239,339,258,354,253,353,235,343,216,320,209,296,203,273,187,248,174,238"/>
 </map>
 </div>
@@ -417,8 +454,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a3ac6313822b618d6d840e62b50b27300_icgraph.png" border="0" usemap="#aFSM_8c_a3ac6313822b618d6d840e62b50b27300_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a3ac6313822b618d6d840e62b50b27300_icgraph" id="aFSM_8c_a3ac6313822b618d6d840e62b50b27300_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,270,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Initialise all sensor modules." alt="" coords="231,5,270,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -442,13 +479,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00163">163</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Put all sensor modules into sleep/low-power mode. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00173">173</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_cgraph.png" border="0" usemap="#aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_cgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_cgraph" id="aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,114,57"/>
+<area shape="rect" title="Put all sensor modules into sleep/low&#45;power mode." alt="" coords="5,31,114,57"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title="Send a command strobe to the radio." alt="" coords="162,31,335,57"/>
 <area shape="poly" title=" " alt="" coords="114,41,149,43,144,45,114,47"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title="Pull CSN high to deselect the CC1101." alt="" coords="383,5,510,32"/>
@@ -462,8 +502,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_icgraph.png" border="0" usemap="#aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_icgraph" id="aFSM_8c_a893b00a605ab03c1da247e3aa2d4ddd9_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,339,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Put all sensor modules into sleep/low&#45;power mode." alt="" coords="231,5,339,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -487,13 +527,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00177">177</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Wake all sensor modules from sleep. </p>
+<dl class="section return"><dt>Returns</dt><dd>0 on success </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00188">188</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_cgraph.png" border="0" usemap="#aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_cgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_cgraph" id="aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,31,128,57"/>
+<area shape="rect" title="Wake all sensor modules from sleep." alt="" coords="5,31,128,57"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title="Send a command strobe to the radio." alt="" coords="176,31,349,57"/>
 <area shape="poly" title=" " alt="" coords="128,41,163,43,157,45,128,47"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title="Pull CSN high to deselect the CC1101." alt="" coords="397,5,524,32"/>
@@ -507,8 +550,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_icgraph.png" border="0" usemap="#aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_icgraph" id="aFSM_8c_abf1b3875cc65a3a80f7384e8a49c880f_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,353,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Wake all sensor modules from sleep." alt="" coords="231,5,353,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -536,14 +579,23 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00215">215</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Get the current RTC time and date. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date_p</td><td>Pointer to store date </td></tr>
+    <tr><td class="paramname">time_p</td><td>Pointer to store time </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00229">229</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_aee5a480c2a2f0e60dbc40eef9c438a7d_icgraph.png" border="0" usemap="#aFSM_8c_aee5a480c2a2f0e60dbc40eef9c438a7d_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_aee5a480c2a2f0e60dbc40eef9c438a7d_icgraph" id="aFSM_8c_aee5a480c2a2f0e60dbc40eef9c438a7d_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,368,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Get the current RTC time and date." alt="" coords="231,5,368,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -576,14 +628,24 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00203">203</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Set the RTC date. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Day (1-31) </td></tr>
+    <tr><td class="paramname">m</td><td>Month (1-12) </td></tr>
+    <tr><td class="paramname">y</td><td>Year (0-99, offset from 2000) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00216">216</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a1477e04f668cfe6aa256997715fbd752_icgraph.png" border="0" usemap="#aFSM_8c_a1477e04f668cfe6aa256997715fbd752_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a1477e04f668cfe6aa256997715fbd752_icgraph" id="aFSM_8c_a1477e04f668cfe6aa256997715fbd752_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,336,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Set the RTC date." alt="" coords="231,5,336,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -616,14 +678,24 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00190">190</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p>Set the RTC time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>Hours (0-23) </td></tr>
+    <tr><td class="paramname">m</td><td>Minutes (0-59) </td></tr>
+    <tr><td class="paramname">s</td><td>Seconds (0-59) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00202">202</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="FSM_8c_a6394cfb21b4df9ee2857af8482755fc5_icgraph.png" border="0" usemap="#aFSM_8c_a6394cfb21b4df9ee2857af8482755fc5_icgraph" loading="lazy" alt=""/></div>
 <map name="aFSM_8c_a6394cfb21b4df9ee2857af8482755fc5_icgraph" id="aFSM_8c_a6394cfb21b4df9ee2857af8482755fc5_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,336,32"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" title="Set the RTC time." alt="" coords="231,5,336,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
 <area shape="poly" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
@@ -645,7 +717,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00023">23</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00030">30</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -661,7 +733,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00029">29</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00036">36</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -699,7 +771,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00030">30</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00037">37</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -723,7 +795,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00011">11</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00018">18</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -859,7 +931,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00028">28</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00035">35</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -875,7 +947,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00025">25</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00032">32</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -891,7 +963,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00027">27</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00034">34</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -907,7 +979,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00026">26</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00033">33</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -923,7 +995,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00033">33</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00040">40</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -939,7 +1011,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00034">34</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00041">41</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -963,7 +1035,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00012">12</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00019">19</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -979,7 +1051,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00031">31</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00038">38</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1067,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00014">14</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00021">21</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -1018,7 +1090,7 @@ Here is the caller graph for this function:</div>
 <div class="line">}</div>
 <div class="ttc" id="aadc_8h_html_a62fcafba91cf315db7e0e0c8f22c656f"><div class="ttname"><a href="adc_8h.html#a62fcafba91cf315db7e0e0c8f22c656f">hadc</a></div><div class="ttdeci">ADC_HandleTypeDef hadc</div><div class="ttdef"><b>Definition</b> <a href="adc_8c_source.html#l00027">adc.c:27</a></div></div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00016">16</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00023">23</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1106,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00024">24</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="FSM_8c_source.html#l00031">31</a> of file <a class="el" href="FSM_8c_source.html">FSM.c</a>.</p>
 
 </div>
 </div>

@@ -1,8 +1,8 @@
 <map id="GPS_process_data" name="GPS_process_data">
-<area shape="rect" id="Node000001" title=" " alt="" coords="395,31,529,57"/>
-<area shape="rect" id="Node000002" href="$gps_8c.html#a45db3755d0d6460c6bca3243eefb1137" title=" " alt="" coords="268,5,346,32"/>
+<area shape="rect" id="Node000001" title="Process the copied DMA buffer and extract valid NMEA sentences." alt="" coords="395,31,529,57"/>
+<area shape="rect" id="Node000002" href="$gps_8c.html#a45db3755d0d6460c6bca3243eefb1137" title="DMA full&#45;transfer callback — copy second half of buffer." alt="" coords="268,5,346,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,31,346,28,346,22,382,30"/>
-<area shape="rect" id="Node000004" href="$gps_8c.html#a5df78bced34f78e2221d020b78a06a89" title=" " alt="" coords="267,56,347,83"/>
+<area shape="rect" id="Node000004" href="$gps_8c.html#a5df78bced34f78e2221d020b78a06a89" title="DMA half&#45;transfer callback — copy first half of buffer." alt="" coords="267,56,347,83"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="383,57,348,65,347,60,377,58"/>
 <area shape="rect" id="Node000003" href="$main_8c.html#ae494a9643f29b87d6d81e5264e60e57b" title=" " alt="" coords="17,5,207,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,19,207,21,207,16,255,18"/>

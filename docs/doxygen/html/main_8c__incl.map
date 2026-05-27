@@ -16,7 +16,7 @@
 <area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="283,30,371,72,366,74,283,35"/>
 <area shape="rect" id="Node000010" href="$gpio_8h.html" title="This file contains all the function prototypes for the gpio.c file." alt="" coords="463,80,520,107"/>
 <area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="298,30,451,78,446,80,298,35"/>
-<area shape="rect" id="Node000011" href="$FSM_8h.html" title=" " alt="" coords="663,80,723,107"/>
+<area shape="rect" id="Node000011" href="$FSM_8h.html" title="Application finite state machine." alt="" coords="663,80,723,107"/>
 <area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="315,27,649,83,645,86,316,32"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="279,304,395,331"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,255,339,290,335,287,335,258"/>
@@ -32,7 +32,7 @@
 <area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="669,106,582,150,580,145,664,108"/>
 <area shape="rect" id="Node000013" href="$UV_8h.html" title="UV index sensor driver (ADC&#45;based)." alt="" coords="630,155,681,181"/>
 <area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="688,106,670,143,667,139,684,109"/>
-<area shape="rect" id="Node000014" href="$gps_8h.html" title=" " alt="" coords="705,155,758,181"/>
+<area shape="rect" id="Node000014" href="$gps_8h.html" title="GPS NMEA parser driver (UART&#45;based)." alt="" coords="705,155,758,181"/>
 <area shape="poly" id="edge23_Node000011_Node000014" title=" " alt="" coords="701,105,720,142,715,140,698,110"/>
 <area shape="rect" id="Node000015" href="$PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="782,155,843,181"/>
 <area shape="poly" id="edge24_Node000011_Node000015" title=" " alt="" coords="714,105,781,147,776,146,713,110"/>

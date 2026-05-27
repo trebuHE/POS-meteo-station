@@ -6,9 +6,9 @@
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="641,50,446,67,445,62,636,50"/>
 <area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="335,5,428,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,19,429,21,429,16,479,18"/>
-<area shape="rect" id="Node000004" href="$FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
+<area shape="rect" id="Node000004" href="$FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title="Initialise all sensor modules." alt="" coords="231,5,270,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,19,271,21,271,16,322,18"/>
-<area shape="rect" id="Node000005" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,31,183,57"/>
+<area shape="rect" id="Node000005" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,31,183,57"/>
 <area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="213,27,184,37,183,32,219,26"/>
 <area shape="rect" id="Node000006" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="85,45,55,47,55,41,89,43"/>

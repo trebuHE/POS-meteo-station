@@ -71,8 +71,7 @@ var searchData=
   ['cc1101_5fwriteburst_68',['CC1101_WriteBurst',['../CC1101__BSP_8c.html#a98c51bc0f2c2f2ceb3870bcba78b278f',1,'CC1101_BSP.c']]],
   ['cc1101_5fwritereg_69',['CC1101_WriteReg',['../CC1101__BSP_8c.html#a6d0d8c013801efb0e557048c66056622',1,'CC1101_BSP.c']]],
   ['chipid_70',['chipID',['../BME280__STM32_8c.html#a796b28eea9db4350622c3e171356eda3',1,'BME280_STM32.c']]],
-  ['cmsis_71',['CMSIS',['../group__CMSIS.html',1,'']]],
-  ['config_5freg_72',['CONFIG_REG',['../BME280__STM32_8h.html#af81594fa2c83e52e601f2e4a1d81d8bc',1,'BME280_STM32.h']]],
-  ['ctrl_5fhum_5freg_73',['CTRL_HUM_REG',['../BME280__STM32_8h.html#a0c8d072281e1eb1503db135c70deb0a4',1,'BME280_STM32.h']]],
-  ['ctrl_5fmeas_5freg_74',['CTRL_MEAS_REG',['../BME280__STM32_8h.html#aa7ef1f864bc7d2616c3866844d60d872',1,'BME280_STM32.h']]]
+  ['config_5freg_71',['CONFIG_REG',['../BME280__STM32_8h.html#af81594fa2c83e52e601f2e4a1d81d8bc',1,'BME280_STM32.h']]],
+  ['ctrl_5fhum_5freg_72',['CTRL_HUM_REG',['../BME280__STM32_8h.html#a0c8d072281e1eb1503db135c70deb0a4',1,'BME280_STM32.h']]],
+  ['ctrl_5fmeas_5freg_73',['CTRL_MEAS_REG',['../BME280__STM32_8h.html#aa7ef1f864bc7d2616c3866844d60d872',1,'BME280_STM32.h']]]
 ];

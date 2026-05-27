@@ -1,5 +1,5 @@
 <map id="BME280_Config" name="BME280_Config">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,122,32"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="170,5,248,32"/>
+<area shape="rect" id="Node000001" title="Configure the BME280 sensor." alt="" coords="5,5,122,32"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="170,5,248,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,16,157,18,151,19,122,21"/>
 </map>

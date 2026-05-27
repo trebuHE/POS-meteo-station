@@ -1,6 +1,6 @@
 <map id="BME280_Config" name="BME280_Config">
-<area shape="rect" id="Node000001" title=" " alt="" coords="463,5,579,32"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" id="Node000001" title="Configure the BME280 sensor." alt="" coords="463,5,579,32"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="444,19,415,21,415,16,450,19"/>
 <area shape="rect" id="Node000003" href="$FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>

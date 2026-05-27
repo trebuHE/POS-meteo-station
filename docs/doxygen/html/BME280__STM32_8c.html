@@ -92,14 +92,17 @@ $(function(){initNavTree('BME280__STM32_8c.html','',''); });
   <div class="headertitle"><div class="title">BME280_STM32.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>BME280 sensor driver implementation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BME280_STM32.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c__incl.png" border="0" usemap="#aCore_2Src_2BME280__STM32_8c" loading="lazy" alt=""/></div>
 <map name="aCore_2Src_2BME280__STM32_8c" id="aCore_2Src_2BME280__STM32_8c">
-<area shape="rect" title=" " alt="" coords="5,5,193,32"/>
-<area shape="rect" href="BME280__STM32_8h.html" title=" " alt="" coords="33,80,165,107"/>
+<area shape="rect" title="BME280 sensor driver implementation." alt="" coords="5,5,193,32"/>
+<area shape="rect" href="BME280__STM32_8h.html" title="BME280 temperature, pressure and humidity sensor driver." alt="" coords="33,80,165,107"/>
 <area shape="poly" title=" " alt="" coords="100,30,102,65,96,64,98,35"/>
 <area shape="rect" href="main_8h.html" title=": Header for main.c file." alt="" coords="69,155,129,181"/>
 <area shape="poly" title=" " alt="" coords="100,105,102,140,96,138,98,110"/>
@@ -113,15 +116,24 @@ Include dependency graph for BME280_STM32.c:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a1f962ddd82326d17badf383f08bcd2b2" id="r_a1f962ddd82326d17badf383f08bcd2b2"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a1f962ddd82326d17badf383f08bcd2b2">TrimRead</a> (void)</td></tr>
+<tr class="memdesc:a1f962ddd82326d17badf383f08bcd2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read trimming parameters from sensor NVM.  <br /></td></tr>
 <tr class="memitem:a74196344ec7dc7abe6d78d2bb869069c" id="r_a74196344ec7dc7abe6d78d2bb869069c"><td class="memItemLeft">static int&#160;</td><td class="memItemRight"><a class="el" href="#a74196344ec7dc7abe6d78d2bb869069c">BMEReadRaw</a> (void)</td></tr>
+<tr class="memdesc:a74196344ec7dc7abe6d78d2bb869069c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read raw ADC values from the sensor.  <br /></td></tr>
 <tr class="memitem:afa0f5b0d59e854dfb6dac12629cbbb56" id="r_afa0f5b0d59e854dfb6dac12629cbbb56"><td class="memItemLeft">static int32_t&#160;</td><td class="memItemRight"><a class="el" href="#afa0f5b0d59e854dfb6dac12629cbbb56">BME280_compensate_T_int32</a> (int32_t adc_T)</td></tr>
+<tr class="memdesc:afa0f5b0d59e854dfb6dac12629cbbb56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compensate raw temperature using calibration data.  <br /></td></tr>
 <tr class="memitem:a58c5f5ab0a679d882cfc2f2d76ab73d3" id="r_a58c5f5ab0a679d882cfc2f2d76ab73d3"><td class="memItemLeft">static uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a58c5f5ab0a679d882cfc2f2d76ab73d3">BME280_compensate_P_int64</a> (int32_t adc_P)</td></tr>
 <tr class="memitem:aac67e97cc18cf651c204ff85a0f9a2ae" id="r_aac67e97cc18cf651c204ff85a0f9a2ae"><td class="memItemLeft">static uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#aac67e97cc18cf651c204ff85a0f9a2ae">bme280_compensate_H_int32</a> (int32_t adc_H)</td></tr>
+<tr class="memdesc:aac67e97cc18cf651c204ff85a0f9a2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compensate raw humidity using calibration data.  <br /></td></tr>
 <tr class="memitem:adc7177d437282548b781f63009d5b3cb" id="r_adc7177d437282548b781f63009d5b3cb"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#adc7177d437282548b781f63009d5b3cb">BME280_Init</a> ()</td></tr>
+<tr class="memdesc:adc7177d437282548b781f63009d5b3cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the BME280 with default settings.  <br /></td></tr>
 <tr class="memitem:a42ebbef1095921a08f7827365239d51a" id="r_a42ebbef1095921a08f7827365239d51a"><td class="memItemLeft"><a class="el" href="structBME280__Data__t.html">BME280_Data_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a42ebbef1095921a08f7827365239d51a">BME280_Get_Data</a> ()</td></tr>
+<tr class="memdesc:a42ebbef1095921a08f7827365239d51a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a full measurement cycle and return the data.  <br /></td></tr>
 <tr class="memitem:a4a2d33eb424306161e70516c4e68e430" id="r_a4a2d33eb424306161e70516c4e68e430"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4a2d33eb424306161e70516c4e68e430">BME280_Config</a> (uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, uint8_t mode, uint8_t t_sb, uint8_t filter)</td></tr>
+<tr class="memdesc:a4a2d33eb424306161e70516c4e68e430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the BME280 sensor.  <br /></td></tr>
 <tr class="memitem:a5bb79165d1624ab511f8d48244e8e129" id="r_a5bb79165d1624ab511f8d48244e8e129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5bb79165d1624ab511f8d48244e8e129">BME280_WakeUP</a> (void)</td></tr>
+<tr class="memdesc:a5bb79165d1624ab511f8d48244e8e129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake the sensor from sleep for a forced measurement.  <br /></td></tr>
 <tr class="memitem:a07c32fc31559a7a8a67c36dd1600503b" id="r_a07c32fc31559a7a8a67c36dd1600503b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07c32fc31559a7a8a67c36dd1600503b">BME280_Measure</a> (float *temperature, float *pressure, float *humidity)</td></tr>
+<tr class="memdesc:a07c32fc31559a7a8a67c36dd1600503b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a measurement and retrieve temperature, pressure, humidity.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -151,7 +163,14 @@ Variables</h2></td></tr>
 <tr class="memitem:a796b28eea9db4350622c3e171356eda3" id="r_a796b28eea9db4350622c3e171356eda3"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a796b28eea9db4350622c3e171356eda3">chipID</a></td></tr>
 <tr class="memitem:a378412dd7dee78fd082af58da5a24b1c" id="r_a378412dd7dee78fd082af58da5a24b1c"><td class="memItemLeft">static <a class="el" href="structBME280__Data__t.html">BME280_Data_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a378412dd7dee78fd082af58da5a24b1c">data</a> = {0}</td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>BME280 sensor driver implementation. </p>
+<dl class="section author"><dt>Author</dt><dd>ControllersTech.com </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Dec 14, 2021</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2017 ControllersTech.com This is a free software under the GNU license, you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation. This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly or indirectly by this software, read more about this on the GNU General Public License. </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aac67e97cc18cf651c204ff85a0f9a2ae" name="aac67e97cc18cf651c204ff85a0f9a2ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac67e97cc18cf651c204ff85a0f9a2ae">&#9670;&#160;</a></span>bme280_compensate_H_int32()</h2>
 
@@ -175,16 +194,25 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00341">341</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Compensate raw humidity using calibration data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adc_H</td><td>Raw humidity ADC value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Humidity in Q22.10 format (e.g. 47445 = 46.333 %RH) </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00343">343</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_aac67e97cc18cf651c204ff85a0f9a2ae_icgraph.png" border="0" usemap="#aBME280__STM32_8c_aac67e97cc18cf651c204ff85a0f9a2ae_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_aac67e97cc18cf651c204ff85a0f9a2ae_icgraph" id="aBME280__STM32_8c_aac67e97cc18cf651c204ff85a0f9a2ae_icgraph">
-<area shape="rect" title=" " alt="" coords="590,5,752,48"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="413,13,542,40"/>
+<area shape="rect" title="Compensate raw humidity using calibration data." alt="" coords="590,5,752,48"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,13,542,40"/>
 <area shape="poly" title=" " alt="" coords="571,27,542,29,542,24,577,27"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,13,365,40"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,13,365,40"/>
 <area shape="poly" title=" " alt="" coords="395,27,366,29,366,24,400,27"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,13,183,40"/>
 <area shape="poly" title=" " alt="" coords="213,27,184,29,183,24,218,26"/>
@@ -223,9 +251,9 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="BME280__STM32_8c_a58c5f5ab0a679d882cfc2f2d76ab73d3_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a58c5f5ab0a679d882cfc2f2d76ab73d3_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a58c5f5ab0a679d882cfc2f2d76ab73d3_icgraph" id="aBME280__STM32_8c_a58c5f5ab0a679d882cfc2f2d76ab73d3_icgraph">
 <area shape="rect" title=" " alt="" coords="590,5,755,48"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="413,13,542,40"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,13,542,40"/>
 <area shape="poly" title=" " alt="" coords="572,27,542,29,542,24,577,27"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,13,365,40"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,13,365,40"/>
 <area shape="poly" title=" " alt="" coords="395,27,366,29,366,24,400,27"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,13,183,40"/>
 <area shape="poly" title=" " alt="" coords="213,27,184,29,183,24,218,26"/>
@@ -259,16 +287,26 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00270">270</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Compensate raw temperature using calibration data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">adc_T</td><td>Raw temperature ADC value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Temperature in 0.01 DegC (e.g. 5123 = 51.23 DegC) </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Sets global t_fine for pressure/humidity compensation </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00268">268</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_afa0f5b0d59e854dfb6dac12629cbbb56_icgraph.png" border="0" usemap="#aBME280__STM32_8c_afa0f5b0d59e854dfb6dac12629cbbb56_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_afa0f5b0d59e854dfb6dac12629cbbb56_icgraph" id="aBME280__STM32_8c_afa0f5b0d59e854dfb6dac12629cbbb56_icgraph">
-<area shape="rect" title=" " alt="" coords="590,5,754,48"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="413,13,542,40"/>
+<area shape="rect" title="Compensate raw temperature using calibration data." alt="" coords="590,5,754,48"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,13,542,40"/>
 <area shape="poly" title=" " alt="" coords="571,27,542,29,542,24,577,27"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,13,365,40"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,13,365,40"/>
 <area shape="poly" title=" " alt="" coords="395,27,366,29,366,24,400,27"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,13,183,40"/>
 <area shape="poly" title=" " alt="" coords="213,27,184,29,183,24,218,26"/>
@@ -318,14 +356,33 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00077">77</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Configure the BME280 sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">osrs_t</td><td>Temperature oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">osrs_p</td><td>Pressure oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">osrs_h</td><td>Humidity oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">mode</td><td>Sensor mode (MODE_SLEEP, MODE_FORCED, MODE_NORMAL) </td></tr>
+    <tr><td class="paramname">t_sb</td><td>Standby time (T_SB_0p5 .. T_SB_20) </td></tr>
+    <tr><td class="paramname">filter</td><td>IIR filter coefficient (IIR_OFF .. IIR_16) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, non-zero error code on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00062">62</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_cgraph.png" border="0" usemap="#aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_cgraph" id="aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,122,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="170,5,248,32"/>
+<area shape="rect" title="Configure the BME280 sensor." alt="" coords="5,5,122,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="170,5,248,32"/>
 <area shape="poly" title=" " alt="" coords="122,16,157,18,151,19,122,21"/>
 </map>
 </div>
@@ -334,8 +391,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_icgraph" id="aBME280__STM32_8c_a4a2d33eb424306161e70516c4e68e430_icgraph">
-<area shape="rect" title=" " alt="" coords="463,5,579,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" title="Configure the BME280 sensor." alt="" coords="463,5,579,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="poly" title=" " alt="" coords="444,19,415,21,415,16,450,19"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
@@ -363,24 +420,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00051">51</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Perform a full measurement cycle and return the data. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a static <a class="el" href="structBME280__Data__t.html" title="BME280 measurement data container.">BME280_Data_t</a> with latest values </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00045">45</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_cgraph.png" border="0" usemap="#aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_cgraph" id="aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,139,140,165"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="189,113,317,140"/>
+<area shape="rect" title="Perform a full measurement cycle and return the data." alt="" coords="5,139,140,165"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="189,113,317,140"/>
 <area shape="poly" title=" " alt="" coords="139,140,176,137,171,139,141,145"/>
-<area shape="rect" href="BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title=" " alt="" coords="188,164,318,191"/>
+<area shape="rect" href="BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title="Wake the sensor from sleep for a forced measurement." alt="" coords="188,164,318,191"/>
 <area shape="poly" title=" " alt="" coords="140,159,175,165,169,167,140,164"/>
-<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="368,5,530,48"/>
+<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="368,5,530,48"/>
 <area shape="poly" title=" " alt="" coords="274,111,365,58,375,56,379,54,367,62,276,115"/>
 <area shape="rect" href="BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="366,72,531,115"/>
 <area shape="poly" title=" " alt="" coords="317,113,353,109,348,111,318,118"/>
-<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="366,139,531,181"/>
+<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="366,139,531,181"/>
 <area shape="poly" title=" " alt="" coords="317,135,354,143,348,144,317,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="394,205,503,232"/>
+<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="394,205,503,232"/>
 <area shape="poly" title=" " alt="" coords="296,138,319,150,344,171,353,181,367,191,383,201,377,200,365,196,350,185,340,175,317,154,295,143"/>
 </map>
 </div>
@@ -389,7 +449,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_icgraph" id="aBME280__STM32_8c_a42ebbef1095921a08f7827365239d51a_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
@@ -414,16 +474,24 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00047">47</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Initialise the BME280 with default settings. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, non-zero on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00041">41</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_cgraph.png" border="0" usemap="#aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_cgraph" id="aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,102,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title=" " alt="" coords="150,5,266,32"/>
+<area shape="rect" title="Initialise the BME280 with default settings." alt="" coords="5,5,102,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="150,5,266,32"/>
 <area shape="poly" title=" " alt="" coords="102,16,137,18,131,19,102,21"/>
-<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="314,5,392,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="314,5,392,32"/>
 <area shape="poly" title=" " alt="" coords="266,16,301,19,296,19,266,21"/>
 </map>
 </div>
@@ -432,7 +500,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_icgraph.png" border="0" usemap="#aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_icgraph" id="aBME280__STM32_8c_adc7177d437282548b781f63009d5b3cb_icgraph">
-<area shape="rect" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
@@ -468,20 +536,30 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00164">164</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Perform a measurement and retrieve temperature, pressure, humidity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temperature</td><td>Pointer to store temperature (°C) </td></tr>
+    <tr><td class="paramname">pressure</td><td>Pointer to store pressure (Pa) </td></tr>
+    <tr><td class="paramname">humidity</td><td>Pointer to store humidity (RH) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00152">152</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_cgraph.png" border="0" usemap="#aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_cgraph" id="aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,113,134,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="183,5,346,48"/>
+<area shape="rect" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="5,113,134,140"/>
+<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="183,5,346,48"/>
 <area shape="poly" title=" " alt="" coords="90,111,180,58,195,53,191,56,183,62,93,115"/>
 <area shape="rect" href="BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="182,72,347,115"/>
 <area shape="poly" title=" " alt="" coords="133,113,169,109,164,111,135,118"/>
-<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="182,139,346,181"/>
+<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="182,139,346,181"/>
 <area shape="poly" title=" " alt="" coords="134,135,169,142,164,144,135,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="210,205,318,232"/>
+<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="210,205,318,232"/>
 <area shape="poly" title=" " alt="" coords="91,138,133,164,183,191,200,200,195,200,181,196,130,169,90,143"/>
 </map>
 </div>
@@ -490,8 +568,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_icgraph" id="aBME280__STM32_8c_a07c32fc31559a7a8a67c36dd1600503b_icgraph">
-<area shape="rect" title=" " alt="" coords="413,5,542,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,5,542,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="poly" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
@@ -517,14 +595,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00145">145</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Wake the sensor from sleep for a forced measurement. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00130">130</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a5bb79165d1624ab511f8d48244e8e129_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a5bb79165d1624ab511f8d48244e8e129_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a5bb79165d1624ab511f8d48244e8e129_icgraph" id="aBME280__STM32_8c_a5bb79165d1624ab511f8d48244e8e129_icgraph">
-<area shape="rect" title=" " alt="" coords="413,5,544,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Wake the sensor from sleep for a forced measurement." alt="" coords="413,5,544,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="poly" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
@@ -558,16 +638,24 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00240">240</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Read raw ADC values from the sensor. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, 1 if chip ID mismatch (device not found) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00235">235</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a74196344ec7dc7abe6d78d2bb869069c_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a74196344ec7dc7abe6d78d2bb869069c_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a74196344ec7dc7abe6d78d2bb869069c_icgraph" id="aBME280__STM32_8c_a74196344ec7dc7abe6d78d2bb869069c_icgraph">
-<area shape="rect" title=" " alt="" coords="590,5,698,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="413,5,542,32"/>
+<area shape="rect" title="Read raw ADC values from the sensor." alt="" coords="590,5,698,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,5,542,32"/>
 <area shape="poly" title=" " alt="" coords="571,19,542,21,542,16,577,19"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="poly" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
@@ -601,16 +689,24 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00197">197</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Read trimming parameters from sensor NVM. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, non-zero on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00188">188</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8c_a1f962ddd82326d17badf383f08bcd2b2_icgraph.png" border="0" usemap="#aBME280__STM32_8c_a1f962ddd82326d17badf383f08bcd2b2_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8c_a1f962ddd82326d17badf383f08bcd2b2_icgraph" id="aBME280__STM32_8c_a1f962ddd82326d17badf383f08bcd2b2_icgraph">
-<area shape="rect" title=" " alt="" coords="627,5,705,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title=" " alt="" coords="463,5,579,32"/>
+<area shape="rect" title="Read trimming parameters from sensor NVM." alt="" coords="627,5,705,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="463,5,579,32"/>
 <area shape="poly" title=" " alt="" coords="609,19,579,21,579,16,614,19"/>
-<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="poly" title=" " alt="" coords="444,19,415,21,415,16,450,19"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
@@ -636,7 +732,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00042">42</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00036">36</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -660,7 +756,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00044">44</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -676,7 +772,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00035">35</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00029">29</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -692,7 +788,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00039">39</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00033">33</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -708,7 +804,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00035">35</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00029">29</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -724,7 +820,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00039">39</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00033">33</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -740,7 +836,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00039">39</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00033">33</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -756,7 +852,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00039">39</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00033">33</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -772,7 +868,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00034">34</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00028">28</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -788,7 +884,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -804,7 +900,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -820,7 +916,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -836,7 +932,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -852,7 +948,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -868,7 +964,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -884,7 +980,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -900,7 +996,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00038">38</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -916,7 +1012,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00033">33</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00027">27</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -932,7 +1028,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00037">37</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00031">31</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -948,7 +1044,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00037">37</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00031">31</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -964,7 +1060,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00031">31</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00025">25</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -980,7 +1076,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00031">31</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00025">25</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -996,7 +1092,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00041">41</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00035">35</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -1012,7 +1108,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00031">31</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00025">25</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>
@@ -1028,7 +1124,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00030">30</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00024">24</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 
 </div>
 </div>

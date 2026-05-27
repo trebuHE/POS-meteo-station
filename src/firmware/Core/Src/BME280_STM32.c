@@ -1,22 +1,16 @@
-/*
-  ***************************************************************************************************************
-  ***************************************************************************************************************
-  ***************************************************************************************************************
-
-  File:		  BME280_STM32.c
-  Author:     ControllersTech.com
-  Updated:    Dec 14, 2021
-
-  ***************************************************************************************************************
-  Copyright (C) 2017 ControllersTech.com
-
-  This is a free software under the GNU license, you can redistribute it and/or modify it under the terms
-  of the GNU General Public License version 3 as published by the Free Software Foundation.
-  This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly
-  or indirectly by this software, read more about this on the GNU General Public License.
-
-  ***************************************************************************************************************
-*/
+/**
+ * @file    BME280_STM32.c
+ * @brief   BME280 sensor driver implementation
+ * @author  ControllersTech.com
+ * @date    Dec 14, 2021
+ *
+ * @copyright Copyright (C) 2017 ControllersTech.com
+ * This is a free software under the GNU license, you can redistribute it and/or modify it under the terms
+ * of the GNU General Public License version 3 as published by the Free Software Foundation.
+ * This software library is shared with public for educational purposes, without WARRANTY and Author is
+ * not liable for any damages caused directly or indirectly by this software, read more about this on
+ * the GNU General Public License.
+ */
 
 #include "BME280_STM32.h"
 
@@ -55,25 +49,16 @@ BME280_Data_t* BME280_Get_Data() {
 }
 
 
-/* Configuration for the BME280
-
- * @osrs is the oversampling to improve the accuracy
- *       if osrs is set to OSRS_OFF, the respective measurement will be skipped
- *       It can be set to OSRS_1, OSRS_2, OSRS_4, etc. Check the header file
- *
- * @mode can be used to set the mode for the device
- *       MODE_SLEEP will put the device in sleep
- *       MODE_FORCED device goes back to sleep after one measurement. You need to use the BME280_WakeUP() function before every measurement
- *       MODE_NORMAL device performs measurement in the normal mode. Check datasheet page no 16
- *
- * @t_sb is the standby time. The time sensor waits before performing another measurement
- *       It is used along with the normal mode. Check datasheet page no 16 and page no 30
- *
- * @filter is the IIR filter coefficients
- *         IIR is used to avoid the short term fluctuations
- *         Check datasheet page no 18 and page no 30
+/**
+ * @brief  Configure the BME280 sensor
+ * @param  osrs_t  Temperature oversampling (OSRS_OFF .. OSRS_16)
+ * @param  osrs_p  Pressure oversampling (OSRS_OFF .. OSRS_16)
+ * @param  osrs_h  Humidity oversampling (OSRS_OFF .. OSRS_16)
+ * @param  mode    Sensor mode (MODE_SLEEP, MODE_FORCED, MODE_NORMAL)
+ * @param  t_sb    Standby time (T_SB_0p5 .. T_SB_20)
+ * @param  filter  IIR filter coefficient (IIR_OFF .. IIR_16)
+ * @retval 0 on success, non-zero error code on failure
  */
-
 int BME280_Config (uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, uint8_t mode, uint8_t t_sb, uint8_t filter)
 {
 	// Read the Trimming parameters
@@ -139,8 +124,8 @@ int BME280_Config (uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, uint8_t mode,
 	return 0;  //Success
 }
 
-/* To be used when doing the force measurement
- * the Device need to be put in forced mode every time the measurement is needed
+/**
+ * @brief  Wake the sensor from sleep for a forced measurement
  */
 void BME280_WakeUP(void)
 {
@@ -158,8 +143,11 @@ void BME280_WakeUP(void)
 	HAL_Delay (100);
 }
 
-/* measure the temp, pressure and humidity
- * the values will be stored in the parameters passed to the function
+/**
+ * @brief  Perform a measurement and retrieve temperature, pressure, humidity
+ * @param  temperature  Pointer to store temperature (°C)
+ * @param  pressure     Pointer to store pressure (Pa)
+ * @param  humidity     Pointer to store humidity (%RH)
  */
 void BME280_Measure(float *temperature, float *pressure, float *humidity)
 {
@@ -193,7 +181,10 @@ void BME280_Measure(float *temperature, float *pressure, float *humidity)
 }
 
 
-// Read the Trimming parameters saved in the NVM ROM of the device
+/**
+ * @brief  Read trimming parameters from sensor NVM
+ * @retval 0 on success, non-zero on failure
+ */
 static int TrimRead(void)
 {
 	uint8_t trimdata[32];
@@ -237,6 +228,10 @@ static int TrimRead(void)
 	return 0; //Success
 }
 
+/**
+ * @brief  Read raw ADC values from the sensor
+ * @retval 0 on success, 1 if chip ID mismatch (device not found)
+ */
 static int BMEReadRaw(void)
 {
 	uint8_t RawData[8];
@@ -264,9 +259,12 @@ static int BMEReadRaw(void)
 
 /************* COMPENSATION CALCULATION AS PER DATASHEET (page 25) **************************/
 
-/* Returns temperature in DegC, resolution is 0.01 DegC. Output value of “5123” equals 51.23 DegC.
-   t_fine carries fine temperature as global value
-*/
+/**
+ * @brief  Compensate raw temperature using calibration data
+ * @param  adc_T  Raw temperature ADC value
+ * @return Temperature in 0.01 DegC (e.g. 5123 = 51.23 DegC)
+ * @note   Sets global t_fine for pressure/humidity compensation
+ */
 static int32_t BME280_compensate_T_int32(int32_t adc_T)
 {
 	int32_t var1, var2, T;
@@ -279,9 +277,11 @@ static int32_t BME280_compensate_T_int32(int32_t adc_T)
 
 
 #if SUPPORT_64BIT
-/* Returns pressure in Pa as unsigned 32 bit integer in Q24.8 format (24 integer bits and 8 fractional bits).
-   Output value of “24674867” represents 24674867/256 = 96386.2 Pa = 963.862 hPa
-*/
+/**
+ * @brief  Compensate raw pressure using calibration data (64-bit)
+ * @param  adc_P  Raw pressure ADC value
+ * @return Pressure in Q24.8 format (e.g. 24674867 = 96386.2 Pa)
+ */
 static uint32_t BME280_compensate_P_int64(int32_t adc_P)
 {
 	int64_t var1, var2, p;
@@ -335,9 +335,11 @@ static uint32_t BME280_compensate_P_int32(int32_t adc_P)
 }
 #endif
 
-/* Returns humidity in %RH as unsigned 32 bit integer in Q22.10 format (22 integer and 10 fractional bits).
-   Output value of “47445” represents 47445/1024 = 46.333 %RH
-*/
+/**
+ * @brief  Compensate raw humidity using calibration data
+ * @param  adc_H  Raw humidity ADC value
+ * @return Humidity in Q22.10 format (e.g. 47445 = 46.333 %%RH)
+ */
 static uint32_t bme280_compensate_H_int32(int32_t adc_H)
 {
 	int32_t v_x1_u32r;

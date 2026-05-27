@@ -126,7 +126,7 @@ Include dependency graph for main.c:</div>
 <area shape="poly" title=" " alt="" coords="283,30,371,72,366,74,283,35"/>
 <area shape="rect" href="gpio_8h.html" title="This file contains all the function prototypes for the gpio.c file." alt="" coords="463,80,520,107"/>
 <area shape="poly" title=" " alt="" coords="298,30,451,78,446,80,298,35"/>
-<area shape="rect" href="FSM_8h.html" title=" " alt="" coords="663,80,723,107"/>
+<area shape="rect" href="FSM_8h.html" title="Application finite state machine." alt="" coords="663,80,723,107"/>
 <area shape="poly" title=" " alt="" coords="315,27,649,83,645,86,316,32"/>
 <area shape="rect" title=" " alt="" coords="279,304,395,331"/>
 <area shape="poly" title=" " alt="" coords="339,255,339,290,335,287,335,258"/>
@@ -142,7 +142,7 @@ Include dependency graph for main.c:</div>
 <area shape="poly" title=" " alt="" coords="669,106,582,150,580,145,664,108"/>
 <area shape="rect" href="UV_8h.html" title="UV index sensor driver (ADC&#45;based)." alt="" coords="630,155,681,181"/>
 <area shape="poly" title=" " alt="" coords="688,106,670,143,667,139,684,109"/>
-<area shape="rect" href="gps_8h.html" title=" " alt="" coords="705,155,758,181"/>
+<area shape="rect" href="gps_8h.html" title="GPS NMEA parser driver (UART&#45;based)." alt="" coords="705,155,758,181"/>
 <area shape="poly" title=" " alt="" coords="701,105,720,142,715,140,698,110"/>
 <area shape="rect" href="PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="782,155,843,181"/>
 <area shape="poly" title=" " alt="" coords="714,105,781,147,776,146,713,110"/>
@@ -240,7 +240,7 @@ Here is the caller graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="301,373,205,367,102,351,56,335,55,330,103,345,206,361,305,370"/>
 <area shape="poly" title=" " alt="" coords="301,420,204,407,152,395,102,377,70,359,46,339,45,334,73,354,104,372,153,390,205,402,306,418"/>
 <area shape="poly" title=" " alt="" coords="312,476,264,475,208,465,153,449,101,424,78,404,59,381,37,339,37,334,63,378,82,400,104,419,155,444,209,460,264,469,317,476"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="147,512,227,539"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="147,512,227,539"/>
 <area shape="poly" title=" " alt="" coords="331,492,228,519,227,513,326,492"/>
 <area shape="poly" title=" " alt="" coords="130,512,101,495,71,456,50,411,37,368,33,339,33,334,42,367,55,409,75,453,104,491,135,512"/>
 </map>
@@ -289,13 +289,13 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="main_8c_ae494a9643f29b87d6d81e5264e60e57b_cgraph.png" border="0" usemap="#amain_8c_ae494a9643f29b87d6d81e5264e60e57b_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_ae494a9643f29b87d6d81e5264e60e57b_cgraph" id="amain_8c_ae494a9643f29b87d6d81e5264e60e57b_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,195,57"/>
-<area shape="rect" href="gps_8c.html#a45db3755d0d6460c6bca3243eefb1137" title=" " alt="" coords="243,31,320,57"/>
+<area shape="rect" href="gps_8c.html#a45db3755d0d6460c6bca3243eefb1137" title="DMA full&#45;transfer callback — copy second half of buffer." alt="" coords="243,31,320,57"/>
 <area shape="poly" title=" " alt="" coords="195,41,229,44,224,44,195,47"/>
-<area shape="rect" href="gps_8c.html#a61d73819c3ea04fb29886713c285b482" title=" " alt="" coords="368,31,502,57"/>
+<area shape="rect" href="gps_8c.html#a61d73819c3ea04fb29886713c285b482" title="Process the copied DMA buffer and extract valid NMEA sentences." alt="" coords="368,31,502,57"/>
 <area shape="poly" title=" " alt="" coords="320,41,355,44,350,44,321,47"/>
-<area shape="rect" href="gps_8c.html#ab83f0a677b84e8621efd642c3d3b7504" title=" " alt="" coords="557,5,645,32"/>
+<area shape="rect" href="gps_8c.html#ab83f0a677b84e8621efd642c3d3b7504" title="Parse a validated NMEA sentence ($GPZDA) for time and date." alt="" coords="557,5,645,32"/>
 <area shape="poly" title=" " alt="" coords="503,31,539,28,544,27,503,36"/>
-<area shape="rect" href="gps_8c.html#a582e2f94fa69bebe44d1f2f5dd30578f" title=" " alt="" coords="550,56,652,83"/>
+<area shape="rect" href="gps_8c.html#a582e2f94fa69bebe44d1f2f5dd30578f" title="Validate an NMEA sentence using its checksum." alt="" coords="550,56,652,83"/>
 <area shape="poly" title=" " alt="" coords="503,52,538,59,532,59,503,57"/>
 </map>
 </div>
@@ -324,13 +324,13 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="main_8c_a1884970cc493d8efba5aec28c0d526e7_cgraph.png" border="0" usemap="#amain_8c_a1884970cc493d8efba5aec28c0d526e7_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_a1884970cc493d8efba5aec28c0d526e7_cgraph" id="amain_8c_a1884970cc493d8efba5aec28c0d526e7_cgraph">
 <area shape="rect" title=" " alt="" coords="5,31,219,57"/>
-<area shape="rect" href="gps_8c.html#a5df78bced34f78e2221d020b78a06a89" title=" " alt="" coords="267,31,347,57"/>
+<area shape="rect" href="gps_8c.html#a5df78bced34f78e2221d020b78a06a89" title="DMA half&#45;transfer callback — copy first half of buffer." alt="" coords="267,31,347,57"/>
 <area shape="poly" title=" " alt="" coords="219,41,254,44,249,44,219,47"/>
-<area shape="rect" href="gps_8c.html#a61d73819c3ea04fb29886713c285b482" title=" " alt="" coords="395,31,529,57"/>
+<area shape="rect" href="gps_8c.html#a61d73819c3ea04fb29886713c285b482" title="Process the copied DMA buffer and extract valid NMEA sentences." alt="" coords="395,31,529,57"/>
 <area shape="poly" title=" " alt="" coords="347,41,382,44,377,44,348,47"/>
-<area shape="rect" href="gps_8c.html#ab83f0a677b84e8621efd642c3d3b7504" title=" " alt="" coords="584,5,672,32"/>
+<area shape="rect" href="gps_8c.html#ab83f0a677b84e8621efd642c3d3b7504" title="Parse a validated NMEA sentence ($GPZDA) for time and date." alt="" coords="584,5,672,32"/>
 <area shape="poly" title=" " alt="" coords="530,31,566,28,571,27,530,36"/>
-<area shape="rect" href="gps_8c.html#a582e2f94fa69bebe44d1f2f5dd30578f" title=" " alt="" coords="577,56,679,83"/>
+<area shape="rect" href="gps_8c.html#a582e2f94fa69bebe44d1f2f5dd30578f" title="Validate an NMEA sentence using its checksum." alt="" coords="577,56,679,83"/>
 <area shape="poly" title=" " alt="" coords="530,52,565,59,559,59,530,57"/>
 </map>
 </div>
@@ -367,7 +367,7 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph.png" border="0" usemap="#amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph" id="amain_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph">
 <area shape="rect" title="The application entry point." alt="" coords="5,1145,55,1172"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="147,563,227,589"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="147,563,227,589"/>
 <area shape="poly" title=" " alt="" coords="32,1144,175,604,180,605,38,1145"/>
 <area shape="rect" href="main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="319,1069,464,1096"/>
 <area shape="poly" title=" " alt="" coords="29,1145,31,1105,41,1052,50,1024,63,998,79,974,101,954,145,930,186,922,228,931,272,954,286,965,294,977,300,1004,304,1030,310,1043,321,1055,326,1061,321,1061,317,1059,306,1046,299,1032,294,1005,289,979,282,968,270,958,226,936,186,927,147,935,104,958,83,977,67,1000,55,1026,46,1054,36,1106,34,1145"/>
@@ -397,39 +397,39 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="207,560,257,530,318,498,335,492,331,496,320,502,260,534,211,564"/>
 <area shape="rect" href="CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title="Transmit a packet." alt="" coords="328,917,455,944"/>
 <area shape="poly" title=" " alt="" coords="190,587,203,644,226,726,243,771,264,816,290,859,321,897,335,909,330,910,317,901,285,862,259,819,238,773,221,728,198,646,190,592"/>
-<area shape="rect" href="FSM_8c.html#ada691d3b91a2519660a91670ffbee284" title=" " alt="" coords="324,968,459,995"/>
+<area shape="rect" href="FSM_8c.html#ada691d3b91a2519660a91670ffbee284" title="Print radio packet data over UART for debugging." alt="" coords="324,968,459,995"/>
 <area shape="poly" title=" " alt="" coords="189,587,198,655,217,752,234,806,256,859,285,910,321,954,325,959,319,959,317,958,280,913,251,862,229,808,212,753,193,655,189,593"/>
-<area shape="rect" href="gps_8c.html#a23451e108a5ed8beac81f16f623be6ae" title=" " alt="" coords="340,1019,443,1045"/>
+<area shape="rect" href="gps_8c.html#a23451e108a5ed8beac81f16f623be6ae" title="Get day from parsed GPS data." alt="" coords="340,1019,443,1045"/>
 <area shape="poly" title=" " alt="" coords="192,587,253,812,291,937,308,981,321,1005,329,1013,324,1014,317,1008,303,984,286,939,248,813,191,592"/>
-<area shape="rect" href="gps_8c.html#adce5fc1c4195a1dd0526172b6c1764c3" title=" " alt="" coords="335,5,448,32"/>
+<area shape="rect" href="gps_8c.html#adce5fc1c4195a1dd0526172b6c1764c3" title="Get hours from parsed UTC time." alt="" coords="335,5,448,32"/>
 <area shape="poly" title=" " alt="" coords="187,562,201,460,228,305,246,223,267,148,290,85,317,42,324,38,321,43,321,46,295,88,272,149,251,224,233,306,206,461,192,563"/>
-<area shape="rect" href="gps_8c.html#a08e0b5af1b1f641eb7a557def097af3a" title=" " alt="" coords="328,56,455,83"/>
+<area shape="rect" href="gps_8c.html#a08e0b5af1b1f641eb7a557def097af3a" title="Get minutes from parsed UTC time." alt="" coords="328,56,455,83"/>
 <area shape="poly" title=" " alt="" coords="185,562,186,483,191,424,200,358,216,288,240,218,273,152,317,93,323,89,321,94,321,96,278,155,245,220,221,290,206,359,196,425,191,483,190,563"/>
-<area shape="rect" href="gps_8c.html#a60646ec8455568bf0ef099fa527bf33b" title=" " alt="" coords="333,107,450,133"/>
+<area shape="rect" href="gps_8c.html#a60646ec8455568bf0ef099fa527bf33b" title="Get month from parsed GPS data." alt="" coords="333,107,450,133"/>
 <area shape="poly" title=" " alt="" coords="185,562,189,490,206,378,222,316,246,254,277,195,317,144,323,140,321,145,321,147,281,198,250,256,228,318,211,379,195,490,191,563"/>
-<area shape="rect" href="gps_8c.html#ae99a2ed7099484c1401f85fbc178ac7b" title=" " alt="" coords="326,157,457,184"/>
+<area shape="rect" href="gps_8c.html#ae99a2ed7099484c1401f85fbc178ac7b" title="Get seconds from parsed UTC time." alt="" coords="326,157,457,184"/>
 <area shape="poly" title=" " alt="" coords="186,562,193,497,212,399,229,344,251,290,280,239,317,194,323,191,321,195,321,198,285,242,256,293,234,346,217,400,198,497,191,562"/>
-<area shape="rect" href="gps_8c.html#a054218ae029029e070b02df987cc3b54" title=" " alt="" coords="338,208,445,235"/>
+<area shape="rect" href="gps_8c.html#a054218ae029029e070b02df987cc3b54" title="Get year from parsed GPS data." alt="" coords="338,208,445,235"/>
 <area shape="poly" title=" " alt="" coords="187,562,196,504,218,420,235,373,257,327,284,283,317,245,326,239,324,244,321,249,288,286,261,329,240,375,223,421,201,505,192,563"/>
-<area shape="rect" href="gps_8c.html#a0b37e487c9a032dc57f727caad18e2b4" title=" " alt="" coords="336,259,447,285"/>
+<area shape="rect" href="gps_8c.html#a0b37e487c9a032dc57f727caad18e2b4" title="Invalidate the GPS data flag." alt="" coords="336,259,447,285"/>
 <area shape="poly" title=" " alt="" coords="188,562,200,512,224,441,241,402,262,363,287,327,317,295,325,291,322,296,321,299,292,331,267,366,246,404,229,443,205,513,193,563"/>
-<area shape="rect" href="gps_8c.html#a16c04c31667c0045fe7984b49cb3b261" title=" " alt="" coords="326,309,458,336"/>
+<area shape="rect" href="gps_8c.html#a16c04c31667c0045fe7984b49cb3b261" title="Check if GPS data is currently valid." alt="" coords="326,309,458,336"/>
 <area shape="poly" title=" " alt="" coords="190,562,204,520,230,462,268,400,291,371,317,346,326,342,323,346,321,350,295,375,272,403,235,465,209,522,195,563"/>
-<area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="372,360,411,387"/>
+<area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title="Initialise all sensor modules." alt="" coords="372,360,411,387"/>
 <area shape="poly" title=" " alt="" coords="192,561,210,528,237,484,274,437,317,397,336,386,359,379,355,383,339,390,321,401,278,441,242,487,214,531,197,563"/>
-<area shape="rect" href="FSM_8c.html#a893b00a605ab03c1da247e3aa2d4ddd9" title=" " alt="" coords="527,765,635,792"/>
+<area shape="rect" href="FSM_8c.html#a893b00a605ab03c1da247e3aa2d4ddd9" title="Put all sensor modules into sleep/low&#45;power mode." alt="" coords="527,765,635,792"/>
 <area shape="poly" title=" " alt="" coords="191,587,206,633,230,693,246,724,267,754,292,781,320,802,357,816,388,816,422,809,464,801,515,794,511,797,465,807,423,814,389,821,356,821,318,806,288,785,263,758,242,727,225,695,201,635,191,592"/>
-<area shape="rect" href="FSM_8c.html#abf1b3875cc65a3a80f7384e8a49c880f" title=" " alt="" coords="520,816,642,843"/>
+<area shape="rect" href="FSM_8c.html#abf1b3875cc65a3a80f7384e8a49c880f" title="Wake all sensor modules from sleep." alt="" coords="520,816,642,843"/>
 <area shape="poly" title=" " alt="" coords="190,587,204,636,227,702,244,737,265,770,290,799,320,823,366,842,416,850,466,849,514,845,510,848,467,855,416,855,365,848,318,828,286,803,260,773,239,739,222,704,199,638,190,592"/>
 <area shape="rect" href="PMS_8c.html#a4739686c4fd62daff0eed5fe121ff232" title="Get the latest sensor data (converts from DMA buffer)." alt="" coords="335,512,448,539"/>
 <area shape="poly" title=" " alt="" coords="226,564,322,541,318,545,229,568"/>
 <area shape="rect" href="PMS_8c.html#a969aa1ca5b51f5a42abc575e17eb0109" title="Validate a PMS5003 frame using its checksum." alt="" coords="322,563,461,589"/>
 <area shape="poly" title=" " alt="" coords="226,574,309,574,305,578,229,578"/>
-<area shape="rect" href="FSM_8c.html#aee5a480c2a2f0e60dbc40eef9c438a7d" title=" " alt="" coords="323,613,460,640"/>
+<area shape="rect" href="FSM_8c.html#aee5a480c2a2f0e60dbc40eef9c438a7d" title="Get the current RTC time and date." alt="" coords="323,613,460,640"/>
 <area shape="poly" title=" " alt="" coords="227,583,322,607,318,610,229,588"/>
-<area shape="rect" href="FSM_8c.html#a1477e04f668cfe6aa256997715fbd752" title=" " alt="" coords="339,664,444,691"/>
+<area shape="rect" href="FSM_8c.html#a1477e04f668cfe6aa256997715fbd752" title="Set the RTC date." alt="" coords="339,664,444,691"/>
 <area shape="poly" title=" " alt="" coords="208,587,260,618,320,650,335,657,330,659,318,654,257,622,210,592"/>
-<area shape="rect" href="FSM_8c.html#a6394cfb21b4df9ee2857af8482755fc5" title=" " alt="" coords="339,715,444,741"/>
+<area shape="rect" href="FSM_8c.html#a6394cfb21b4df9ee2857af8482755fc5" title="Set the RTC time." alt="" coords="339,715,444,741"/>
 <area shape="poly" title=" " alt="" coords="198,587,249,642,283,673,320,700,331,707,326,709,318,705,280,677,245,646,199,592"/>
 <area shape="poly" title=" " alt="" coords="192,587,259,845,297,987,321,1056,325,1060,319,1060,317,1059,292,988,253,846,191,592"/>
 <area shape="rect" href="UV_8c.html#afa1ae84128276b5043a7f82e369e6d1b" title="Read the current UV index from the sensor." alt="" coords="338,765,445,792"/>
@@ -460,7 +460,7 @@ Here is the call graph for this function:</div>
 <area shape="poly" title=" " alt="" coords="410,369,438,362,463,346,476,328,483,309,486,272,489,234,496,214,510,194,521,187,518,192,514,198,501,216,494,235,491,272,488,311,481,330,466,350,440,366,414,373"/>
 <area shape="rect" href="CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="534,411,628,437"/>
 <area shape="poly" title=" " alt="" coords="411,376,522,406,517,409,413,381"/>
-<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="544,208,618,235"/>
+<area shape="rect" href="gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title="Initialise the GPS module (configure NMEA messages + start DMA)." alt="" coords="544,208,618,235"/>
 <area shape="poly" title=" " alt="" coords="410,369,437,361,463,346,473,334,480,322,486,297,492,271,499,258,511,245,531,233,528,237,514,249,503,261,497,273,491,298,485,324,478,337,466,350,439,366,413,373"/>
 <area shape="rect" href="PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="543,259,619,285"/>
 <area shape="poly" title=" " alt="" coords="410,367,437,359,463,346,477,334,486,321,496,308,511,295,531,286,527,290,514,300,500,312,491,324,481,337,466,350,439,364,413,371"/>
@@ -572,7 +572,7 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="main_8c_a70af21c671abfcc773614a9a4f63d920_icgraph.png" border="0" usemap="#amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph" loading="lazy" alt=""/></div>
 <map name="amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph" id="amain_8c_a70af21c671abfcc773614a9a4f63d920_icgraph">
 <area shape="rect" title="System Clock Configuration." alt="" coords="231,31,376,57"/>
-<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,30,184,28,184,22,218,30"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,55,57"/>
 <area shape="poly" title=" " alt="" coords="215,47,55,47,55,41,215,41"/>

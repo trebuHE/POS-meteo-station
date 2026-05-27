@@ -1,34 +1,22 @@
-/*
- * gps.c
+/**
+ * @file    gps.c
+ * @brief   GPS NMEA parser driver implementation
+ * @author  Bulanov Konstantin
+ * @date    Nov 15, 2019
  *
- *  Created on: Nov 15, 2019
- *      Author: Bulanov Konstantin
+ * Contact: leech001@gmail.com
  *
- *  Contact information
- *  -------------------
+ * @copyright Copyright (C) Bulanov Konstantin, 2019
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
  *
- * e-mail   :  leech001@gmail.com
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  */
-
-/*
- * |---------------------------------------------------------------------------------
- * | Copyright (C) Bulanov Konstantin,2019
- * |
- * | This program is free software: you can redistribute it and/or modify
- * | it under the terms of the GNU General Public License as published by
- * | the Free Software Foundation, either version 3 of the License, or
- * | any later version.
- * |
- * | This program is distributed in the hope that it will be useful,
- * | but WITHOUT ANY WARRANTY; without even the implied warranty of
- * | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * | GNU General Public License for more details.
- * |
- * | You should have received a copy of the GNU General Public License
- * | along with this program.  If not, see <http://www.gnu.org/licenses/>.
- * |---------------------------------------------------------------------------------
- */
-
 
 #include <stdio.h>
 #include <string.h>
@@ -50,6 +38,7 @@ static GPS_t GPS = {
 					.data_valid=0,
 };
 
+/** @brief  Initialise the GPS module (configure NMEA messages + start DMA) */
 void GPS_Init(UART_HandleTypeDef* gps_uart) {
 	p_gps_huart = gps_uart;
 	char gps[80] = "$PCAS04,1";
@@ -63,6 +52,7 @@ void GPS_Init(UART_HandleTypeDef* gps_uart) {
 	HAL_UART_Receive_DMA(p_gps_huart, (uint8_t*)dma_rx_buffer, GPS_BUF_SIZE);
 }
 
+/** @brief  Append NMEA checksum and CRLF to a command string */
 void GPS_Append_NMEA_Checksum(char *str, size_t size) {
     if (!str || size < 6) return;
 
@@ -86,18 +76,21 @@ void GPS_Append_NMEA_Checksum(char *str, size_t size) {
 
 
 
+/** @brief  DMA half-transfer callback — copy first half of buffer */
 void GPS_Half() {
 	memcpy(parsing_buffer, (uint8_t*)(dma_rx_buffer), GPS_BUF_SIZE/2 - 1);
 
 	GPS_process_data();
 }
 
+/** @brief  DMA full-transfer callback — copy second half of buffer */
 void GPS_Full() {
 	memcpy(parsing_buffer, (uint8_t*)(dma_rx_buffer + GPS_BUF_SIZE/2), GPS_BUF_SIZE/2 - 1);
 
 	GPS_process_data();
 }
 
+/** @brief  Process the copied DMA buffer and extract valid NMEA sentences */
 void GPS_process_data() {
 	uint8_t line[100] = {0};
 	uint8_t line_index = 0;
@@ -123,6 +116,7 @@ void GPS_process_data() {
 	}
 }
 
+/** @brief  Validate an NMEA sentence using its checksum */
 int GPS_validate(char *nmeastr){
     char check[3];
     char checkcalcstr[3];
@@ -161,40 +155,49 @@ int GPS_validate(char *nmeastr){
         && (checkcalcstr[1] == check[1])) ? 1 : 0 ;
 }
 
+/** @brief  Parse a validated NMEA sentence ($GPZDA) for time and date */
 void GPS_parse(char *GPSstrParse){
     if (!strncmp(GPSstrParse, "$GPZDA", 6)){
     	sscanf(GPSstrParse, "$GPZDA,%f,%u,%u,%u", &GPS.utc_time, &GPS.day, &GPS.month, &GPS.year) ? GPS.data_valid = 1 : 0;
 	}
 }
 
+/** @brief  Get hours from parsed UTC time */
 uint8_t GPS_get_hours() {
     return (uint8_t)((uint32_t)GPS.utc_time / 10000);
 }
 
+/** @brief  Get minutes from parsed UTC time */
 uint8_t GPS_get_minutes() {
     return (uint8_t)(((uint32_t)GPS.utc_time / 100) % 100);
 }
 
+/** @brief  Get seconds from parsed UTC time */
 uint8_t GPS_get_seconds() {
     return (uint8_t)((uint32_t)GPS.utc_time % 100);
 }
 
+/** @brief  Get day from parsed GPS data */
 uint8_t GPS_get_day() {
 	return (uint8_t)GPS.day;
 }
 
+/** @brief  Get month from parsed GPS data */
 uint8_t GPS_get_month() {
 	return (uint8_t)GPS.month;
 }
 
+/** @brief  Get year from parsed GPS data */
 uint8_t GPS_get_year() {
 	return (uint8_t)GPS.year;
 }
 
+/** @brief  Check if GPS data is currently valid */
 uint8_t GPS_is_data_valid() {
 	return GPS.data_valid;
 }
 
+/** @brief  Invalidate the GPS data flag */
 void GPS_invalidate() {
 	GPS.data_valid = 0;
 }

@@ -29,7 +29,7 @@
 <area shape="poly" id="edge14_Node000010_Node000005" title=" " alt="" coords="301,373,205,367,102,351,56,335,55,330,103,345,206,361,305,370"/>
 <area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="301,420,204,407,152,395,102,377,70,359,46,339,45,334,73,354,104,372,153,390,205,402,306,418"/>
 <area shape="poly" id="edge20_Node000012_Node000005" title=" " alt="" coords="312,476,264,475,208,465,153,449,101,424,78,404,59,381,37,339,37,334,63,378,82,400,104,419,155,444,209,460,264,469,317,476"/>
-<area shape="rect" id="Node000013" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="147,512,227,539"/>
+<area shape="rect" id="Node000013" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title="Main FSM loop (runs forever, never returns)." alt="" coords="147,512,227,539"/>
 <area shape="poly" id="edge18_Node000012_Node000013" title=" " alt="" coords="331,492,228,519,227,513,326,492"/>
 <area shape="poly" id="edge19_Node000013_Node000005" title=" " alt="" coords="130,512,101,495,71,456,50,411,37,368,33,339,33,334,42,367,55,409,75,453,104,491,135,512"/>
 </map>

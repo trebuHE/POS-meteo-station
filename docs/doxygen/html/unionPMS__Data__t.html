@@ -93,25 +93,32 @@ $(function(){initNavTree('unionPMS__Data__t.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>PMS5003 data access union (byte / word / frame views).  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="PMS_8h_source.html">PMS.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for PMS_Data_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="unionPMS__Data__t__coll__graph.png" border="0" usemap="#aPMS__Data__t_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aPMS__Data__t_coll__map" id="aPMS__Data__t_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,91,117"/>
+<area shape="rect" title="PMS5003 data access union (byte / word / frame views)." alt="" coords="5,5,91,117"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ab7fd8c78f4293d0a76b43e949ff7cc82" id="r_ab7fd8c78f4293d0a76b43e949ff7cc82"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#ab7fd8c78f4293d0a76b43e949ff7cc82">bytes</a> [<a class="el" href="PMS_8h.html#a515b63b731387c7a04776a7891f4bc72">PMS_DATA_SIZE</a>]</td></tr>
+<tr class="memdesc:ab7fd8c78f4293d0a76b43e949ff7cc82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raw byte view.  <br /></td></tr>
 <tr class="memitem:ac1131bdd84bdd5bb60e20dbd67ecdf51" id="r_ac1131bdd84bdd5bb60e20dbd67ecdf51"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#ac1131bdd84bdd5bb60e20dbd67ecdf51">words</a> [<a class="el" href="PMS_8h.html#a515b63b731387c7a04776a7891f4bc72">PMS_DATA_SIZE</a>/2]</td></tr>
+<tr class="memdesc:ac1131bdd84bdd5bb60e20dbd67ecdf51"><td class="mdescLeft">&#160;</td><td class="mdescRight">16-bit word view  <br /></td></tr>
 <tr class="memitem:aea9429adcf13aaec55cd9526d48f8ef8" id="r_aea9429adcf13aaec55cd9526d48f8ef8"><td class="memItemLeft"><a class="el" href="PMS_8h.html#aa7345b6bfc3a78b87c579d8d18556004">PMS_Frame_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#aea9429adcf13aaec55cd9526d48f8ef8">frame</a></td></tr>
+<tr class="memdesc:aea9429adcf13aaec55cd9526d48f8ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structured frame view.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00034">34</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
+<div class="textblock"><p>PMS5003 data access union (byte / word / frame views). </p>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00044">44</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="ab7fd8c78f4293d0a76b43e949ff7cc82" name="ab7fd8c78f4293d0a76b43e949ff7cc82"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7fd8c78f4293d0a76b43e949ff7cc82">&#9670;&#160;</a></span>bytes</h2>
@@ -125,7 +132,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00035">35</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
+<p>Raw byte view. </p>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00045">45</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
 
 </div>
 </div>
@@ -141,7 +150,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00037">37</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
+<p>Structured frame view. </p>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00047">47</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
 
 </div>
 </div>
@@ -157,7 +168,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00036">36</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
+<p>16-bit word view </p>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8h_source.html#l00046">46</a> of file <a class="el" href="PMS_8h_source.html">PMS.h</a>.</p>
 
 </div>
 </div>

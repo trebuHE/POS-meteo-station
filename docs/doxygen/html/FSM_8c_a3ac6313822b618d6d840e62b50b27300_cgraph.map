@@ -6,7 +6,7 @@
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="43,211,96,189,93,193,47,215"/>
 <area shape="rect" id="Node000013" href="$gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="104,208,178,235"/>
 <area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="44,219,90,219,86,223,46,224"/>
-<area shape="rect" id="Node000015" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title=" " alt="" coords="103,259,178,285"/>
+<area shape="rect" id="Node000015" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="103,259,178,285"/>
 <area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="45,227,97,250,92,253,45,232"/>
 <area shape="rect" id="Node000016" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title=" " alt="" coords="108,309,174,336"/>
 <area shape="poly" id="edge24_Node000001_Node000016" title=" " alt="" coords="36,232,62,264,94,295,100,301,95,301,91,299,58,267,36,238"/>

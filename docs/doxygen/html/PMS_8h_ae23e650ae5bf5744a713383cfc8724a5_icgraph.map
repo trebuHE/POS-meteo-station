@@ -1,5 +1,5 @@
 <map id="PMS_Init" name="PMS_Init">
-<area shape="rect" id="Node000001" title=" " alt="" coords="318,5,394,32"/>
+<area shape="rect" id="Node000001" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="318,5,394,32"/>
 <area shape="rect" id="Node000002" href="$FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="300,19,271,21,270,16,306,19"/>
 <area shape="rect" id="Node000003" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>

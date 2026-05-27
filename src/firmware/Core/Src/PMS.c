@@ -1,3 +1,10 @@
+/**
+ * @file    PMS.c
+ * @brief   PMS5003 particulate matter sensor driver implementation
+ * @author  POS Meteo Station Team
+ * @date    2025
+ */
+
 #include "PMS.h"
 #include <string.h>
 
@@ -5,6 +12,7 @@ static volatile uint8_t pms_data[PMS_DATA_SIZE] = { 0 };
 static PMS_Data_t PMS_Data = { 0 };
 static European_Air_Quality_Index_t PMS_Air_Quality_Index;
 
+/** @brief  Initialise the PMS5003 sensor (start DMA + enable power) */
 HAL_StatusTypeDef PMS_Init(UART_HandleTypeDef *pms_uart) {
 	HAL_StatusTypeDef status = HAL_UART_Receive_DMA(pms_uart, (uint8_t*) pms_data, PMS_DATA_SIZE);
 	HAL_Delay(50);
@@ -13,6 +21,7 @@ HAL_StatusTypeDef PMS_Init(UART_HandleTypeDef *pms_uart) {
 	return status;
 }
 
+/** @brief  Get the latest sensor data (converts from DMA buffer) */
 PMS_Data_t* PMS_Get_Data() {
 	memcpy(PMS_Data.bytes, (uint8_t*) pms_data, PMS_DATA_SIZE);
 
@@ -28,6 +37,7 @@ PMS_Data_t* PMS_Get_Data() {
 	return &PMS_Data;
 }
 
+/** @brief  Validate a PMS5003 frame using its checksum */
 uint8_t PMS_Is_Data_Valid(PMS_Data_t *data) {
 	uint16_t sum = 0;
 
@@ -38,6 +48,7 @@ uint8_t PMS_Is_Data_Valid(PMS_Data_t *data) {
 	return (sum == data->frame.checksum) ? 1 : 0;
 }
 
+/** @brief  Calculate the European Air Quality Index from the data */
 European_Air_Quality_Index_t* PMS_Get_Quality_Index(PMS_Data_t *data) {
 	if (data->frame.pm_2_5_atmos < 6 && data->frame.pm_10_0_atmos < 16) {
 		PMS_Air_Quality_Index = GOOD;

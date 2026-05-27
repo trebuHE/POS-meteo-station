@@ -8,7 +8,7 @@
 <area shape="poly" id="edge38_Node000001_Node000005" title=" " alt="" coords="1057,36,973,64,932,81,895,100,866,121,848,145,845,156,845,169,850,182,859,195,880,211,913,224,1001,242,1100,251,1189,257,1184,257,1099,257,1000,248,912,230,878,216,855,199,845,184,840,170,839,156,844,142,862,118,892,96,930,76,971,59,1052,37"/>
 <area shape="rect" id="Node000007" href="$CC1101__BSP_8h.html" title="CC1101 sub&#45;1GHz RF transceiver driver (433 MHz)." alt="" coords="101,88,266,115"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1049,23,717,40,499,57,279,83,238,90,236,85,278,77,498,52,716,35,1054,21"/>
-<area shape="rect" id="Node000009" href="$PMS_8h.html" title=" " alt="" coords="290,88,405,115"/>
+<area shape="rect" id="Node000009" href="$PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="290,88,405,115"/>
 <area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="1049,23,775,41,600,58,424,83,391,90,390,85,423,77,599,52,775,35,1055,21"/>
 <area shape="rect" id="Node000011" href="$UV_8h.html" title=" " alt="" coords="480,88,584,115"/>
 <area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="1050,25,847,45,722,61,598,83,569,90,568,85,596,77,721,55,846,39,1055,23"/>
@@ -40,7 +40,7 @@
 <area shape="rect" id="Node000008" href="$CC1101__BSP_8c.html" title="CC1101 RF transceiver driver implementation." alt="" coords="5,171,173,197"/>
 <area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="155,127,105,173,102,169,159,123"/>
 <area shape="poly" id="edge11_Node000009_Node000003" title=" " alt="" coords="364,126,391,171,386,170,362,130"/>
-<area shape="rect" id="Node000010" href="$PMS_8c.html" title=" " alt="" coords="197,171,314,197"/>
+<area shape="rect" id="Node000010" href="$PMS_8c.html" title="PMS5003 particulate matter sensor driver implementation." alt="" coords="197,171,314,197"/>
 <area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="324,124,271,173,268,168,320,126"/>
 <area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="500,122,418,173,416,168,495,124"/>
 <area shape="rect" id="Node000012" href="$UV_8c.html" title=" " alt="" coords="477,171,584,197"/>

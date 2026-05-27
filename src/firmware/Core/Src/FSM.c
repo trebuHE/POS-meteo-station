@@ -1,3 +1,10 @@
+/**
+ * @file    FSM.c
+ * @brief   Application finite state machine implementation
+ * @author  POS Meteo Station Team
+ * @date    2025
+ */
+
 #include "FSM.h"
 
 extern ADC_HandleTypeDef hadc;
@@ -33,6 +40,7 @@ uint8_t sleep_time_min = 1;
 RTC_DateTypeDef RTC_date;
 RTC_TimeTypeDef RTC_time;
 
+/** @brief  Main FSM loop (runs forever, never returns) */
 void FSM_Run() {
 
 	while(1){
@@ -149,6 +157,7 @@ void FSM_Run() {
 	}
 }
 
+/** @brief  Initialise all sensor modules */
 uint8_t Init(UV_Config_t* uv_config_p) {
 	BME280_Init();
 	UV_Init(&UV_config);
@@ -160,6 +169,7 @@ uint8_t Init(UV_Config_t* uv_config_p) {
 	return 0;
 }
 
+/** @brief  Put all sensor modules into sleep/low-power mode */
 uint8_t modules_sleep() {
 	if (enable_gps != 1)
 		HAL_GPIO_WritePin(GPS_WAKEUP_GPIO_Port, GPS_WAKEUP_Pin, GPIO_PIN_RESET);
@@ -174,6 +184,7 @@ uint8_t modules_sleep() {
 	return 0;
 }
 
+/** @brief  Wake all sensor modules from sleep */
 uint8_t modules_wakeup() {
 	HAL_GPIO_WritePin(PMS_SLEEP_GPIO_Port, PMS_SLEEP_Pin, GPIO_PIN_SET);
 
@@ -187,6 +198,7 @@ uint8_t modules_wakeup() {
 	return 0;
 }
 
+/** @brief  Set the RTC time */
 void RTC_set_time(uint8_t h, uint8_t m, uint8_t s) {
 	RTC_TimeTypeDef sTime = {0};
 	sTime.Hours = h;
@@ -200,6 +212,7 @@ void RTC_set_time(uint8_t h, uint8_t m, uint8_t s) {
 	}
 }
 
+/** @brief  Set the RTC date */
 void RTC_set_date(uint8_t d,  uint8_t m, uint8_t y) {
 	RTC_DateTypeDef sDate = {0};
 	sDate.WeekDay = 1;
@@ -212,11 +225,13 @@ void RTC_set_date(uint8_t d,  uint8_t m, uint8_t y) {
 	}
 }
 
+/** @brief  Get the current RTC time and date */
 void RTC_get_time_date(RTC_DateTypeDef* date_p, RTC_TimeTypeDef* time_p) {
 	HAL_RTC_GetTime(&hrtc, time_p, RTC_FORMAT_BIN);
 	HAL_RTC_GetDate(&hrtc, date_p, RTC_FORMAT_BIN);
 }
 
+/** @brief  Print radio packet data over UART for debugging */
 void Debug_Radio_Data(UART_HandleTypeDef *huart, Radio_Data_t *data) {
     char buff[256]; // Large buffer to hold the full report
     int len;

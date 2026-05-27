@@ -1,5 +1,13 @@
 var searchData=
 [
-  ['2_204_0',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]],
-  ['2_3a_20warstwa_20sprzętowa_20i_20komunikacja_20radiowa_20tydzień_202_204_1',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]]
+  ['1_0',['Faza 1: Analiza i Planowanie (tydzień 1)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15',1,'']]],
+  ['1_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20stakeholders_20md_20interesariusze_1',['2.1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2stakeholders.html&quot; title=&quot;Interesariusze&quot;&gt;Interesariusze&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md30',1,'']]],
+  ['1_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20system_5fgoal_20md_20cel_20systemu_2',['1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2system__goal.html&quot; title=&quot;Cel systemu&quot;&gt;Cel systemu&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md28',1,'']]],
+  ['1_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20system_5fstructure_20md_20struktura_20systemu_3',['3.1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2system__structure.html&quot; title=&quot;Struktura systemu&quot;&gt;Struktura systemu&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md34',1,'']]],
+  ['1_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20tech_20firmware_20md_20oprogramowanie_20wbudowane_20węzła_20pomiarowego_20firmware_4',['1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2firmware.html&quot; title=&quot;Oprogramowanie wbudowane węzła pomiarowego&quot;&gt;Oprogramowanie wbudowane węzła pomiarowego (Firmware)&lt;/a&gt;',['../dir_8479ad2cb676c9a6a5f60b046ea0bbe9.html#autotoc_md72',1,'']]],
+  ['13_5',['Faza 5: Testy, Poprawki i Integracja (tydzień 9-13)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md19',1,'']]],
+  ['14_2015_6',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
+  ['15_7',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
+  ['16_8',['Faza 7: Wdrożenie (tydzień 16)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md21',1,'']]],
+  ['1_3a_20analiza_20i_20planowanie_20tydzień_201_9',['Faza 1: Analiza i Planowanie (tydzień 1)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15',1,'']]]
 ];

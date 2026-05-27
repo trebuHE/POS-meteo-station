@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['użycia_0',['Diagram Przypadków Użycia',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md47',1,'']]],
+  ['użycia_1',['użycia',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md35',1,'3.2 &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html&quot; title=&quot;Scenariusze użycia&quot;&gt;Scenariusze użycia&lt;/a&gt;'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html',1,'Scenariusze użycia']]],
+  ['użytkownikami_20i_20uprawnieniami_2',['UC-04: Zarządzanie użytkownikami i uprawnieniami',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md45',1,'']]],
+  ['uc_2001_3a_20przeglądanie_20danych_20pogodowych_3',['UC-01: Przeglądanie danych pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md42',1,'']]],
+  ['uc_2002_3a_20konfiguracja_20ostrzeżeń_20pogodowych_4',['UC-02: Konfiguracja ostrzeżeń pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md43',1,'']]],
+  ['uc_2003_3a_20generowanie_20raportów_20okresowych_5',['UC-03: Generowanie raportów okresowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md44',1,'']]],
+  ['uc_2004_3a_20zarządzanie_20użytkownikami_20i_20uprawnieniami_6',['UC-04: Zarządzanie użytkownikami i uprawnieniami',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md45',1,'']]],
+  ['uc_2005_3a_20gromadzenie_20danych_20pogodowych_7',['UC-05: Gromadzenie danych pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md46',1,'']]],
+  ['uprawnieniami_8',['UC-04: Zarządzanie użytkownikami i uprawnieniami',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md45',1,'']]],
+  ['urządzenia_20centralnego_9',['urządzenia centralnego',['../dir_899f3bed886f9952929d57251421a8bc.html#autotoc_md91',1,'Oprogramowanie urządzenia centralnego'],['../dir_ed01c4b50fafec3d1b25618689cea3f8.html#autotoc_md96',1,'Testy kodu urządzenia centralnego']]],
+  ['urządzenia_20centralnego_20gateway_10',['urządzenia centralnego Gateway',['../dir_8479ad2cb676c9a6a5f60b046ea0bbe9.html#autotoc_md73',1,'2. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gateway.html&quot; title=&quot;Oprogramowanie urządzenia centralnego (Gateway)&quot;&gt;Oprogramowanie urządzenia centralnego (Gateway)&lt;/a&gt;'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gateway.html',1,'Oprogramowanie urządzenia centralnego (Gateway)']]],
+  ['use_5fcases_20md_20scenariusze_20użycia_11',['3.2 &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html&quot; title=&quot;Scenariusze użycia&quot;&gt;Scenariusze użycia&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md35',1,'']]]
+];

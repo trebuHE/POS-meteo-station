@@ -83,4 +83,4 @@ flowchart LR
 
     %% Relacje - Aktorzy Systemowi
     Wezel --- UC5
-    
+```

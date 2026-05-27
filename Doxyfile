@@ -1026,7 +1026,19 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = README.md meta src/firmware/Core/Inc src/firmware/Core/Src
+INPUT                  = README.md \
+                         meta \
+                         specs/func \
+                         specs/tech \
+                         src/database \
+                         src/gateway \
+                         src/gui \
+                         src/web/backend \
+                         src/web/frontend \
+                         tests/firmware \
+                         tests/gateway \
+                         src/firmware/Core/Inc \
+                         src/firmware/Core/Src
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses

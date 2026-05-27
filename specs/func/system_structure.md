@@ -28,4 +28,4 @@ flowchart BT
     DB --> WebServer & AdminApp
     WebServer --> Browser["Przeglądarka - Działkowicz"]
     AdminApp --> Manager["Zarządca ROD"]
-    
+```

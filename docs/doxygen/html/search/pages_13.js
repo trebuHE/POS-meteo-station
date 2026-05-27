@@ -1,8 +1,14 @@
 var searchData=
 [
-  ['radiowa_20tydzień_202_204_0',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]],
-  ['raportowanie_20i_20finalizacja_20tydzień_2014_2015_1',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
-  ['realizacji_20projektu_2',['realizacji projektu',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html',1,'Plan realizacji projektu'],['../index.html#autotoc_md8',1,'Plan realizacji projektu']]],
-  ['repozytorium_3',['Zawartość repozytorium',['../index.html#autotoc_md9',1,'']]],
-  ['rozwiązanie_4',['Projektowane rozwiązanie',['../index.html#autotoc_md4',1,'']]]
+  ['klas_0',['Klas',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2firmware.html#autotoc_md58',1,'Architektura oprogramowania - Diagram Klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gateway.html#autotoc_md64',1,'Architektura oprogramowania - Diagram Klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gui.html#autotoc_md69',1,'Architektura oprogramowania - Diagram Klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__backend.html#autotoc_md82',1,'Architektura oprogramowania - Diagram Klas']]],
+  ['klas_1',['klas',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2firmware.html#autotoc_md59',1,'Opis struktury klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gateway.html#autotoc_md65',1,'Opis struktury klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gui.html#autotoc_md70',1,'Opis struktury klas'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__backend.html#autotoc_md83',1,'Opis struktury klas']]],
+  ['kodu_20urządzenia_20centralnego_2',['Testy kodu urządzenia centralnego',['../dir_ed01c4b50fafec3d1b25618689cea3f8.html#autotoc_md96',1,'']]],
+  ['kodu_20węzła_20pomiarowego_3',['Testy kodu węzła pomiarowego',['../dir_1b5c7c63c08d05d87aad182cd255edd2.html#autotoc_md95',1,'']]],
+  ['komponentów_4',['Architektura frontendu - Diagram Komponentów',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__frontend.html#autotoc_md88',1,'']]],
+  ['komponentów_5',['Diagram komponentów',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2system__structure.html#autotoc_md40',1,'']]],
+  ['komponenty_20interfejsu_6',['Komponenty interfejsu',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__frontend.html#autotoc_md86',1,'']]],
+  ['komponenty_20sprzętowe_7',['Komponenty sprzętowe',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2firmware.html#autotoc_md56',1,'']]],
+  ['komponenty_20systemowe_8',['Komponenty systemowe',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2database.html#autotoc_md50',1,'Komponenty systemowe'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2gateway.html#autotoc_md62',1,'Komponenty systemowe'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__backend.html#autotoc_md80',1,'Komponenty systemowe']]],
+  ['komunikacja_20radiowa_20tydzień_202_204_9',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]],
+  ['konfiguracja_20ostrzeżeń_20pogodowych_10',['UC-02: Konfiguracja ostrzeżeń pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md43',1,'']]]
 ];

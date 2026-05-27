@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['1_0',['Faza 1: Analiza i Planowanie (tydzień 1)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15',1,'']]],
-  ['13_1',['Faza 5: Testy, Poprawki i Integracja (tydzień 9-13)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md19',1,'']]],
-  ['14_2015_2',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
-  ['15_3',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
-  ['16_4',['Faza 7: Wdrożenie (tydzień 16)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md21',1,'']]],
-  ['1_3a_20analiza_20i_20planowanie_20tydzień_201_5',['Faza 1: Analiza i Planowanie (tydzień 1)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15',1,'']]]
+  ['01_3a_20przeglądanie_20danych_20pogodowych_0',['UC-01: Przeglądanie danych pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md42',1,'']]],
+  ['02_3a_20konfiguracja_20ostrzeżeń_20pogodowych_1',['UC-02: Konfiguracja ostrzeżeń pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md43',1,'']]],
+  ['03_3a_20generowanie_20raportów_20okresowych_2',['UC-03: Generowanie raportów okresowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md44',1,'']]],
+  ['04_3a_20zarządzanie_20użytkownikami_20i_20uprawnieniami_3',['UC-04: Zarządzanie użytkownikami i uprawnieniami',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md45',1,'']]],
+  ['05_3a_20gromadzenie_20danych_20pogodowych_4',['UC-05: Gromadzenie danych pogodowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md46',1,'']]]
 ];

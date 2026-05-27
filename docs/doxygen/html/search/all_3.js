@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['4_0',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]],
-  ['4_3a_20warstwa_20prezentacji_20i_20interfejsy_20tydzień_207_209_1',['Faza 4: Warstwa Prezentacji i Interfejsy (tydzień 7-9)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md18',1,'']]]
+  ['3_201_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20system_5fstructure_20md_20struktura_20systemu_0',['3.1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2system__structure.html&quot; title=&quot;Struktura systemu&quot;&gt;Struktura systemu&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md34',1,'']]],
+  ['3_202_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20use_5fcases_20md_20scenariusze_20użycia_1',['3.2 &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html&quot; title=&quot;Scenariusze użycia&quot;&gt;Scenariusze użycia&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md35',1,'']]],
+  ['3_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20func_20nfrs_20md_20wymagania_20pozafunkcjonalne_2',['2.3. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2NFRs.html&quot; title=&quot;Wymagania pozafunkcjonalne&quot;&gt;Wymagania pozafunkcjonalne&lt;/a&gt;',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md32',1,'']]],
+  ['3_20home_20hubert_20studia_20pos_20pos_20meteo_20station_20specs_20tech_20database_20md_20baza_20danych_3',['3. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2database.html&quot; title=&quot;Baza danych&quot;&gt;Baza danych&lt;/a&gt;',['../dir_8479ad2cb676c9a6a5f60b046ea0bbe9.html#autotoc_md74',1,'']]],
+  ['3_20model_20systemu_4',['3. Model systemu',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md33',1,'']]],
+  ['3_3a_20warstwa_20danych_20i_20backend_20tydzień_205_206_5',['Faza 3: Warstwa Danych i Backend (tydzień 5-6)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md17',1,'']]]
 ];

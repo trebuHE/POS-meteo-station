@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['komunikacja_20radiowa_20tydzień_202_204_0',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]]
+  ['i_20backend_20tydzień_205_206_0',['Faza 3: Warstwa Danych i Backend (tydzień 5-6)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md17',1,'']]],
+  ['i_20finalizacja_20tydzień_2014_2015_1',['Faza 6: Raportowanie i Finalizacja (tydzień 14-15)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20',1,'']]],
+  ['i_20integracja_20tydzień_209_2013_2',['Faza 5: Testy, Poprawki i Integracja (tydzień 9-13)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md19',1,'']]],
+  ['i_20interfejsy_20tydzień_207_209_3',['Faza 4: Warstwa Prezentacji i Interfejsy (tydzień 7-9)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md18',1,'']]],
+  ['i_20komunikacja_20radiowa_20tydzień_202_204_4',['Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16',1,'']]],
+  ['i_20planowanie_20tydzień_201_5',['Faza 1: Analiza i Planowanie (tydzień 1)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15',1,'']]],
+  ['i_20uprawnieniami_6',['UC-04: Zarządzanie użytkownikami i uprawnieniami',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2use__cases.html#autotoc_md45',1,'']]],
+  ['i_20wymagań_20jakościowych_7',['Opis struktury i wymagań jakościowych',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__frontend.html#autotoc_md89',1,'']]],
+  ['i2c_2ec_8',['i2c.c',['../i2c_8c.html',1,'']]],
+  ['i2c_2eh_9',['i2c.h',['../i2c_8h.html',1,'']]],
+  ['id_5freg_10',['ID_REG',['../BME280__STM32_8h.html#a95c754a9fe808331240df62b32f782d5',1,'BME280_STM32.h']]],
+  ['idle_11',['IDLE',['../FSM_8h.html#a1e17b57f83c9c6da91543cd275188a13afd6a0e4343048b10646dd2976cc5ad18',1,'FSM.h']]],
+  ['iir_5f16_12',['IIR_16',['../BME280__STM32_8h.html#a168ee3693070c8fd9cf8483bbfb342a9',1,'BME280_STM32.h']]],
+  ['iir_5f2_13',['IIR_2',['../BME280__STM32_8h.html#a065c476c5be0bab51f345a601d433e24',1,'BME280_STM32.h']]],
+  ['iir_5f4_14',['IIR_4',['../BME280__STM32_8h.html#a62c8da1cf47be7331c575ac098326e16',1,'BME280_STM32.h']]],
+  ['iir_5f8_15',['IIR_8',['../BME280__STM32_8h.html#a1e5d59ee7f276b6bfbef49cf54773b1c',1,'BME280_STM32.h']]],
+  ['iir_5foff_16',['IIR_OFF',['../BME280__STM32_8h.html#a3d2dbed30067f03190d2accd2645b56c',1,'BME280_STM32.h']]],
+  ['index_5fthresholds_5fmv_17',['index_thresholds_mV',['../structUV__Config__t.html#a1bbdac7fd899f9d90851660686f20b0a',1,'UV_Config_t']]],
+  ['init_18',['Init',['../FSM_8h.html#a3ac6313822b618d6d840e62b50b27300',1,'Init(UV_Config_t *uv_config_p):&#160;FSM.c'],['../FSM_8c.html#a3ac6313822b618d6d840e62b50b27300',1,'Init(UV_Config_t *uv_config_p):&#160;FSM.c']]],
+  ['initialise_5fmonitor_5fhandles_19',['initialise_monitor_handles',['../syscalls_8c.html#a25c7f100d498300fff65568c2fcfe639',1,'syscalls.c']]],
+  ['integracja_20tydzień_209_2013_20',['Faza 5: Testy, Poprawki i Integracja (tydzień 9-13)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md19',1,'']]],
+  ['interesariusze_21',['Interesariusze',['../dir_f4a06e308babdd3a80ea781ed39e0b03.html#autotoc_md30',1,'2.1. &lt;a class=&quot;el&quot; href=&quot;md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2stakeholders.html&quot; title=&quot;Interesariusze&quot;&gt;Interesariusze&lt;/a&gt;'],['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2stakeholders.html',1,'Interesariusze'],['../index.html#autotoc_md5',1,'Interesariusze']]],
+  ['interesariuszy_22',['Wykaz interesariuszy',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2func_2stakeholders.html#autotoc_md37',1,'']]],
+  ['interfejsu_23',['Komponenty interfejsu',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2specs_2tech_2web__frontend.html#autotoc_md86',1,'']]],
+  ['interfejsy_20tydzień_207_209_24',['Faza 4: Warstwa Prezentacji i Interfejsy (tydzień 7-9)',['../md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md18',1,'']]],
+  ['interval_25',['interval',['../structRadio__Config__t.html#ad626159340411af97e8adc590d3b30c2',1,'Radio_Config_t']]]
 ];

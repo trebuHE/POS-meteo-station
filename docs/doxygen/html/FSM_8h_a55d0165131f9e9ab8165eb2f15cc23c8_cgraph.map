@@ -42,7 +42,7 @@
 <area shape="poly" id="edge65_Node000001_Node000045" title=" " alt="" coords="48,808,59,890,76,1007,101,1124,117,1170,136,1201,143,1209,138,1209,132,1204,112,1172,96,1126,70,1008,54,891,48,814"/>
 <area shape="rect" id="Node000046" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="134,1265,279,1292"/>
 <area shape="poly" id="edge66_Node000001_Node000046" title=" " alt="" coords="48,808,57,899,73,1031,84,1100,98,1164,115,1216,136,1252,138,1256,133,1255,132,1255,111,1218,93,1165,79,1101,67,1032,52,899,48,814"/>
-<area shape="rect" id="Node000048" href="$UV_8c.html#afa1ae84128276b5043a7f82e369e6d1b" title=" " alt="" coords="153,1316,260,1343"/>
+<area shape="rect" id="Node000048" href="$UV_8c.html#afa1ae84128276b5043a7f82e369e6d1b" title="Read the current UV index from the sensor." alt="" coords="153,1316,260,1343"/>
 <area shape="poly" id="edge68_Node000001_Node000048" title=" " alt="" coords="47,808,56,907,70,1055,81,1132,95,1204,114,1262,136,1302,142,1310,137,1309,132,1306,109,1264,90,1205,76,1133,64,1056,50,908,47,814"/>
 <area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="328,139,456,165"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="253,191,332,168,328,172,256,195"/>
@@ -94,7 +94,7 @@
 <area shape="poly" id="edge53_Node000029_Node000035" title=" " alt="" coords="225,366,255,373,281,390,298,414,307,437,310,481,311,527,316,551,329,576,356,605,351,606,325,579,311,552,305,527,304,482,302,438,293,416,277,394,252,378,227,371"/>
 <area shape="rect" id="Node000037" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="354,353,430,380"/>
 <area shape="poly" id="edge55_Node000029_Node000037" title=" " alt="" coords="225,364,341,365,337,368,228,369"/>
-<area shape="rect" id="Node000038" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title=" " alt="" coords="360,404,425,431"/>
+<area shape="rect" id="Node000038" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title="Initialise the UV sensor (start ADC DMA)." alt="" coords="360,404,425,431"/>
 <area shape="poly" id="edge56_Node000029_Node000038" title=" " alt="" coords="225,369,347,403,342,406,228,374"/>
 <area shape="rect" id="Node000031" href="$BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="555,256,672,283"/>
 <area shape="poly" id="edge42_Node000030_Node000031" title=" " alt="" coords="440,264,542,266,538,270,442,269"/>

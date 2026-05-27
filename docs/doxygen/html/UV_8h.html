@@ -92,13 +92,16 @@ $(function(){initNavTree('UV_8h.html','',''); });
   <div class="headertitle"><div class="title">UV.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>UV index sensor driver (ADC-based).  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for UV.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="UV_8h__incl.png" border="0" usemap="#aCore_2Inc_2UV_8h" loading="lazy" alt=""/></div>
 <map name="aCore_2Inc_2UV_8h" id="aCore_2Inc_2UV_8h">
-<area shape="rect" title=" " alt="" coords="11,5,116,32"/>
+<area shape="rect" title="UV index sensor driver (ADC&#45;based)." alt="" coords="11,5,116,32"/>
 <area shape="rect" href="main_8h.html" title=": Header for main.c file." alt="" coords="33,80,94,107"/>
 <area shape="poly" title=" " alt="" coords="64,30,66,65,61,64,63,35"/>
 <area shape="rect" title=" " alt="" coords="5,155,122,181"/>
@@ -110,10 +113,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="UV_8h__dep__incl.png" border="0" usemap="#aCore_2Inc_2UV_8hdep" loading="lazy" alt=""/></div>
 <map name="aCore_2Inc_2UV_8hdep" id="aCore_2Inc_2UV_8hdep">
-<area shape="rect" title=" " alt="" coords="147,5,252,32"/>
+<area shape="rect" title="UV index sensor driver (ADC&#45;based)." alt="" coords="147,5,252,32"/>
 <area shape="rect" href="FSM_8h.html" title=" " alt="" coords="76,80,190,107"/>
 <area shape="poly" title=" " alt="" coords="180,42,146,82,142,78,176,45"/>
-<area shape="rect" href="UV_8c.html" title=" " alt="" coords="214,80,321,107"/>
+<area shape="rect" href="UV_8c.html" title="UV index sensor driver implementation." alt="" coords="214,80,321,107"/>
 <area shape="poly" title=" " alt="" coords="223,41,258,80,253,80,221,46"/>
 <area shape="rect" href="FSM_8c.html" title=" " alt="" coords="5,155,122,181"/>
 <area shape="poly" title=" " alt="" coords="113,117,77,156,74,152,108,119"/>
@@ -127,6 +130,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:UV_5FConfig_5Ft" id="r_UV_5FConfig_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structUV__Config__t.html">UV_Config_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">UV sensor configuration parameters.  <a href="structUV__Config__t.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -147,13 +151,22 @@ Enumerations</h2></td></tr>
 , <a class="el" href="#a34d3ff3206a4c34bb8bb8a8c2d56092ca20dc0f6c9086b0a3a4f46458d50101d6">UV_INDEX_11</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a34d3ff3206a4c34bb8bb8a8c2d56092c"><td class="mdescLeft">&#160;</td><td class="mdescRight">UV index levels (0-11).  <a href="#a34d3ff3206a4c34bb8bb8a8c2d56092c">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a759408b4dc6c29a42789fc8c5af2df9c" id="r_a759408b4dc6c29a42789fc8c5af2df9c"><td class="memItemLeft">HAL_StatusTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a759408b4dc6c29a42789fc8c5af2df9c">UV_Init</a> (<a class="el" href="structUV__Config__t.html">UV_Config_t</a> *config)</td></tr>
+<tr class="memdesc:a759408b4dc6c29a42789fc8c5af2df9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the UV sensor (start ADC DMA).  <br /></td></tr>
 <tr class="memitem:afa1ae84128276b5043a7f82e369e6d1b" id="r_afa1ae84128276b5043a7f82e369e6d1b"><td class="memItemLeft"><a class="el" href="#a34d3ff3206a4c34bb8bb8a8c2d56092c">UV_Index_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#afa1ae84128276b5043a7f82e369e6d1b">UV_Get_Index</a> (void)</td></tr>
+<tr class="memdesc:afa1ae84128276b5043a7f82e369e6d1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the current UV index from the sensor.  <br /></td></tr>
 </table>
-<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>UV index sensor driver (ADC-based). </p>
+<dl class="section author"><dt>Author</dt><dd>POS Meteo Station Team </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="UV_8h_source.html">UV.h</a>.</p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="a34d3ff3206a4c34bb8bb8a8c2d56092c" name="a34d3ff3206a4c34bb8bb8a8c2d56092c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a34d3ff3206a4c34bb8bb8a8c2d56092c">&#9670;&#160;</a></span>UV_Index_t</h2>
 
@@ -165,22 +178,36 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>UV index levels (0-11). </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779"></a>UV_INDEX_0&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca68beda1915a5ffe0c03cb8808b885d13" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca68beda1915a5ffe0c03cb8808b885d13"></a>UV_INDEX_1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cae51f65271ffa5a82e8585094bb98e286" name="a34d3ff3206a4c34bb8bb8a8c2d56092cae51f65271ffa5a82e8585094bb98e286"></a>UV_INDEX_2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cad1906c67ae2e9e5a7fa85eab60311197" name="a34d3ff3206a4c34bb8bb8a8c2d56092cad1906c67ae2e9e5a7fa85eab60311197"></a>UV_INDEX_3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cae8cef03bdf41d59ff15f91fcd3943c6a" name="a34d3ff3206a4c34bb8bb8a8c2d56092cae8cef03bdf41d59ff15f91fcd3943c6a"></a>UV_INDEX_4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d4280d6ec8f2ab489e1d35a11d54375" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d4280d6ec8f2ab489e1d35a11d54375"></a>UV_INDEX_5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092caeea0ef28961ed9b0fb7696a9a7d0495f" name="a34d3ff3206a4c34bb8bb8a8c2d56092caeea0ef28961ed9b0fb7696a9a7d0495f"></a>UV_INDEX_6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d8b0e351d1c9844cc3fd535ab4ee415" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d8b0e351d1c9844cc3fd535ab4ee415"></a>UV_INDEX_7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cac128d20b21c08a45d2afcf6af0555c19" name="a34d3ff3206a4c34bb8bb8a8c2d56092cac128d20b21c08a45d2afcf6af0555c19"></a>UV_INDEX_8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca05428556b76acf3c3d735d00369767ef" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca05428556b76acf3c3d735d00369767ef"></a>UV_INDEX_9&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca5a3d4de1a5a2f878f4b675e599dee3ca" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca5a3d4de1a5a2f878f4b675e599dee3ca"></a>UV_INDEX_10&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca20dc0f6c9086b0a3a4f46458d50101d6" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca20dc0f6c9086b0a3a4f46458d50101d6"></a>UV_INDEX_11&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779"></a>UV_INDEX_0&#160;</td><td class="fielddoc"><p>UV index 0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca68beda1915a5ffe0c03cb8808b885d13" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca68beda1915a5ffe0c03cb8808b885d13"></a>UV_INDEX_1&#160;</td><td class="fielddoc"><p>UV index 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cae51f65271ffa5a82e8585094bb98e286" name="a34d3ff3206a4c34bb8bb8a8c2d56092cae51f65271ffa5a82e8585094bb98e286"></a>UV_INDEX_2&#160;</td><td class="fielddoc"><p>UV index 2. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cad1906c67ae2e9e5a7fa85eab60311197" name="a34d3ff3206a4c34bb8bb8a8c2d56092cad1906c67ae2e9e5a7fa85eab60311197"></a>UV_INDEX_3&#160;</td><td class="fielddoc"><p>UV index 3. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cae8cef03bdf41d59ff15f91fcd3943c6a" name="a34d3ff3206a4c34bb8bb8a8c2d56092cae8cef03bdf41d59ff15f91fcd3943c6a"></a>UV_INDEX_4&#160;</td><td class="fielddoc"><p>UV index 4. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d4280d6ec8f2ab489e1d35a11d54375" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d4280d6ec8f2ab489e1d35a11d54375"></a>UV_INDEX_5&#160;</td><td class="fielddoc"><p>UV index 5. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092caeea0ef28961ed9b0fb7696a9a7d0495f" name="a34d3ff3206a4c34bb8bb8a8c2d56092caeea0ef28961ed9b0fb7696a9a7d0495f"></a>UV_INDEX_6&#160;</td><td class="fielddoc"><p>UV index 6. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d8b0e351d1c9844cc3fd535ab4ee415" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca2d8b0e351d1c9844cc3fd535ab4ee415"></a>UV_INDEX_7&#160;</td><td class="fielddoc"><p>UV index 7. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092cac128d20b21c08a45d2afcf6af0555c19" name="a34d3ff3206a4c34bb8bb8a8c2d56092cac128d20b21c08a45d2afcf6af0555c19"></a>UV_INDEX_8&#160;</td><td class="fielddoc"><p>UV index 8. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca05428556b76acf3c3d735d00369767ef" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca05428556b76acf3c3d735d00369767ef"></a>UV_INDEX_9&#160;</td><td class="fielddoc"><p>UV index 9. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca5a3d4de1a5a2f878f4b675e599dee3ca" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca5a3d4de1a5a2f878f4b675e599dee3ca"></a>UV_INDEX_10&#160;</td><td class="fielddoc"><p>UV index 10. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a34d3ff3206a4c34bb8bb8a8c2d56092ca20dc0f6c9086b0a3a4f46458d50101d6" name="a34d3ff3206a4c34bb8bb8a8c2d56092ca20dc0f6c9086b0a3a4f46458d50101d6"></a>UV_INDEX_11&#160;</td><td class="fielddoc"><p>UV index 11. </p>
+</td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="UV_8h_source.html#l00005">5</a> of file <a class="el" href="UV_8h_source.html">UV.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UV_8h_source.html#l00013">13</a> of file <a class="el" href="UV_8h_source.html">UV.h</a>.</p>
 
 </div>
 </div>
@@ -200,13 +227,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UV_8c_source.html#l00012">12</a> of file <a class="el" href="UV_8c_source.html">UV.c</a>.</p>
+<p>Read the current UV index from the sensor. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a static <a class="el" href="#a34d3ff3206a4c34bb8bb8a8c2d56092c" title="UV index levels (0-11).">UV_Index_t</a> with the current level </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="UV_8c_source.html#l00021">21</a> of file <a class="el" href="UV_8c_source.html">UV.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="UV_8h_afa1ae84128276b5043a7f82e369e6d1b_icgraph.png" border="0" usemap="#aUV_8h_afa1ae84128276b5043a7f82e369e6d1b_icgraph" loading="lazy" alt=""/></div>
 <map name="aUV_8h_afa1ae84128276b5043a7f82e369e6d1b_icgraph" id="aUV_8h_afa1ae84128276b5043a7f82e369e6d1b_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,338,32"/>
+<area shape="rect" title="Read the current UV index from the sensor." alt="" coords="231,5,338,32"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
@@ -231,13 +261,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="UV_8c_source.html#l00007">7</a> of file <a class="el" href="UV_8c_source.html">UV.c</a>.</p>
+<p>Initialise the UV sensor (start ADC DMA). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>Pointer to UV configuration struct </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HAL_OK</td><td>on success, otherwise HAL_ERROR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="UV_8c_source.html#l00015">15</a> of file <a class="el" href="UV_8c_source.html">UV.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="UV_8h_a759408b4dc6c29a42789fc8c5af2df9c_icgraph.png" border="0" usemap="#aUV_8h_a759408b4dc6c29a42789fc8c5af2df9c_icgraph" loading="lazy" alt=""/></div>
 <map name="aUV_8h_a759408b4dc6c29a42789fc8c5af2df9c_icgraph" id="aUV_8h_a759408b4dc6c29a42789fc8c5af2df9c_icgraph">
-<area shape="rect" title=" " alt="" coords="318,5,384,32"/>
+<area shape="rect" title="Initialise the UV sensor (start ADC DMA)." alt="" coords="318,5,384,32"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>

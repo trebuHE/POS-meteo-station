@@ -1,14 +1,23 @@
+/**
+ * @file    UV.c
+ * @brief   UV index sensor driver implementation
+ * @author  POS Meteo Station Team
+ * @date    2025
+ */
+
 #include "UV.h"
 
 static UV_Config_t* UV_config_p;
 static volatile  uint16_t adc_buff = 0;
 static UV_Index_t UV_index;
 
+/** @brief  Initialise the UV sensor (start ADC DMA) */
 HAL_StatusTypeDef UV_Init(UV_Config_t *config_p) {
 	UV_config_p = config_p;
 	return HAL_ADC_Start_DMA(UV_config_p->adc_p, (uint32_t*)(&adc_buff), 1);
 }
 
+/** @brief  Read the current UV index from the sensor */
 UV_Index_t* UV_Get_Index(void) {
 	uint16_t adc_voltage = (float)adc_buff / (float)UV_config_p->adc_max_value * UV_config_p->adc_max_voltage * 1000.0f;
 

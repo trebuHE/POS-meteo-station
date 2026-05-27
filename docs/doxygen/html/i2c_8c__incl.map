@@ -1,0 +1,9 @@
+<map id="Core/Src/i2c.c" name="Core/Src/i2c.c">
+<area shape="rect" id="Node000001" title="This file provides code for the configuration of the I2C instances." alt="" coords="11,5,116,32"/>
+<area shape="rect" id="Node000002" href="$i2c_8h.html" title="This file contains all the function prototypes for the i2c.c file." alt="" coords="39,80,88,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="64,30,66,65,61,64,63,35"/>
+<area shape="rect" id="Node000003" href="$main_8h.html" title=": Header for main.c file." alt="" coords="33,155,94,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="64,105,66,139,61,139,63,110"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,229,122,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="65,180,66,214,61,213,62,184"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="BME280_WakeUP" name="BME280_WakeUP">
+<area shape="rect" id="Node000001" title=" " alt="" coords="413,5,544,32"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
+<area shape="rect" id="Node000003" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="85,20,55,21,55,16,90,18"/>
+</map>

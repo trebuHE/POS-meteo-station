@@ -1,0 +1,9 @@
+<map id="modules_sleep" name="modules_sleep">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,114,57"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title=" " alt="" coords="162,31,335,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,41,149,43,144,45,114,47"/>
+<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title=" " alt="" coords="383,5,510,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="335,30,370,28,365,29,336,36"/>
+<area shape="rect" id="Node000004" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title=" " alt="" coords="390,56,503,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="336,52,377,60,372,60,335,58"/>
+</map>

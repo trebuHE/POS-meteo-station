@@ -1,0 +1,47 @@
+<map id="Core/Src/main.c" name="Core/Src/main.c">
+<area shape="rect" id="Node000001" title=": Main program body" alt="" coords="199,5,315,32"/>
+<area shape="rect" id="Node000002" href="$main_8h.html" title=": Header for main.c file." alt="" coords="307,229,367,256"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,25,162,32,123,43,85,59,52,82,28,106,13,130,9,154,13,167,21,180,39,193,66,205,139,222,220,232,294,239,288,240,220,237,138,227,64,210,36,198,17,183,8,169,4,155,8,128,24,102,48,78,83,54,121,38,161,27,200,22"/>
+<area shape="rect" id="Node000004" href="$adc_8h.html" title="This file contains all the function prototypes for the adc.c file." alt="" coords="31,155,85,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="196,24,164,30,129,41,95,57,68,82,61,95,57,109,56,140,51,139,51,108,56,93,64,78,92,53,127,36,163,25,200,20"/>
+<area shape="rect" id="Node000005" href="$dma_8h.html" title="This file contains all the function prototypes for the dma.c file." alt="" coords="79,80,136,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="229,35,149,75,146,71,232,30"/>
+<area shape="rect" id="Node000006" href="$i2c_8h.html" title="This file contains all the function prototypes for the i2c.c file." alt="" coords="160,80,209,107"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="242,35,210,71,206,67,246,31"/>
+<area shape="rect" id="Node000007" href="$rtc_8h.html" title="This file contains all the function prototypes for the rtc.c file." alt="" coords="233,80,280,107"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="258,30,259,65,254,64,256,35"/>
+<area shape="rect" id="Node000008" href="$spi_8h.html" title="This file contains all the function prototypes for the spi.c file." alt="" coords="304,80,353,107"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="270,30,308,69,303,69,269,35"/>
+<area shape="rect" id="Node000009" href="$usart_8h.html" title="This file contains all the function prototypes for the usart.c file." alt="" coords="378,80,439,107"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="283,30,371,72,366,74,283,35"/>
+<area shape="rect" id="Node000010" href="$gpio_8h.html" title="This file contains all the function prototypes for the gpio.c file." alt="" coords="463,80,520,107"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="298,30,451,78,446,80,298,35"/>
+<area shape="rect" id="Node000011" href="$FSM_8h.html" title=" " alt="" coords="663,80,723,107"/>
+<area shape="poly" id="edge17_Node000001_Node000011" title=" " alt="" coords="315,27,649,83,645,86,316,32"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="279,304,395,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="339,255,339,290,335,287,335,258"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="85,174,293,227,290,232,85,179"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="127,104,244,179,307,220,301,221,241,184,126,110"/>
+<area shape="poly" id="edge8_Node000006_Node000002" title=" " alt="" coords="199,105,316,218,311,219,197,110"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="265,105,325,216,320,215,262,109"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="327,105,321,141,321,181,329,215,324,213,315,182,316,140,323,109"/>
+<area shape="poly" id="edge14_Node000009_Node000002" title=" " alt="" coords="401,105,371,156,347,217,343,213,366,153,397,109"/>
+<area shape="poly" id="edge16_Node000010_Node000002" title=" " alt="" coords="478,106,421,157,359,220,356,216,418,153,473,108"/>
+<area shape="poly" id="edge18_Node000011_Node000002" title=" " alt="" coords="659,100,572,121,517,137,465,157,420,184,367,222,364,218,417,180,462,152,516,132,570,116,664,98"/>
+<area shape="rect" id="Node000012" href="$BME280__STM32_8h.html" title=" " alt="" coords="475,155,606,181"/>
+<area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="669,106,582,150,580,145,664,108"/>
+<area shape="rect" id="Node000013" href="$UV_8h.html" title=" " alt="" coords="630,155,681,181"/>
+<area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="688,106,670,143,667,139,684,109"/>
+<area shape="rect" id="Node000014" href="$gps_8h.html" title=" " alt="" coords="705,155,758,181"/>
+<area shape="poly" id="edge23_Node000011_Node000014" title=" " alt="" coords="701,105,720,142,715,140,698,110"/>
+<area shape="rect" id="Node000015" href="$PMS_8h.html" title=" " alt="" coords="782,155,843,181"/>
+<area shape="poly" id="edge24_Node000011_Node000015" title=" " alt="" coords="714,105,781,147,776,146,713,110"/>
+<area shape="rect" id="Node000016" href="$CC1101__BSP_8h.html" title=" " alt="" coords="868,155,979,181"/>
+<area shape="poly" id="edge26_Node000011_Node000016" title=" " alt="" coords="724,102,872,149,866,150,723,107"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="1003,155,1063,181"/>
+<area shape="poly" id="edge28_Node000011_Node000017" title=" " alt="" coords="723,97,837,118,990,154,985,154,836,124,723,103"/>
+<area shape="poly" id="edge20_Node000012_Node000002" title=" " alt="" coords="508,181,382,228,381,223,503,183"/>
+<area shape="poly" id="edge22_Node000013_Node000002" title=" " alt="" coords="632,177,619,184,491,214,383,236,382,230,490,209,617,179,627,179"/>
+<area shape="poly" id="edge25_Node000015_Node000002" title=" " alt="" coords="784,178,771,184,662,204,554,220,383,240,382,234,553,215,661,199,770,179,779,179"/>
+<area shape="poly" id="edge27_Node000016_Node000002" title=" " alt="" coords="865,180,856,184,588,218,383,240,382,234,587,213,855,179,870,179"/>
+</map>

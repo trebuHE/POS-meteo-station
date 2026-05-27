@@ -28,7 +28,7 @@
 <area shape="poly" id="edge14_Node000009_Node000002" title=" " alt="" coords="401,105,371,156,347,217,343,213,366,153,397,109"/>
 <area shape="poly" id="edge16_Node000010_Node000002" title=" " alt="" coords="478,106,421,157,359,220,356,216,418,153,473,108"/>
 <area shape="poly" id="edge18_Node000011_Node000002" title=" " alt="" coords="659,100,572,121,517,137,465,157,420,184,367,222,364,218,417,180,462,152,516,132,570,116,664,98"/>
-<area shape="rect" id="Node000012" href="$BME280__STM32_8h.html" title=" " alt="" coords="475,155,606,181"/>
+<area shape="rect" id="Node000012" href="$BME280__STM32_8h.html" title="BME280 temperature, pressure and humidity sensor driver." alt="" coords="475,155,606,181"/>
 <area shape="poly" id="edge19_Node000011_Node000012" title=" " alt="" coords="669,106,582,150,580,145,664,108"/>
 <area shape="rect" id="Node000013" href="$UV_8h.html" title=" " alt="" coords="630,155,681,181"/>
 <area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="688,106,670,143,667,139,684,109"/>

@@ -1,6 +1,6 @@
 <map id="Core/Src/BME280_STM32.c" name="Core/Src/BME280_STM32.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,193,32"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8h.html" title=" " alt="" coords="33,80,165,107"/>
+<area shape="rect" id="Node000001" title="BME280 sensor driver implementation." alt="" coords="5,5,193,32"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8h.html" title="BME280 temperature, pressure and humidity sensor driver." alt="" coords="33,80,165,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,30,102,65,96,64,98,35"/>
 <area shape="rect" id="Node000003" href="$main_8h.html" title=": Header for main.c file." alt="" coords="69,155,129,181"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,105,102,140,96,138,98,110"/>

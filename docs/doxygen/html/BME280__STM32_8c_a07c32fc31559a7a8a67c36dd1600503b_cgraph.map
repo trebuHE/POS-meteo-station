@@ -1,11 +1,11 @@
 <map id="BME280_Measure" name="BME280_Measure">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,113,134,140"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="183,5,346,48"/>
+<area shape="rect" id="Node000001" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="5,113,134,140"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="183,5,346,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,111,180,58,195,53,191,56,183,62,93,115"/>
 <area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="182,72,347,115"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,113,169,109,164,111,135,118"/>
-<area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="182,139,346,181"/>
+<area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="182,139,346,181"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,135,169,142,164,144,135,140"/>
-<area shape="rect" id="Node000005" href="$BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="210,205,318,232"/>
+<area shape="rect" id="Node000005" href="$BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="210,205,318,232"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="91,138,133,164,183,191,200,200,195,200,181,196,130,169,90,143"/>
 </map>

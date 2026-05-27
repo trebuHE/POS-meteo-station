@@ -1,8 +1,8 @@
 <map id="BME280_compensate_T_int32" name="BME280_compensate_T_int32">
-<area shape="rect" id="Node000001" title=" " alt="" coords="590,5,754,48"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="413,13,542,40"/>
+<area shape="rect" id="Node000001" title="Compensate raw temperature using calibration data." alt="" coords="590,5,754,48"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,13,542,40"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="571,27,542,29,542,24,577,27"/>
-<area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,13,365,40"/>
+<area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,13,365,40"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="395,27,366,29,366,24,400,27"/>
 <area shape="rect" id="Node000004" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,13,183,40"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="213,27,184,29,183,24,218,26"/>

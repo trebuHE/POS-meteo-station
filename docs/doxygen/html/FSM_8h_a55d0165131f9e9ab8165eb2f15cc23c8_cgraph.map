@@ -1,6 +1,6 @@
 <map id="FSM_Run" name="FSM_Run">
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,784,86,811"/>
-<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="139,193,274,220"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="139,193,274,220"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,783,47,707,58,585,69,514,84,440,104,366,131,296,153,260,181,229,179,234,157,263,136,298,110,368,89,441,74,515,63,585,52,707,49,784"/>
 <area shape="rect" id="Node000009" href="$CC1101__BSP_8c.html#ab7dbca39fc858732abd03cd1e99b970e" title=" " alt="" coords="330,881,454,908"/>
 <area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="51,808,65,834,82,864,105,893,135,915,160,925,187,931,243,932,296,924,345,912,341,915,297,929,243,938,186,936,159,930,132,920,102,897,78,867,60,837,52,814"/>
@@ -44,17 +44,17 @@
 <area shape="poly" id="edge66_Node000001_Node000046" title=" " alt="" coords="48,808,57,899,73,1031,84,1100,98,1164,115,1216,136,1252,138,1256,133,1255,132,1255,111,1218,93,1165,79,1101,67,1032,52,899,48,814"/>
 <area shape="rect" id="Node000048" href="$UV_8c.html#afa1ae84128276b5043a7f82e369e6d1b" title=" " alt="" coords="153,1316,260,1343"/>
 <area shape="poly" id="edge68_Node000001_Node000048" title=" " alt="" coords="47,808,56,907,70,1055,81,1132,95,1204,114,1262,136,1302,142,1310,137,1309,132,1306,109,1264,90,1205,76,1133,64,1056,50,908,47,814"/>
-<area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="328,139,456,165"/>
+<area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="328,139,456,165"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="253,191,332,168,328,172,256,195"/>
-<area shape="rect" id="Node000008" href="$BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title=" " alt="" coords="327,193,457,220"/>
+<area shape="rect" id="Node000008" href="$BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title="Wake the sensor from sleep for a forced measurement." alt="" coords="327,193,457,220"/>
 <area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="272,205,314,205,309,208,275,209"/>
-<area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="532,189,695,232"/>
+<area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="532,189,695,232"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="444,163,520,184,515,186,446,168"/>
 <area shape="rect" id="Node000005" href="$BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="531,5,696,48"/>
 <area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="404,137,447,98,504,58,518,53,515,56,507,62,450,102,409,140"/>
-<area shape="rect" id="Node000006" href="$BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="531,72,696,115"/>
+<area shape="rect" id="Node000006" href="$BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="531,72,696,115"/>
 <area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="444,136,518,117,514,121,447,140"/>
-<area shape="rect" id="Node000007" href="$BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="559,139,668,165"/>
+<area shape="rect" id="Node000007" href="$BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="559,139,668,165"/>
 <area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="455,150,545,150,541,154,458,154"/>
 <area shape="rect" id="Node000010" href="$CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title=" " alt="" coords="770,527,943,553"/>
 <area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="399,879,439,824,469,792,504,766,535,752,565,747,618,750,644,751,669,749,694,740,720,722,735,704,742,685,744,645,745,605,752,584,768,564,775,561,771,564,772,567,757,586,750,606,749,646,747,686,740,706,723,726,696,745,670,754,644,757,618,755,565,752,537,757,507,770,472,796,443,827,403,883"/>
@@ -86,7 +86,7 @@
 <area shape="poly" id="edge27_Node000018_Node000012" title=" " alt="" coords="919,501,944,512,960,525,969,538,978,551,993,563,1001,570,996,570,989,567,974,554,965,541,956,529,942,517,919,506"/>
 <area shape="poly" id="edge29_Node000019_Node000011" title=" " alt="" coords="913,450,944,462,989,487,1028,517,1023,517,986,492,942,466,914,455"/>
 <area shape="poly" id="edge30_Node000019_Node000012" title=" " alt="" coords="921,448,945,462,957,475,964,488,970,513,976,539,982,551,993,563,997,569,992,569,989,567,978,554,971,541,965,515,959,490,952,478,941,466,922,454"/>
-<area shape="rect" id="Node000030" href="$BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title=" " alt="" coords="344,252,440,279"/>
+<area shape="rect" id="Node000030" href="$BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="344,252,440,279"/>
 <area shape="poly" id="edge41_Node000029_Node000030" title=" " alt="" coords="225,354,354,284,351,289,229,358"/>
 <area shape="rect" id="Node000033" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title=" " alt="" coords="346,471,439,497"/>
 <area shape="poly" id="edge44_Node000029_Node000033" title=" " alt="" coords="225,368,253,376,280,390,296,402,306,415,329,441,357,461,351,463,325,445,302,418,292,406,278,394,251,381,228,373"/>
@@ -96,9 +96,9 @@
 <area shape="poly" id="edge55_Node000029_Node000037" title=" " alt="" coords="225,364,341,365,337,368,228,369"/>
 <area shape="rect" id="Node000038" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title=" " alt="" coords="360,404,425,431"/>
 <area shape="poly" id="edge56_Node000029_Node000038" title=" " alt="" coords="225,369,347,403,342,406,228,374"/>
-<area shape="rect" id="Node000031" href="$BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title=" " alt="" coords="555,256,672,283"/>
+<area shape="rect" id="Node000031" href="$BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="555,256,672,283"/>
 <area shape="poly" id="edge42_Node000030_Node000031" title=" " alt="" coords="440,264,542,266,538,270,442,269"/>
-<area shape="rect" id="Node000032" href="$BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="817,256,896,283"/>
+<area shape="rect" id="Node000032" href="$BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="817,256,896,283"/>
 <area shape="poly" id="edge43_Node000031_Node000032" title=" " alt="" coords="671,267,804,268,799,271,673,272"/>
 <area shape="poly" id="edge45_Node000033_Node000010" title=" " alt="" coords="439,487,756,526,752,529,440,492"/>
 <area shape="poly" id="edge50_Node000033_Node000011" title=" " alt="" coords="418,469,455,441,470,419,476,398,484,378,504,360,534,346,561,339,585,336,609,338,660,349,722,360,838,370,887,383,944,411,974,433,1001,460,1040,513,1035,513,997,463,971,437,942,416,885,388,837,375,721,365,659,354,609,343,585,342,561,344,536,351,507,365,489,381,481,400,474,422,459,444,422,472"/>

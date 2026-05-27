@@ -92,13 +92,16 @@ $(function(){initNavTree('BME280__STM32_8h.html','',''); });
   <div class="headertitle"><div class="title">BME280_STM32.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>BME280 temperature, pressure and humidity sensor driver.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for BME280_STM32.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h__incl.png" border="0" usemap="#aCore_2Inc_2BME280__STM32_8h" loading="lazy" alt=""/></div>
 <map name="aCore_2Inc_2BME280__STM32_8h" id="aCore_2Inc_2BME280__STM32_8h">
-<area shape="rect" title=" " alt="" coords="5,5,191,32"/>
+<area shape="rect" title="BME280 temperature, pressure and humidity sensor driver." alt="" coords="5,5,191,32"/>
 <area shape="rect" href="main_8h.html" title=": Header for main.c file." alt="" coords="68,80,128,107"/>
 <area shape="poly" title=" " alt="" coords="99,30,101,65,95,64,97,35"/>
 <area shape="rect" title=" " alt="" coords="40,155,156,181"/>
@@ -110,10 +113,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h__dep__incl.png" border="0" usemap="#aCore_2Inc_2BME280__STM32_8hdep" loading="lazy" alt=""/></div>
 <map name="aCore_2Inc_2BME280__STM32_8hdep" id="aCore_2Inc_2BME280__STM32_8hdep">
-<area shape="rect" title=" " alt="" coords="127,5,312,32"/>
+<area shape="rect" title="BME280 temperature, pressure and humidity sensor driver." alt="" coords="127,5,312,32"/>
 <area shape="rect" href="FSM_8h.html" title=" " alt="" coords="76,80,190,107"/>
 <area shape="poly" title=" " alt="" coords="195,41,149,82,146,78,191,44"/>
-<area shape="rect" href="BME280__STM32_8c.html" title=" " alt="" coords="214,80,401,107"/>
+<area shape="rect" href="BME280__STM32_8c.html" title="BME280 sensor driver implementation." alt="" coords="214,80,401,107"/>
 <area shape="poly" title=" " alt="" coords="247,40,295,80,290,80,246,45"/>
 <area shape="rect" href="FSM_8c.html" title=" " alt="" coords="5,155,122,181"/>
 <area shape="poly" title=" " alt="" coords="113,117,77,156,74,152,108,119"/>
@@ -127,6 +130,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:BME280_5FData_5Ft" id="r_BME280_5FData_5Ft"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structBME280__Data__t.html">BME280_Data_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">BME280 measurement data container.  <a href="structBME280__Data__t.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -134,48 +138,89 @@ Macros</h2></td></tr>
 <tr class="memitem:a51fada77ee8570752a87fdccf02b5e61" id="r_a51fada77ee8570752a87fdccf02b5e61"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a51fada77ee8570752a87fdccf02b5e61">SUPPORT_64BIT</a>&#160;&#160;&#160;1</td></tr>
 <tr class="memitem:a632fe389011b56233474fad5bc075e4b" id="r_a632fe389011b56233474fad5bc075e4b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a632fe389011b56233474fad5bc075e4b">BME280_ADDRESS</a>&#160;&#160;&#160;0xEC</td></tr>
 <tr class="memitem:a22dccf9967969390f776dbfd512d5339" id="r_a22dccf9967969390f776dbfd512d5339"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a22dccf9967969390f776dbfd512d5339">OSRS_OFF</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:a22dccf9967969390f776dbfd512d5339"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling definitions.  <br /></td></tr>
 <tr class="memitem:a25fdd5ae5a289867fa264cc7a9d415d8" id="r_a25fdd5ae5a289867fa264cc7a9d415d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a25fdd5ae5a289867fa264cc7a9d415d8">OSRS_1</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:a25fdd5ae5a289867fa264cc7a9d415d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling x1.  <br /></td></tr>
 <tr class="memitem:a52b6f91a0ec9546e60f9aebcc0f5fdb1" id="r_a52b6f91a0ec9546e60f9aebcc0f5fdb1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a52b6f91a0ec9546e60f9aebcc0f5fdb1">OSRS_2</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="memdesc:a52b6f91a0ec9546e60f9aebcc0f5fdb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling x2.  <br /></td></tr>
 <tr class="memitem:afec9a4157fffbca9746348ba0fa26944" id="r_afec9a4157fffbca9746348ba0fa26944"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#afec9a4157fffbca9746348ba0fa26944">OSRS_4</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:afec9a4157fffbca9746348ba0fa26944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling x4.  <br /></td></tr>
 <tr class="memitem:a9814c463a0ce896eb14a0175e3fef311" id="r_a9814c463a0ce896eb14a0175e3fef311"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9814c463a0ce896eb14a0175e3fef311">OSRS_8</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:a9814c463a0ce896eb14a0175e3fef311"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling x8.  <br /></td></tr>
 <tr class="memitem:a9b84ed65478c526724cdca93828b710d" id="r_a9b84ed65478c526724cdca93828b710d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a9b84ed65478c526724cdca93828b710d">OSRS_16</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="memdesc:a9b84ed65478c526724cdca93828b710d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Oversampling x16.  <br /></td></tr>
 <tr class="memitem:a2d957317ff490fa73cd4377d5ebf0b0d" id="r_a2d957317ff490fa73cd4377d5ebf0b0d"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a2d957317ff490fa73cd4377d5ebf0b0d">MODE_SLEEP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:a2d957317ff490fa73cd4377d5ebf0b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mode definitions.  <br /></td></tr>
 <tr class="memitem:abd053cf07f5f643126a9840a62133d08" id="r_abd053cf07f5f643126a9840a62133d08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#abd053cf07f5f643126a9840a62133d08">MODE_FORCED</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:abd053cf07f5f643126a9840a62133d08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Forced mode (single measurement, then sleep).  <br /></td></tr>
 <tr class="memitem:a199e55c829920c767a3f1f42a6a7c1d8" id="r_a199e55c829920c767a3f1f42a6a7c1d8"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a199e55c829920c767a3f1f42a6a7c1d8">MODE_NORMAL</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:a199e55c829920c767a3f1f42a6a7c1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal continuous mode.  <br /></td></tr>
 <tr class="memitem:aa164fc2769f7547c6aa01a8f1f4cff3e" id="r_aa164fc2769f7547c6aa01a8f1f4cff3e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa164fc2769f7547c6aa01a8f1f4cff3e">T_SB_0p5</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:aa164fc2769f7547c6aa01a8f1f4cff3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby time (normal mode).  <br /></td></tr>
 <tr class="memitem:a46d2ce01896a92cdf9a8874db8207f86" id="r_a46d2ce01896a92cdf9a8874db8207f86"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a46d2ce01896a92cdf9a8874db8207f86">T_SB_62p5</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:a46d2ce01896a92cdf9a8874db8207f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 62.5 ms.  <br /></td></tr>
 <tr class="memitem:a4fdb0f4f31b3dc4cfea51696eb06fc64" id="r_a4fdb0f4f31b3dc4cfea51696eb06fc64"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4fdb0f4f31b3dc4cfea51696eb06fc64">T_SB_125</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="memdesc:a4fdb0f4f31b3dc4cfea51696eb06fc64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 125 ms.  <br /></td></tr>
 <tr class="memitem:acdc90c1cc3d4fbb7ddc20ebbcf86bbc5" id="r_acdc90c1cc3d4fbb7ddc20ebbcf86bbc5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#acdc90c1cc3d4fbb7ddc20ebbcf86bbc5">T_SB_250</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:acdc90c1cc3d4fbb7ddc20ebbcf86bbc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 250 ms.  <br /></td></tr>
 <tr class="memitem:a843b70be40e8f2c7f0687437c6cd701b" id="r_a843b70be40e8f2c7f0687437c6cd701b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a843b70be40e8f2c7f0687437c6cd701b">T_SB_500</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:a843b70be40e8f2c7f0687437c6cd701b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 500 ms.  <br /></td></tr>
 <tr class="memitem:a010573e716913a2fc6abee4672d1a47b" id="r_a010573e716913a2fc6abee4672d1a47b"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a010573e716913a2fc6abee4672d1a47b">T_SB_1000</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="memdesc:a010573e716913a2fc6abee4672d1a47b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 1000 ms.  <br /></td></tr>
 <tr class="memitem:a7019adb0ae1f890cb2746c8e20804f10" id="r_a7019adb0ae1f890cb2746c8e20804f10"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7019adb0ae1f890cb2746c8e20804f10">T_SB_10</a>&#160;&#160;&#160;0x06</td></tr>
+<tr class="memdesc:a7019adb0ae1f890cb2746c8e20804f10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 10 ms.  <br /></td></tr>
 <tr class="memitem:aa9a7a443640c424c7d5a40ff03ef497a" id="r_aa9a7a443640c424c7d5a40ff03ef497a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa9a7a443640c424c7d5a40ff03ef497a">T_SB_20</a>&#160;&#160;&#160;0x07</td></tr>
+<tr class="memdesc:aa9a7a443640c424c7d5a40ff03ef497a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standby 20 ms.  <br /></td></tr>
 <tr class="memitem:a3d2dbed30067f03190d2accd2645b56c" id="r_a3d2dbed30067f03190d2accd2645b56c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a3d2dbed30067f03190d2accd2645b56c">IIR_OFF</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:a3d2dbed30067f03190d2accd2645b56c"><td class="mdescLeft">&#160;</td><td class="mdescRight">IIR filter coefficients.  <br /></td></tr>
 <tr class="memitem:a065c476c5be0bab51f345a601d433e24" id="r_a065c476c5be0bab51f345a601d433e24"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a065c476c5be0bab51f345a601d433e24">IIR_2</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="memdesc:a065c476c5be0bab51f345a601d433e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter coefficient 2.  <br /></td></tr>
 <tr class="memitem:a62c8da1cf47be7331c575ac098326e16" id="r_a62c8da1cf47be7331c575ac098326e16"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a62c8da1cf47be7331c575ac098326e16">IIR_4</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="memdesc:a62c8da1cf47be7331c575ac098326e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter coefficient 4.  <br /></td></tr>
 <tr class="memitem:a1e5d59ee7f276b6bfbef49cf54773b1c" id="r_a1e5d59ee7f276b6bfbef49cf54773b1c"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1e5d59ee7f276b6bfbef49cf54773b1c">IIR_8</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="memdesc:a1e5d59ee7f276b6bfbef49cf54773b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter coefficient 8.  <br /></td></tr>
 <tr class="memitem:a168ee3693070c8fd9cf8483bbfb342a9" id="r_a168ee3693070c8fd9cf8483bbfb342a9"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a168ee3693070c8fd9cf8483bbfb342a9">IIR_16</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="memdesc:a168ee3693070c8fd9cf8483bbfb342a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filter coefficient 16.  <br /></td></tr>
 <tr class="memitem:a95c754a9fe808331240df62b32f782d5" id="r_a95c754a9fe808331240df62b32f782d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a95c754a9fe808331240df62b32f782d5">ID_REG</a>&#160;&#160;&#160;0xD0</td></tr>
+<tr class="memdesc:a95c754a9fe808331240df62b32f782d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register definitions.  <br /></td></tr>
 <tr class="memitem:a7cdd48a4218a992cff0505923edc52fe" id="r_a7cdd48a4218a992cff0505923edc52fe"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a7cdd48a4218a992cff0505923edc52fe">RESET_REG</a>&#160;&#160;&#160;0xE0</td></tr>
+<tr class="memdesc:a7cdd48a4218a992cff0505923edc52fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soft reset register.  <br /></td></tr>
 <tr class="memitem:a0c8d072281e1eb1503db135c70deb0a4" id="r_a0c8d072281e1eb1503db135c70deb0a4"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a0c8d072281e1eb1503db135c70deb0a4">CTRL_HUM_REG</a>&#160;&#160;&#160;0xF2</td></tr>
+<tr class="memdesc:a0c8d072281e1eb1503db135c70deb0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Humidity control register.  <br /></td></tr>
 <tr class="memitem:a1f7e79cfe81dc06414550fa52418941e" id="r_a1f7e79cfe81dc06414550fa52418941e"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a1f7e79cfe81dc06414550fa52418941e">STATUS_REG</a>&#160;&#160;&#160;0xF3</td></tr>
+<tr class="memdesc:a1f7e79cfe81dc06414550fa52418941e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status register.  <br /></td></tr>
 <tr class="memitem:aa7ef1f864bc7d2616c3866844d60d872" id="r_aa7ef1f864bc7d2616c3866844d60d872"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aa7ef1f864bc7d2616c3866844d60d872">CTRL_MEAS_REG</a>&#160;&#160;&#160;0xF4</td></tr>
+<tr class="memdesc:aa7ef1f864bc7d2616c3866844d60d872"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measurement control register.  <br /></td></tr>
 <tr class="memitem:af81594fa2c83e52e601f2e4a1d81d8bc" id="r_af81594fa2c83e52e601f2e4a1d81d8bc"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#af81594fa2c83e52e601f2e4a1d81d8bc">CONFIG_REG</a>&#160;&#160;&#160;0xF5</td></tr>
+<tr class="memdesc:af81594fa2c83e52e601f2e4a1d81d8bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration register.  <br /></td></tr>
 <tr class="memitem:a923307dd6c7ca6c6d9567d1f5c896a9a" id="r_a923307dd6c7ca6c6d9567d1f5c896a9a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a923307dd6c7ca6c6d9567d1f5c896a9a">PRESS_MSB_REG</a>&#160;&#160;&#160;0xF7</td></tr>
+<tr class="memdesc:a923307dd6c7ca6c6d9567d1f5c896a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pressure MSB register.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4a2d33eb424306161e70516c4e68e430" id="r_a4a2d33eb424306161e70516c4e68e430"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4a2d33eb424306161e70516c4e68e430">BME280_Config</a> (uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, uint8_t mode, uint8_t t_sb, uint8_t filter)</td></tr>
+<tr class="memdesc:a4a2d33eb424306161e70516c4e68e430"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the BME280 sensor.  <br /></td></tr>
 <tr class="memitem:a5bb79165d1624ab511f8d48244e8e129" id="r_a5bb79165d1624ab511f8d48244e8e129"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5bb79165d1624ab511f8d48244e8e129">BME280_WakeUP</a> (void)</td></tr>
+<tr class="memdesc:a5bb79165d1624ab511f8d48244e8e129"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wake the sensor from sleep for a forced measurement.  <br /></td></tr>
 <tr class="memitem:a07c32fc31559a7a8a67c36dd1600503b" id="r_a07c32fc31559a7a8a67c36dd1600503b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a07c32fc31559a7a8a67c36dd1600503b">BME280_Measure</a> (float *temperature, float *pressure, float *humidity)</td></tr>
+<tr class="memdesc:a07c32fc31559a7a8a67c36dd1600503b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a measurement and retrieve temperature, pressure, humidity.  <br /></td></tr>
 <tr class="memitem:a6eca04f74fec4840ef5f0369b15e767c" id="r_a6eca04f74fec4840ef5f0369b15e767c"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a6eca04f74fec4840ef5f0369b15e767c">BME280_Init</a> (void)</td></tr>
+<tr class="memdesc:a6eca04f74fec4840ef5f0369b15e767c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the BME280 with default settings.  <br /></td></tr>
 <tr class="memitem:ab8143ce71ef34650ff421159e5ed262f" id="r_ab8143ce71ef34650ff421159e5ed262f"><td class="memItemLeft"><a class="el" href="structBME280__Data__t.html">BME280_Data_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ab8143ce71ef34650ff421159e5ed262f">BME280_Get_Data</a> (void)</td></tr>
+<tr class="memdesc:ab8143ce71ef34650ff421159e5ed262f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a full measurement cycle and return the data.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a74796addc8b4acbbd71cdae2ffb68c4d" id="r_a74796addc8b4acbbd71cdae2ffb68c4d"><td class="memItemLeft">I2C_HandleTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a74796addc8b4acbbd71cdae2ffb68c4d">BME280_I2C</a></td></tr>
 </table>
-<a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>BME280 temperature, pressure and humidity sensor driver. </p>
+<dl class="section author"><dt>Author</dt><dd>ControllersTech.com </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Dec 14, 2021</dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (C) 2017 ControllersTech.com This is a free software under the GNU license, you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation. This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly or indirectly by this software, read more about this on the GNU General Public License. </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a632fe389011b56233474fad5bc075e4b" name="a632fe389011b56233474fad5bc075e4b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a632fe389011b56233474fad5bc075e4b">&#9670;&#160;</a></span>BME280_ADDRESS</h2>
 
@@ -188,7 +233,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00032">32</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00026">26</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +249,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00027">27</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00021">21</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -220,7 +265,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00118">118</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Configuration register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00114">114</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -236,7 +283,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00115">115</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Humidity control register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00111">111</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -252,7 +301,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00117">117</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Measurement control register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00113">113</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -268,7 +319,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00113">113</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Register definitions. </p>
+<p>Chip ID register </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00109">109</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -284,7 +338,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00109">109</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Filter coefficient 16. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00106">106</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -300,7 +356,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00106">106</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Filter coefficient 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00103">103</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -316,7 +374,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00107">107</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Filter coefficient 4. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00104">104</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -332,7 +392,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00108">108</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Filter coefficient 8. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00105">105</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -348,7 +410,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00105">105</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>IIR filter coefficients. </p>
+<p>Filter off </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00102">102</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -364,7 +429,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00091">91</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Forced mode (single measurement, then sleep). </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00088">88</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -380,7 +447,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00092">92</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Normal continuous mode. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00089">89</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -396,7 +465,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00090">90</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Mode definitions. </p>
+<p>Sleep mode </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00087">87</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -412,7 +484,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00083">83</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling x1. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00080">80</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -428,7 +502,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00087">87</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling x16. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00084">84</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -444,7 +520,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00084">84</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling x2. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00081">81</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -460,7 +538,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00085">85</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling x4. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00082">82</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -476,7 +556,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00086">86</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling x8. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00083">83</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -492,7 +574,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00082">82</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Oversampling definitions. </p>
+<p>No oversampling (measurement skipped) </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00079">79</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -508,7 +593,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00119">119</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Pressure MSB register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00115">115</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -524,7 +611,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00114">114</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Soft reset register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00110">110</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -540,7 +629,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00116">116</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Status register. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00112">112</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -556,7 +647,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00029">29</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00023">23</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -572,7 +663,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00095">95</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby time (normal mode). </p>
+<p>Standby 0.5 ms </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00092">92</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -588,7 +682,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00101">101</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 10 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00098">98</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -604,7 +700,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00100">100</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 1000 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00097">97</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -620,7 +718,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00097">97</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 125 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00094">94</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -636,7 +736,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00102">102</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 20 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00099">99</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -652,7 +754,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00098">98</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 250 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00095">95</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -668,7 +772,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00099">99</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 500 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00096">96</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -684,7 +790,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00096">96</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
+<p>Standby 62.5 ms. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8h_source.html#l00093">93</a> of file <a class="el" href="BME280__STM32_8h_source.html">BME280_STM32.h</a>.</p>
 
 </div>
 </div>
@@ -728,14 +836,33 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00077">77</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Configure the BME280 sensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">osrs_t</td><td>Temperature oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">osrs_p</td><td>Pressure oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">osrs_h</td><td>Humidity oversampling (OSRS_OFF .. OSRS_16) </td></tr>
+    <tr><td class="paramname">mode</td><td>Sensor mode (MODE_SLEEP, MODE_FORCED, MODE_NORMAL) </td></tr>
+    <tr><td class="paramname">t_sb</td><td>Standby time (T_SB_0p5 .. T_SB_20) </td></tr>
+    <tr><td class="paramname">filter</td><td>IIR filter coefficient (IIR_OFF .. IIR_16) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, non-zero error code on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00062">62</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_cgraph.png" border="0" usemap="#aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_cgraph" id="aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,122,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="170,5,248,32"/>
+<area shape="rect" title="Configure the BME280 sensor." alt="" coords="5,5,122,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="170,5,248,32"/>
 <area shape="poly" title=" " alt="" coords="122,16,157,18,151,19,122,21"/>
 </map>
 </div>
@@ -744,8 +871,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_icgraph.png" border="0" usemap="#aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_icgraph" id="aBME280__STM32_8h_a4a2d33eb424306161e70516c4e68e430_icgraph">
-<area shape="rect" title=" " alt="" coords="463,5,579,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" title="Configure the BME280 sensor." alt="" coords="463,5,579,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="poly" title=" " alt="" coords="444,19,415,21,415,16,450,19"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
@@ -773,24 +900,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00051">51</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Perform a full measurement cycle and return the data. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a static <a class="el" href="structBME280__Data__t.html" title="BME280 measurement data container.">BME280_Data_t</a> with latest values </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00045">45</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_cgraph.png" border="0" usemap="#aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_cgraph" id="aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,139,140,165"/>
-<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="189,113,317,140"/>
+<area shape="rect" title="Perform a full measurement cycle and return the data." alt="" coords="5,139,140,165"/>
+<area shape="rect" href="BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="189,113,317,140"/>
 <area shape="poly" title=" " alt="" coords="139,140,176,137,171,139,141,145"/>
-<area shape="rect" href="BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title=" " alt="" coords="188,164,318,191"/>
+<area shape="rect" href="BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title="Wake the sensor from sleep for a forced measurement." alt="" coords="188,164,318,191"/>
 <area shape="poly" title=" " alt="" coords="140,159,175,165,169,167,140,164"/>
-<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="368,5,530,48"/>
+<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="368,5,530,48"/>
 <area shape="poly" title=" " alt="" coords="274,111,365,58,375,56,379,54,367,62,276,115"/>
 <area shape="rect" href="BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="366,72,531,115"/>
 <area shape="poly" title=" " alt="" coords="317,113,353,109,348,111,318,118"/>
-<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="366,139,531,181"/>
+<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="366,139,531,181"/>
 <area shape="poly" title=" " alt="" coords="317,135,354,143,348,144,317,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="394,205,503,232"/>
+<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="394,205,503,232"/>
 <area shape="poly" title=" " alt="" coords="296,138,319,150,344,171,353,181,367,191,383,201,377,200,365,196,350,185,340,175,317,154,295,143"/>
 </map>
 </div>
@@ -799,7 +929,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_icgraph.png" border="0" usemap="#aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_icgraph" id="aBME280__STM32_8h_ab8143ce71ef34650ff421159e5ed262f_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
@@ -824,16 +954,24 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00047">47</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Initialise the BME280 with default settings. </p>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>on success, non-zero on failure </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00041">41</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_cgraph.png" border="0" usemap="#aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_cgraph" id="aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,102,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title=" " alt="" coords="150,5,266,32"/>
+<area shape="rect" title="Initialise the BME280 with default settings." alt="" coords="5,5,102,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="150,5,266,32"/>
 <area shape="poly" title=" " alt="" coords="102,16,137,18,131,19,102,21"/>
-<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title=" " alt="" coords="314,5,392,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="314,5,392,32"/>
 <area shape="poly" title=" " alt="" coords="266,16,301,19,296,19,266,21"/>
 </map>
 </div>
@@ -842,7 +980,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_icgraph.png" border="0" usemap="#aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_icgraph" id="aBME280__STM32_8h_a6eca04f74fec4840ef5f0369b15e767c_icgraph">
-<area shape="rect" title=" " alt="" coords="318,5,415,32"/>
+<area shape="rect" title="Initialise the BME280 with default settings." alt="" coords="318,5,415,32"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,271,16,305,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
@@ -878,20 +1016,30 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00164">164</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Perform a measurement and retrieve temperature, pressure, humidity. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temperature</td><td>Pointer to store temperature (°C) </td></tr>
+    <tr><td class="paramname">pressure</td><td>Pointer to store pressure (Pa) </td></tr>
+    <tr><td class="paramname">humidity</td><td>Pointer to store humidity (RH) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00152">152</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_cgraph.png" border="0" usemap="#aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_cgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_cgraph" id="aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,113,134,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="183,5,346,48"/>
+<area shape="rect" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="5,113,134,140"/>
+<area shape="rect" href="BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title="Compensate raw humidity using calibration data." alt="" coords="183,5,346,48"/>
 <area shape="poly" title=" " alt="" coords="90,111,180,58,195,53,191,56,183,62,93,115"/>
 <area shape="rect" href="BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="182,72,347,115"/>
 <area shape="poly" title=" " alt="" coords="133,113,169,109,164,111,135,118"/>
-<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="182,139,346,181"/>
+<area shape="rect" href="BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title="Compensate raw temperature using calibration data." alt="" coords="182,139,346,181"/>
 <area shape="poly" title=" " alt="" coords="134,135,169,142,164,144,135,140"/>
-<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="210,205,318,232"/>
+<area shape="rect" href="BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title="Read raw ADC values from the sensor." alt="" coords="210,205,318,232"/>
 <area shape="poly" title=" " alt="" coords="91,138,133,164,183,191,200,200,195,200,181,196,130,169,90,143"/>
 </map>
 </div>
@@ -900,8 +1048,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_icgraph.png" border="0" usemap="#aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_icgraph" id="aBME280__STM32_8h_a07c32fc31559a7a8a67c36dd1600503b_icgraph">
-<area shape="rect" title=" " alt="" coords="413,5,542,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Perform a measurement and retrieve temperature, pressure, humidity." alt="" coords="413,5,542,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="poly" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
@@ -927,14 +1075,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00145">145</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
+<p>Wake the sensor from sleep for a forced measurement. </p>
+
+<p class="definition">Definition at line <a class="el" href="BME280__STM32_8c_source.html#l00130">130</a> of file <a class="el" href="BME280__STM32_8c_source.html">BME280_STM32.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="BME280__STM32_8h_a5bb79165d1624ab511f8d48244e8e129_icgraph.png" border="0" usemap="#aBME280__STM32_8h_a5bb79165d1624ab511f8d48244e8e129_icgraph" loading="lazy" alt=""/></div>
 <map name="aBME280__STM32_8h_a5bb79165d1624ab511f8d48244e8e129_icgraph" id="aBME280__STM32_8h_a5bb79165d1624ab511f8d48244e8e129_icgraph">
-<area shape="rect" title=" " alt="" coords="413,5,544,32"/>
-<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title=" " alt="" coords="231,5,365,32"/>
+<area shape="rect" title="Wake the sensor from sleep for a forced measurement." alt="" coords="413,5,544,32"/>
+<area shape="rect" href="BME280__STM32_8c.html#a42ebbef1095921a08f7827365239d51a" title="Perform a full measurement cycle and return the data." alt="" coords="231,5,365,32"/>
 <area shape="poly" title=" " alt="" coords="395,19,366,21,366,16,400,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>

@@ -34,7 +34,7 @@
 <area shape="poly" id="edge21_Node000011_Node000013" title=" " alt="" coords="688,106,670,143,667,139,684,109"/>
 <area shape="rect" id="Node000014" href="$gps_8h.html" title=" " alt="" coords="705,155,758,181"/>
 <area shape="poly" id="edge23_Node000011_Node000014" title=" " alt="" coords="701,105,720,142,715,140,698,110"/>
-<area shape="rect" id="Node000015" href="$PMS_8h.html" title=" " alt="" coords="782,155,843,181"/>
+<area shape="rect" id="Node000015" href="$PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="782,155,843,181"/>
 <area shape="poly" id="edge24_Node000011_Node000015" title=" " alt="" coords="714,105,781,147,776,146,713,110"/>
 <area shape="rect" id="Node000016" href="$CC1101__BSP_8h.html" title="CC1101 sub&#45;1GHz RF transceiver driver (433 MHz)." alt="" coords="868,155,979,181"/>
 <area shape="poly" id="edge26_Node000011_Node000016" title=" " alt="" coords="724,102,872,149,866,150,723,107"/>

@@ -92,6 +92,9 @@ $(function(){initNavTree('PMS_8c.html','',''); });
   <div class="headertitle"><div class="title">PMS.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>PMS5003 particulate matter sensor driver implementation.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="PMS_8h_source.html">PMS.h</a>&quot;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -99,8 +102,8 @@ Include dependency graph for PMS.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="PMS_8c__incl.png" border="0" usemap="#aCore_2Src_2PMS_8c" loading="lazy" alt=""/></div>
 <map name="aCore_2Src_2PMS_8c" id="aCore_2Src_2PMS_8c">
-<area shape="rect" title=" " alt="" coords="48,5,165,32"/>
-<area shape="rect" href="PMS_8h.html" title=" " alt="" coords="33,80,94,107"/>
+<area shape="rect" title="PMS5003 particulate matter sensor driver implementation." alt="" coords="48,5,165,32"/>
+<area shape="rect" href="PMS_8h.html" title="PMS5003 particulate matter sensor driver." alt="" coords="33,80,94,107"/>
 <area shape="poly" title=" " alt="" coords="98,35,81,68,76,65,100,30"/>
 <area shape="rect" title=" " alt="" coords="118,80,182,107"/>
 <area shape="poly" title=" " alt="" coords="114,30,137,66,132,67,114,35"/>
@@ -116,9 +119,13 @@ Include dependency graph for PMS.c:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae23e650ae5bf5744a713383cfc8724a5" id="r_ae23e650ae5bf5744a713383cfc8724a5"><td class="memItemLeft">HAL_StatusTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#ae23e650ae5bf5744a713383cfc8724a5">PMS_Init</a> (UART_HandleTypeDef *pms_uart)</td></tr>
+<tr class="memdesc:ae23e650ae5bf5744a713383cfc8724a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the PMS5003 sensor (start DMA + enable power).  <br /></td></tr>
 <tr class="memitem:a4739686c4fd62daff0eed5fe121ff232" id="r_a4739686c4fd62daff0eed5fe121ff232"><td class="memItemLeft"><a class="el" href="unionPMS__Data__t.html">PMS_Data_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4739686c4fd62daff0eed5fe121ff232">PMS_Get_Data</a> ()</td></tr>
+<tr class="memdesc:a4739686c4fd62daff0eed5fe121ff232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the latest sensor data (converts from DMA buffer).  <br /></td></tr>
 <tr class="memitem:a969aa1ca5b51f5a42abc575e17eb0109" id="r_a969aa1ca5b51f5a42abc575e17eb0109"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a969aa1ca5b51f5a42abc575e17eb0109">PMS_Is_Data_Valid</a> (<a class="el" href="unionPMS__Data__t.html">PMS_Data_t</a> *<a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a>)</td></tr>
+<tr class="memdesc:a969aa1ca5b51f5a42abc575e17eb0109"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validate a PMS5003 frame using its checksum.  <br /></td></tr>
 <tr class="memitem:a40e0032c3c04a4073fb114087c04e1ed" id="r_a40e0032c3c04a4073fb114087c04e1ed"><td class="memItemLeft"><a class="el" href="PMS_8h.html#a56cf6d5295d5888df6d8aebdfb84995f">European_Air_Quality_Index_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a40e0032c3c04a4073fb114087c04e1ed">PMS_Get_Quality_Index</a> (<a class="el" href="unionPMS__Data__t.html">PMS_Data_t</a> *<a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a>)</td></tr>
+<tr class="memdesc:a40e0032c3c04a4073fb114087c04e1ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the European Air Quality Index from the data.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -126,7 +133,13 @@ Variables</h2></td></tr>
 <tr class="memitem:a289eef4eb8421808ae6f18a56ebf9b9a" id="r_a289eef4eb8421808ae6f18a56ebf9b9a"><td class="memItemLeft">static <a class="el" href="unionPMS__Data__t.html">PMS_Data_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a289eef4eb8421808ae6f18a56ebf9b9a">PMS_Data</a> = { 0 }</td></tr>
 <tr class="memitem:af713aec5def28f305446d29cefa9212a" id="r_af713aec5def28f305446d29cefa9212a"><td class="memItemLeft">static <a class="el" href="PMS_8h.html#a56cf6d5295d5888df6d8aebdfb84995f">European_Air_Quality_Index_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af713aec5def28f305446d29cefa9212a">PMS_Air_Quality_Index</a></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>PMS5003 particulate matter sensor driver implementation. </p>
+<dl class="section author"><dt>Author</dt><dd>POS Meteo Station Team </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2025 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="a4739686c4fd62daff0eed5fe121ff232" name="a4739686c4fd62daff0eed5fe121ff232"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4739686c4fd62daff0eed5fe121ff232">&#9670;&#160;</a></span>PMS_Get_Data()</h2>
 
@@ -142,13 +155,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00016">16</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p>Get the latest sensor data (converts from DMA buffer). </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a static <a class="el" href="unionPMS__Data__t.html" title="PMS5003 data access union (byte / word / frame views).">PMS_Data_t</a> with the latest frame </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00025">25</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="PMS_8c_a4739686c4fd62daff0eed5fe121ff232_icgraph.png" border="0" usemap="#aPMS_8c_a4739686c4fd62daff0eed5fe121ff232_icgraph" loading="lazy" alt=""/></div>
 <map name="aPMS_8c_a4739686c4fd62daff0eed5fe121ff232_icgraph" id="aPMS_8c_a4739686c4fd62daff0eed5fe121ff232_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,344,32"/>
+<area shape="rect" title="Get the latest sensor data (converts from DMA buffer)." alt="" coords="231,5,344,32"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,184,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
@@ -173,7 +189,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00041">41</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p>Calculate the European Air Quality Index from the data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a></td><td>Pointer to PMS data with PM2.5 and PM10 values </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to a static <a class="el" href="PMS_8h.html#a56cf6d5295d5888df6d8aebdfb84995f" title="European Air Quality Index (EEA AQI) levels.">European_Air_Quality_Index_t</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00052">52</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 
 </div>
 </div>
@@ -192,13 +217,27 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00008">8</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p>Initialise the PMS5003 sensor (start DMA + enable power). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pms_uart</td><td>Pointer to UART handle connected to the sensor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HAL_OK</td><td>on success, otherwise HAL_ERROR </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00016">16</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="PMS_8c_ae23e650ae5bf5744a713383cfc8724a5_icgraph.png" border="0" usemap="#aPMS_8c_ae23e650ae5bf5744a713383cfc8724a5_icgraph" loading="lazy" alt=""/></div>
 <map name="aPMS_8c_ae23e650ae5bf5744a713383cfc8724a5_icgraph" id="aPMS_8c_ae23e650ae5bf5744a713383cfc8724a5_icgraph">
-<area shape="rect" title=" " alt="" coords="318,5,394,32"/>
+<area shape="rect" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="318,5,394,32"/>
 <area shape="rect" href="FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" title=" " alt="" coords="300,19,271,21,270,16,306,19"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
@@ -225,13 +264,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00031">31</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p>Validate a PMS5003 frame using its checksum. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="BME280__STM32_8c.html#a378412dd7dee78fd082af58da5a24b1c">data</a></td><td>Pointer to PMS data to validate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if valid, 0 otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00041">41</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="PMS_8c_a969aa1ca5b51f5a42abc575e17eb0109_icgraph.png" border="0" usemap="#aPMS_8c_a969aa1ca5b51f5a42abc575e17eb0109_icgraph" loading="lazy" alt=""/></div>
 <map name="aPMS_8c_a969aa1ca5b51f5a42abc575e17eb0109_icgraph" id="aPMS_8c_a969aa1ca5b51f5a42abc575e17eb0109_icgraph">
-<area shape="rect" title=" " alt="" coords="231,5,369,32"/>
+<area shape="rect" title="Validate a PMS5003 frame using its checksum." alt="" coords="231,5,369,32"/>
 <area shape="rect" href="FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" title=" " alt="" coords="213,19,183,21,183,16,218,19"/>
 <area shape="rect" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>
@@ -262,7 +310,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00006">6</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00013">13</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 
 </div>
 </div>
@@ -286,7 +334,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00005">5</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00012">12</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 
 </div>
 </div>
@@ -310,7 +358,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00004">4</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="PMS_8c_source.html#l00011">11</a> of file <a class="el" href="PMS_8c_source.html">PMS.c</a>.</p>
 
 </div>
 </div>

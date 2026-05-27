@@ -30,9 +30,9 @@
 <area shape="poly" id="edge57_Node000001_Node000039" title=" " alt="" coords="54,809,87,852,109,873,135,890,174,904,206,909,239,904,278,890,309,871,335,846,377,793,374,797,339,849,312,875,280,894,240,909,206,914,172,909,132,894,106,878,83,855,55,814"/>
 <area shape="rect" id="Node000040" href="$FSM_8c.html#abf1b3875cc65a3a80f7384e8a49c880f" title=" " alt="" coords="331,539,453,565"/>
 <area shape="poly" id="edge59_Node000001_Node000040" title=" " alt="" coords="65,809,110,834,166,858,195,864,225,866,252,860,277,846,301,820,312,793,314,764,311,735,306,704,305,671,309,637,325,601,355,572,352,577,329,604,314,638,310,671,312,703,316,734,319,764,317,794,306,822,281,850,254,865,225,871,195,870,164,863,108,839,67,814"/>
-<area shape="rect" id="Node000041" href="$PMS_8c.html#a4739686c4fd62daff0eed5fe121ff232" title=" " alt="" coords="150,1012,263,1039"/>
+<area shape="rect" id="Node000041" href="$PMS_8c.html#a4739686c4fd62daff0eed5fe121ff232" title="Get the latest sensor data (converts from DMA buffer)." alt="" coords="150,1012,263,1039"/>
 <area shape="poly" id="edge61_Node000001_Node000041" title=" " alt="" coords="49,808,61,846,76,894,101,946,136,991,150,1004,145,1005,132,995,97,948,72,896,55,847,50,814"/>
-<area shape="rect" id="Node000042" href="$PMS_8c.html#a969aa1ca5b51f5a42abc575e17eb0109" title=" " alt="" coords="137,1063,276,1089"/>
+<area shape="rect" id="Node000042" href="$PMS_8c.html#a969aa1ca5b51f5a42abc575e17eb0109" title="Validate a PMS5003 frame using its checksum." alt="" coords="137,1063,276,1089"/>
 <area shape="poly" id="edge62_Node000001_Node000042" title=" " alt="" coords="48,808,55,856,68,920,94,988,112,1020,136,1049,139,1053,134,1054,132,1052,108,1023,89,991,63,921,50,857,47,814"/>
 <area shape="rect" id="Node000043" href="$FSM_8c.html#aee5a480c2a2f0e60dbc40eef9c438a7d" title=" " alt="" coords="138,1113,275,1140"/>
 <area shape="poly" id="edge63_Node000001_Node000043" title=" " alt="" coords="47,809,51,864,62,941,73,983,88,1025,109,1065,136,1100,139,1104,134,1105,132,1103,104,1067,83,1027,68,985,57,942,46,865,46,814"/>
@@ -92,7 +92,7 @@
 <area shape="poly" id="edge44_Node000029_Node000033" title=" " alt="" coords="225,368,253,376,280,390,296,402,306,415,329,441,357,461,351,463,325,445,302,418,292,406,278,394,251,381,228,373"/>
 <area shape="rect" id="Node000035" href="$gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="355,615,429,641"/>
 <area shape="poly" id="edge53_Node000029_Node000035" title=" " alt="" coords="225,366,255,373,281,390,298,414,307,437,310,481,311,527,316,551,329,576,356,605,351,606,325,579,311,552,305,527,304,482,302,438,293,416,277,394,252,378,227,371"/>
-<area shape="rect" id="Node000037" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title=" " alt="" coords="354,353,430,380"/>
+<area shape="rect" id="Node000037" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="354,353,430,380"/>
 <area shape="poly" id="edge55_Node000029_Node000037" title=" " alt="" coords="225,364,341,365,337,368,228,369"/>
 <area shape="rect" id="Node000038" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title=" " alt="" coords="360,404,425,431"/>
 <area shape="poly" id="edge56_Node000029_Node000038" title=" " alt="" coords="225,369,347,403,342,406,228,374"/>

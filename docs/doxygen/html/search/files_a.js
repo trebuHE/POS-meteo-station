@@ -7,6 +7,5 @@ var searchData=
   ['stm32l0xx_5fit_2ec_4',['stm32l0xx_it.c',['../stm32l0xx__it_8c.html',1,'']]],
   ['stm32l0xx_5fit_2eh_5',['stm32l0xx_it.h',['../stm32l0xx__it_8h.html',1,'']]],
   ['syscalls_2ec_6',['syscalls.c',['../syscalls_8c.html',1,'']]],
-  ['sysmem_2ec_7',['sysmem.c',['../sysmem_8c.html',1,'']]],
-  ['system_5fstm32l0xx_2ec_8',['system_stm32l0xx.c',['../system__stm32l0xx_8c.html',1,'']]]
+  ['sysmem_2ec_7',['sysmem.c',['../sysmem_8c.html',1,'']]]
 ];

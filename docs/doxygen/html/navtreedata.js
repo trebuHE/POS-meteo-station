@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "POS Meteo Station", "index.html", [
-    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -52,7 +51,7 @@ var NAVTREEINDEX =
 [
 "BME280__STM32_8c.html",
 "UV_8h.html#a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779",
-"stm32l0xx__hal__conf_8h.html#af9580ae862dcc02cee7822030c48d6b8"
+"stm32l0xx__it_8c.html#aa0c7fca836406ade332e1e3f1039d8ab"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

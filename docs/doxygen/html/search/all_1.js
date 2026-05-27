@@ -7,7 +7,5 @@ var searchData=
   ['adc_5fmax_5fvoltage_4',['adc_max_voltage',['../structUV__Config__t.html#aa221effac67b1b3ab44eefb6a8e30d1f',1,'UV_Config_t']]],
   ['adc_5fp_5',['adc_p',['../structUV__Config__t.html#ad43d26efc2fee34d1c2c38bdcd2942f1',1,'UV_Config_t']]],
   ['address_6',['address',['../structRadio__Data__t.html#a7d7d43d0fa9bf6442623d6f0bf2e27e5',1,'Radio_Data_t::address'],['../structRadio__Config__t.html#a370d2b27eef7d55b19149192b780016a',1,'Radio_Config_t::address']]],
-  ['ahbpresctable_7',['AHBPrescTable',['../group__STM32L0xx__System__Private__Variables.html#ga6e1d9cd666f0eacbfde31e9932a93466',1,'system_stm32l0xx.c']]],
-  ['apbpresctable_8',['APBPrescTable',['../group__STM32L0xx__System__Private__Variables.html#ga5b4f8b768465842cf854a8f993b375e9',1,'system_stm32l0xx.c']]],
-  ['assert_5fparam_9',['assert_param',['../stm32l0xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21',1,'stm32l0xx_hal_conf.h']]]
+  ['assert_5fparam_7',['assert_param',['../stm32l0xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21',1,'stm32l0xx_hal_conf.h']]]
 ];

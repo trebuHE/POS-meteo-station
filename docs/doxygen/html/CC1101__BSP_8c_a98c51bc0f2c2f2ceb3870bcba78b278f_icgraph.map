@@ -1,10 +1,10 @@
 <map id="CC1101_WriteBurst" name="CC1101_WriteBurst">
-<area shape="rect" id="Node000001" title=" " alt="" coords="654,31,790,57"/>
-<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title=" " alt="" coords="493,5,606,32"/>
+<area shape="rect" id="Node000001" title="Write multiple bytes to a register (burst)." alt="" coords="654,31,790,57"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title="Apply 433 MHz radio configuration settings." alt="" coords="493,5,606,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="636,32,606,30,607,24,641,32"/>
-<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title=" " alt="" coords="318,56,445,83"/>
+<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title="Transmit a packet." alt="" coords="318,56,445,83"/>
 <area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="641,50,446,67,445,62,636,50"/>
-<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title=" " alt="" coords="335,5,428,32"/>
+<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="335,5,428,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="474,19,429,21,429,16,479,18"/>
 <area shape="rect" id="Node000004" href="$FSM_8c.html#a3ac6313822b618d6d840e62b50b27300" title=" " alt="" coords="231,5,270,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,19,271,21,271,16,322,18"/>

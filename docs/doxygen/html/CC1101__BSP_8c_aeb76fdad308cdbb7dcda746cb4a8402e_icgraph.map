@@ -1,14 +1,14 @@
 <map id="CC1101_CommandStrobe" name="CC1101_CommandStrobe">
-<area shape="rect" id="Node000001" title=" " alt="" coords="738,157,911,184"/>
-<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title=" " alt="" coords="577,5,690,32"/>
+<area shape="rect" id="Node000001" title="Send a command strobe byte to the radio." alt="" coords="738,157,911,184"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title="Apply 433 MHz radio configuration settings." alt="" coords="577,5,690,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="797,146,749,102,688,53,661,35,662,30,692,49,752,98,802,147"/>
-<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title=" " alt="" coords="420,56,514,83"/>
+<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="420,56,514,83"/>
 <area shape="poly" id="edge6_Node000001_Node000003" title=" " alt="" coords="768,152,689,128,514,82,514,77,691,123,773,152"/>
-<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#ab7dbca39fc858732abd03cd1e99b970e" title=" " alt="" coords="405,157,529,184"/>
+<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#ab7dbca39fc858732abd03cd1e99b970e" title="Receive a packet (non&#45;blocking, checks FIFO)." alt="" coords="405,157,529,184"/>
 <area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="746,154,690,148,633,144,577,148,518,159,516,154,576,143,633,139,690,143,751,154"/>
-<area shape="rect" id="Node000008" href="$CC1101__BSP_8c.html#a822e0204525bbc93177e3fed69874f9b" title=" " alt="" coords="577,157,690,184"/>
+<area shape="rect" id="Node000008" href="$CC1101__BSP_8c.html#a822e0204525bbc93177e3fed69874f9b" title="Enter RX listening mode." alt="" coords="577,157,690,184"/>
 <area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="720,171,690,173,690,168,725,170"/>
-<area shape="rect" id="Node000009" href="$CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title=" " alt="" coords="231,208,357,235"/>
+<area shape="rect" id="Node000009" href="$CC1101__BSP_8c.html#a040ff60498ceaf224f310475990bad5e" title="Transmit a packet." alt="" coords="231,208,357,235"/>
 <area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="741,188,690,199,510,215,358,222,358,217,509,210,690,193,747,187"/>
 <area shape="rect" id="Node000010" href="$FSM_8c.html#a893b00a605ab03c1da247e3aa2d4ddd9" title=" " alt="" coords="413,259,521,285"/>
 <area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="792,192,744,220,691,243,602,263,522,272,521,267,601,257,689,237,742,215,787,193"/>

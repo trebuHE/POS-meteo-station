@@ -1,5 +1,5 @@
 <map id="CC1101_Transmit" name="CC1101_Transmit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="231,5,357,32"/>
+<area shape="rect" id="Node000001" title="Transmit a packet." alt="" coords="231,5,357,32"/>
 <area shape="rect" id="Node000002" href="$FSM_8c.html#a7039f5d1436df50c26e07fa8af006d49" title=" " alt="" coords="103,5,183,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,19,184,21,184,16,218,19"/>
 <area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,55,32"/>

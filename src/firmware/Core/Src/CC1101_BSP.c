@@ -1,24 +1,40 @@
+/**
+ * @file    CC1101_BSP.c
+ * @brief   CC1101 RF transceiver driver implementation
+ * @author  POS Meteo Station Team
+ * @date    2025
+ */
+
 #include "CC1101_BSP.h"
 #include <stdio.h>
 
 extern UART_HandleTypeDef huart4;
 
-// --- Low Level SPI Wrappers ---
+/** @name Low-Level SPI Wrappers */
+/**@{*/
 
+/** @brief  Pull CSN low to select the CC1101 */
 void CC1101_Select(void) {
     HAL_GPIO_WritePin(CC1101_CSN_PORT, CC1101_CSN_PIN, GPIO_PIN_RESET);
 }
 
+/** @brief  Pull CSN high to deselect the CC1101 */
 void CC1101_Deselect(void) {
     HAL_GPIO_WritePin(CC1101_CSN_PORT, CC1101_CSN_PIN, GPIO_PIN_SET);
 }
 
+/** @brief  Send a command strobe byte to the radio */
 void CC1101_CommandStrobe(uint8_t cmd) {
     CC1101_Select();
     HAL_SPI_Transmit(&CC1101_SPI_HANDLE, &cmd, 1, 100);
     CC1101_Deselect();
 }
 
+/**
+ * @brief  Write a single register
+ * @param  reg    Register address
+ * @param  value  Value to write
+ */
 void CC1101_WriteReg(uint8_t reg, uint8_t value) {
     uint8_t data[2] = {reg | CC1101_WRITE_BYTE, value};
     CC1101_Select();
@@ -26,6 +42,12 @@ void CC1101_WriteReg(uint8_t reg, uint8_t value) {
     CC1101_Deselect();
 }
 
+/**
+ * @brief  Write multiple bytes to a register (burst)
+ * @param  reg  Starting register address
+ * @param  buf  Data buffer
+ * @param  len  Number of bytes to write
+ */
 void CC1101_WriteBurst(uint8_t reg, uint8_t *buf, uint8_t len) {
     uint8_t addr = reg | CC1101_WRITE_BYTE | CC1101_BURST_BIT;
     CC1101_Select();
@@ -34,6 +56,11 @@ void CC1101_WriteBurst(uint8_t reg, uint8_t *buf, uint8_t len) {
     CC1101_Deselect();
 }
 
+/**
+ * @brief  Read a single register
+ * @param  reg  Register address
+ * @return Register value
+ */
 uint8_t CC1101_ReadReg(uint8_t reg) {
     uint8_t txByte = reg | CC1101_READ_BYTE;
     uint8_t rxByte = 0;
@@ -44,6 +71,12 @@ uint8_t CC1101_ReadReg(uint8_t reg) {
     return rxByte;
 }
 
+/**
+ * @brief  Read multiple bytes from a register (burst)
+ * @param  reg  Starting register address
+ * @param  buf  Buffer to read into
+ * @param  len  Number of bytes to read
+ */
 void CC1101_ReadBurst(uint8_t reg, uint8_t *buf, uint8_t len) {
     uint8_t addr = reg | CC1101_READ_BYTE | CC1101_BURST_BIT;
     CC1101_Select();
@@ -52,6 +85,11 @@ void CC1101_ReadBurst(uint8_t reg, uint8_t *buf, uint8_t len) {
     CC1101_Deselect();
 }
 
+/**
+ * @brief  Read a status register
+ * @param  reg  Status register address
+ * @return Status value
+ */
 uint8_t CC1101_ReadStatus(uint8_t reg) {
     uint8_t txByte = reg | CC1101_READ_BYTE | CC1101_BURST_BIT;
     uint8_t rxByte = 0;
@@ -61,9 +99,9 @@ uint8_t CC1101_ReadStatus(uint8_t reg) {
     CC1101_Deselect();
     return rxByte;
 }
+/**@}*/
 
-// --- Configuration ---
-
+/** @brief  Apply 433 MHz radio configuration settings */
 void CC1101_Config(void) {
     // 1. Reset Chip
     CC1101_CommandStrobe(CC1101_SRES);
@@ -104,6 +142,7 @@ void CC1101_Config(void) {
     CC1101_WriteBurst(CC1101_PATABLE, paTable, 8);
 }
 
+/** @brief  Initialise the CC1101 (reset + verify + configure) */
 uint8_t CC1101_Init(void) {
     // Hard Reset Pulse
     CC1101_Deselect();
@@ -126,10 +165,12 @@ uint8_t CC1101_Init(void) {
 
 // --- Operation ---
 
+/** @brief  Enter RX listening mode */
 void CC1101_SetRx(void) {
     CC1101_CommandStrobe(CC1101_SRX);
 }
 
+/** @brief  Transmit a packet */
 void CC1101_Transmit(uint8_t *data, uint8_t length) {
     CC1101_CommandStrobe(CC1101_SIDLE);
     CC1101_CommandStrobe(CC1101_SFTX); // Flush TX buffer
@@ -147,6 +188,7 @@ void CC1101_Transmit(uint8_t *data, uint8_t length) {
     CC1101_CommandStrobe(CC1101_SIDLE);
 }
 
+/** @brief  Receive a packet (non-blocking, checks FIFO) */
 uint8_t CC1101_Receive(uint8_t *data) {
     uint8_t rxBytes = CC1101_ReadStatus(CC1101_RXBYTES) & 0x7F;
 
@@ -200,18 +242,25 @@ uint8_t CC1101_Receive(uint8_t *data) {
 
 // --- Debugging ---
 
+/** @brief  Read the current radio state (MARCSTATE) */
 uint8_t CC1101_GetState(void) {
     return CC1101_ReadStatus(0x35) & 0x1F; // Mask MARCSTATE
 }
 
+/**
+ * @brief  Get number of bytes in RX FIFO
+ * @return RX FIFO byte count
+ */
 uint8_t CC1101_GetRXBytes(void) {
     return CC1101_ReadStatus(0x3B) & 0x7F;
 }
 
+/** @brief  Get number of bytes in TX FIFO */
 uint8_t CC1101_GetTXBytes(void) {
     return CC1101_ReadStatus(0x3A) & 0x7F;
 }
 
+/** @brief  Print radio state info over UART (debug) */
 void debug_radio_state(void) {
     char buff[64];
     uint8_t status = CC1101_GetState();

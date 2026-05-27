@@ -1,7 +1,7 @@
 <map id="CC1101_ReadStatus" name="CC1101_ReadStatus">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,150,57"/>
-<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title=" " alt="" coords="198,5,325,32"/>
+<area shape="rect" id="Node000001" title="Read a status register." alt="" coords="5,31,150,57"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title="Pull CSN high to deselect the CC1101." alt="" coords="198,5,325,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,31,185,29,180,30,150,37"/>
-<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title=" " alt="" coords="205,56,318,83"/>
+<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title="Pull CSN low to select the CC1101." alt="" coords="205,56,318,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,51,192,59,187,60,150,57"/>
 </map>

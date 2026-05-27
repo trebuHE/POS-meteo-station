@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="5,208,45,235"/>
 <area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#adc7177d437282548b781f63009d5b3cb" title="Initialise the BME280 with default settings." alt="" coords="93,56,189,83"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="34,206,120,92,120,98,39,209"/>
-<area shape="rect" id="Node000005" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title=" " alt="" coords="94,157,188,184"/>
+<area shape="rect" id="Node000005" href="$CC1101__BSP_8c.html#aef2b2c74b7834495133e4bac85e7cd8b" title="Initialise the CC1101 (reset + verify + configure)." alt="" coords="94,157,188,184"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="43,211,96,189,93,193,47,215"/>
 <area shape="rect" id="Node000013" href="$gps_8c.html#adef193cf91aa4bc8fdf54890195bd592" title=" " alt="" coords="104,208,178,235"/>
 <area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="44,219,90,219,86,223,46,224"/>
@@ -14,22 +14,22 @@
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,55,276,34,272,38,191,60"/>
 <area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#a1f962ddd82326d17badf383f08bcd2b2" title="Read trimming parameters from sensor NVM." alt="" coords="549,5,627,32"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="403,16,536,17,531,20,404,21"/>
-<area shape="rect" id="Node000006" href="$CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title=" " alt="" coords="501,107,675,133"/>
+<area shape="rect" id="Node000006" href="$CC1101__BSP_8c.html#aeb76fdad308cdbb7dcda746cb4a8402e" title="Send a command strobe byte to the radio." alt="" coords="501,107,675,133"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="186,154,237,143,366,127,488,121,484,123,367,132,237,148,188,159"/>
-<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title=" " alt="" coords="723,208,850,235"/>
+<area shape="rect" id="Node000007" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title="Pull CSN high to deselect the CC1101." alt="" coords="723,208,850,235"/>
 <area shape="poly" id="edge16_Node000005_Node000007" title=" " alt="" coords="171,182,191,194,205,209,214,223,223,235,238,247,274,265,306,277,364,288,425,291,502,295,589,306,627,305,674,295,721,272,758,246,763,244,724,276,676,300,628,311,589,311,501,300,424,296,363,294,305,282,272,270,236,252,219,239,210,226,201,212,187,198,172,187"/>
-<area shape="rect" id="Node000008" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title=" " alt="" coords="730,157,842,184"/>
+<area shape="rect" id="Node000008" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title="Pull CSN low to select the CC1101." alt="" coords="730,157,842,184"/>
 <area shape="poly" id="edge20_Node000005_Node000008" title=" " alt="" coords="159,155,194,132,236,113,357,78,408,66,456,59,504,58,554,63,611,74,676,92,724,116,763,148,758,147,721,120,674,97,609,79,554,68,503,63,456,65,409,71,358,83,238,119,196,137,162,159"/>
-<area shape="rect" id="Node000009" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title=" " alt="" coords="288,157,402,184"/>
+<area shape="rect" id="Node000009" href="$CC1101__BSP_8c.html#a5b4a3d5dc38748984c9ae2172bf6009e" title="Apply 433 MHz radio configuration settings." alt="" coords="288,157,402,184"/>
 <area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="187,168,275,169,271,172,189,173"/>
-<area shape="rect" id="Node000012" href="$CC1101__BSP_8c.html#a1ce3d85bb08c4477f632279dd9998bb8" title=" " alt="" coords="516,259,660,285"/>
+<area shape="rect" id="Node000012" href="$CC1101__BSP_8c.html#a1ce3d85bb08c4477f632279dd9998bb8" title="Read a status register." alt="" coords="516,259,660,285"/>
 <area shape="poly" id="edge17_Node000005_Node000012" title=" " alt="" coords="187,181,238,193,505,253,502,257,236,199,188,186"/>
 <area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="651,131,676,143,692,156,701,169,710,181,724,194,733,201,728,200,721,198,706,185,697,172,688,159,673,148,651,137"/>
 <area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="643,131,719,153,714,153,643,137"/>
 <area shape="poly" id="edge9_Node000009_Node000006" title=" " alt="" coords="401,156,508,136,503,138,403,161"/>
-<area shape="rect" id="Node000010" href="$CC1101__BSP_8c.html#a98c51bc0f2c2f2ceb3870bcba78b278f" title=" " alt="" coords="520,208,656,235"/>
+<area shape="rect" id="Node000010" href="$CC1101__BSP_8c.html#a98c51bc0f2c2f2ceb3870bcba78b278f" title="Write multiple bytes to a register (burst)." alt="" coords="520,208,656,235"/>
 <area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="402,180,508,204,503,205,402,185"/>
-<area shape="rect" id="Node000011" href="$CC1101__BSP_8c.html#a6d0d8c013801efb0e557048c66056622" title=" " alt="" coords="523,157,653,184"/>
+<area shape="rect" id="Node000011" href="$CC1101__BSP_8c.html#a6d0d8c013801efb0e557048c66056622" title="Write a single register." alt="" coords="523,157,653,184"/>
 <area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="402,168,510,170,505,172,403,173"/>
 <area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="656,219,710,221,704,222,657,224"/>
 <area shape="poly" id="edge12_Node000010_Node000008" title=" " alt="" coords="643,205,719,188,714,189,644,210"/>

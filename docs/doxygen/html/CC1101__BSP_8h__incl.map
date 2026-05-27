@@ -1,5 +1,5 @@
 <map id="Core/Inc/CC1101_BSP.h" name="Core/Inc/CC1101_BSP.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,171,32"/>
+<area shape="rect" id="Node000001" title="CC1101 sub&#45;1GHz RF transceiver driver (433 MHz)." alt="" coords="5,5,171,32"/>
 <area shape="rect" id="Node000002" href="$main_8h.html" title=": Header for main.c file." alt="" coords="58,80,118,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,30,91,65,85,64,87,35"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="30,155,146,181"/>

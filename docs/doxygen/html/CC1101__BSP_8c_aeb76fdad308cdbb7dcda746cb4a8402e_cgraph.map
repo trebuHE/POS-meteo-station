@@ -1,7 +1,7 @@
 <map id="CC1101_CommandStrobe" name="CC1101_CommandStrobe">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,179,57"/>
-<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title=" " alt="" coords="227,5,354,32"/>
+<area shape="rect" id="Node000001" title="Send a command strobe byte to the radio." alt="" coords="5,31,179,57"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8c.html#aee7bfce262612cc4dbedb63a399fd2f1" title="Pull CSN high to deselect the CC1101." alt="" coords="227,5,354,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,30,214,28,208,29,180,36"/>
-<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title=" " alt="" coords="234,56,346,83"/>
+<area shape="rect" id="Node000003" href="$CC1101__BSP_8c.html#a97d9598cddfbdb4aa67149bf33baecde" title="Pull CSN low to select the CC1101." alt="" coords="234,56,346,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,52,221,60,216,60,179,58"/>
 </map>

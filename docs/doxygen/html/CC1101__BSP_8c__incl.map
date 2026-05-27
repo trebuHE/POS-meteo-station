@@ -1,6 +1,6 @@
 <map id="Core/Src/CC1101_BSP.c" name="Core/Src/CC1101_BSP.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="34,5,202,32"/>
-<area shape="rect" id="Node000002" href="$CC1101__BSP_8h.html" title=" " alt="" coords="8,80,119,107"/>
+<area shape="rect" id="Node000001" title="CC1101 RF transceiver driver implementation." alt="" coords="34,5,202,32"/>
+<area shape="rect" id="Node000002" href="$CC1101__BSP_8h.html" title="CC1101 sub&#45;1GHz RF transceiver driver (433 MHz)." alt="" coords="8,80,119,107"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,35,84,69,80,66,110,30"/>
 <area shape="rect" id="Node000005" title=" " alt="" coords="143,80,203,107"/>
 <area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="128,30,157,67,152,68,127,35"/>

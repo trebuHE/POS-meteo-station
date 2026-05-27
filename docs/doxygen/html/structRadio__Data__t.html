@@ -93,32 +93,46 @@ $(function(){initNavTree('structRadio__Data__t.html','',''); });
 </div><!--header-->
 <div class="contents">
 
+<p>Radio packet payload from a measurement node.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Radio_Data_t:</div>
 <div class="dyncontent">
 <div class="center"><img src="structRadio__Data__t__coll__graph.png" border="0" usemap="#aRadio__Data__t_coll__map" loading="lazy" alt="Collaboration graph"/></div>
 <map name="aRadio__Data__t_coll__map" id="aRadio__Data__t_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,96,267"/>
+<area shape="rect" title="Radio packet payload from a measurement node." alt="" coords="5,5,96,267"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a7d7d43d0fa9bf6442623d6f0bf2e27e5" id="r_a7d7d43d0fa9bf6442623d6f0bf2e27e5"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a7d7d43d0fa9bf6442623d6f0bf2e27e5">address</a></td></tr>
+<tr class="memdesc:a7d7d43d0fa9bf6442623d6f0bf2e27e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Node address.  <br /></td></tr>
 <tr class="memitem:a3eb5e53f88d4a7f87ae86c0328ab1a4d" id="r_a3eb5e53f88d4a7f87ae86c0328ab1a4d"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a3eb5e53f88d4a7f87ae86c0328ab1a4d">utc</a></td></tr>
+<tr class="memdesc:a3eb5e53f88d4a7f87ae86c0328ab1a4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">UTC timestamp.  <br /></td></tr>
 <tr class="memitem:a4df11d0533e69c605a3fafbcf953837c" id="r_a4df11d0533e69c605a3fafbcf953837c"><td class="memItemLeft">uint32_t&#160;</td><td class="memItemRight"><a class="el" href="#a4df11d0533e69c605a3fafbcf953837c">date</a></td></tr>
+<tr class="memdesc:a4df11d0533e69c605a3fafbcf953837c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date in packed format (DDMMYYYY).  <br /></td></tr>
 <tr class="memitem:af17ef65c916ed6eadba3a784f7722321" id="r_af17ef65c916ed6eadba3a784f7722321"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#af17ef65c916ed6eadba3a784f7722321">gps_valid</a></td></tr>
+<tr class="memdesc:af17ef65c916ed6eadba3a784f7722321"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPS fix validity flag.  <br /></td></tr>
 <tr class="memitem:adaa18e597777337025d2e16d83b757c5" id="r_adaa18e597777337025d2e16d83b757c5"><td class="memItemLeft">int16_t&#160;</td><td class="memItemRight"><a class="el" href="#adaa18e597777337025d2e16d83b757c5">temp</a></td></tr>
+<tr class="memdesc:adaa18e597777337025d2e16d83b757c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temperature (x10, e.g.  <br /></td></tr>
 <tr class="memitem:a873fa8899ef8cbff0efbb65984d4e176" id="r_a873fa8899ef8cbff0efbb65984d4e176"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a873fa8899ef8cbff0efbb65984d4e176">humidity</a></td></tr>
+<tr class="memdesc:a873fa8899ef8cbff0efbb65984d4e176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Humidity (x10, e.g.  <br /></td></tr>
 <tr class="memitem:ac47ce12981b8f509788862932ce85ad4" id="r_ac47ce12981b8f509788862932ce85ad4"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#ac47ce12981b8f509788862932ce85ad4">pressure</a></td></tr>
+<tr class="memdesc:ac47ce12981b8f509788862932ce85ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pressure in hPa.  <br /></td></tr>
 <tr class="memitem:a6e2df1cbf41f1dc640d660e34edbafda" id="r_a6e2df1cbf41f1dc640d660e34edbafda"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a6e2df1cbf41f1dc640d660e34edbafda">pm25</a></td></tr>
+<tr class="memdesc:a6e2df1cbf41f1dc640d660e34edbafda"><td class="mdescLeft">&#160;</td><td class="mdescRight">PM2.5 concentration.  <br /></td></tr>
 <tr class="memitem:af0bc8f1d0e684bf8156484c81277cfa0" id="r_af0bc8f1d0e684bf8156484c81277cfa0"><td class="memItemLeft">uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#af0bc8f1d0e684bf8156484c81277cfa0">pm10</a></td></tr>
+<tr class="memdesc:af0bc8f1d0e684bf8156484c81277cfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">PM10 concentration.  <br /></td></tr>
 <tr class="memitem:a488f44f1bd89000e81de81799fcef6c0" id="r_a488f44f1bd89000e81de81799fcef6c0"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a488f44f1bd89000e81de81799fcef6c0">uv_index</a></td></tr>
+<tr class="memdesc:a488f44f1bd89000e81de81799fcef6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">UV index.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00074">74</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<div class="textblock"><p>Radio packet payload from a measurement node. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00094">94</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
 <a id="a7d7d43d0fa9bf6442623d6f0bf2e27e5" name="a7d7d43d0fa9bf6442623d6f0bf2e27e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d7d43d0fa9bf6442623d6f0bf2e27e5">&#9670;&#160;</a></span>address</h2>
@@ -132,7 +146,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00075">75</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>Node address. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00095">95</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -148,7 +164,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00077">77</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>Date in packed format (DDMMYYYY). </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00097">97</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -164,7 +182,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00078">78</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>GPS fix validity flag. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00098">98</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +200,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00080">80</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>Humidity (x10, e.g. </p>
+<p>455 = 45.5 %) </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00100">100</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -196,7 +219,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00083">83</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>PM10 concentration. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00103">103</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -212,7 +237,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00082">82</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>PM2.5 concentration. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00102">102</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -228,7 +255,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00081">81</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>Pressure in hPa. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00101">101</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -244,7 +273,10 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00079">79</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>Temperature (x10, e.g. </p>
+<p>235 = 23.5 C) </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00099">99</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -260,7 +292,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00076">76</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>UTC timestamp. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00096">96</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>
@@ -276,7 +310,9 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00084">84</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
+<p>UV index. </p>
+
+<p class="definition">Definition at line <a class="el" href="CC1101__BSP_8h_source.html#l00104">104</a> of file <a class="el" href="CC1101__BSP_8h_source.html">CC1101_BSP.h</a>.</p>
 
 </div>
 </div>

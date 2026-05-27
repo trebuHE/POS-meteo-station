@@ -1,0 +1,15 @@
+<map id="BME280_Get_Data" name="BME280_Get_Data">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,139,140,165"/>
+<area shape="rect" id="Node000002" href="$BME280__STM32_8c.html#a07c32fc31559a7a8a67c36dd1600503b" title=" " alt="" coords="189,113,317,140"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,140,176,137,171,139,141,145"/>
+<area shape="rect" id="Node000007" href="$BME280__STM32_8c.html#a5bb79165d1624ab511f8d48244e8e129" title=" " alt="" coords="188,164,318,191"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="140,159,175,165,169,167,140,164"/>
+<area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#aac67e97cc18cf651c204ff85a0f9a2ae" title=" " alt="" coords="368,5,530,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="274,111,365,58,375,56,379,54,367,62,276,115"/>
+<area shape="rect" id="Node000004" href="$BME280__STM32_8c.html#a58c5f5ab0a679d882cfc2f2d76ab73d3" title=" " alt="" coords="366,72,531,115"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="317,113,353,109,348,111,318,118"/>
+<area shape="rect" id="Node000005" href="$BME280__STM32_8c.html#afa0f5b0d59e854dfb6dac12629cbbb56" title=" " alt="" coords="366,139,531,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="317,135,354,143,348,144,317,140"/>
+<area shape="rect" id="Node000006" href="$BME280__STM32_8c.html#a74196344ec7dc7abe6d78d2bb869069c" title=" " alt="" coords="394,205,503,232"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="296,138,319,150,344,171,353,181,367,191,383,201,377,200,365,196,350,185,340,175,317,154,295,143"/>
+</map>

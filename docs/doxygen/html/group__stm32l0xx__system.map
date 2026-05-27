@@ -1,0 +1,11 @@
+<map id="Stm32l0xx_system" name="Stm32l0xx_system">
+<area shape="rect" id="Node000002" href="$group__CMSIS.html" title=" " alt="" coords="5,213,70,240"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="118,213,251,240"/>
+<area shape="rect" id="Node000005" href="$group__STM32L0xx__System__Private__Defines.html" title=" " alt="" coords="299,5,490,48"/>
+<area shape="rect" id="Node000008" href="$group__STM32L0xx__System__Private__FunctionPrototypes.html" title=" " alt="" coords="299,72,490,115"/>
+<area shape="rect" id="Node000009" href="$group__STM32L0xx__System__Private__Functions.html" title=" " alt="" coords="299,139,490,181"/>
+<area shape="rect" id="Node000003" href="$group__STM32L0xx__System__Private__Includes.html" title=" " alt="" coords="299,205,490,248"/>
+<area shape="rect" id="Node000006" href="$group__STM32L0xx__System__Private__Macros.html" title=" " alt="" coords="299,272,490,315"/>
+<area shape="rect" id="Node000004" href="$group__STM32L0xx__System__Private__TypesDefinitions.html" title=" " alt="" coords="299,339,490,381"/>
+<area shape="rect" id="Node000007" href="$group__STM32L0xx__System__Private__Variables.html" title=" " alt="" coords="299,405,490,448"/>
+</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>POS Meteo Station: Main Page</title>
+<title>POS Meteo Station: Projektowanie Oprogramowania Systemów</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -88,10 +88,86 @@ $(function(){initNavTree('index.html','',''); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">POS Meteo Station Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Projektowanie Oprogramowania Systemów </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2README"></a></p>
+<p>To repozytorium powstaje jako część projektu z przedmiotu Projektowanie Oprogramowania Systemów w toku studiów II stopnia na Politechnice Gdańskiej.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md1"></a>
+Cel projektu</h1>
+<p>Celem projektu jest stworzenie <em>mockupu</em> oprogramowania systemu oraz kompletnej dokumentacji projektowej, w szczególności należy:</p><ul>
+<li>określić klienta, użytkowników końcowych i innych interesariuszy projektowanego systemu,</li>
+<li>określić wymagania funkcjonalne i pozafunkcjonalne,</li>
+<li>utworzyć specyfikację funkcjonalną,</li>
+<li>utworzyć repozytorium projektu ze strukturą odpowiednią dla zastosowanych narzędzi i środowisk,</li>
+<li>utworzyć model UML kluczowych elementów projektowanego systemu i zawrzeć go w dokumentacji technicznej,</li>
+<li>utworzyć harmonogram prac,</li>
+<li>utworzyć dokumentację HTML przy pomocy <a href="https://github.com/doxygen/doxygen">Doxygen</a>,</li>
+<li>wykorzystać system do raportowania i śledzenia błędów,</li>
+<li>przygotować i przeprowadzić testy jednostkowe,</li>
+<li>użyć profilera do wykrycia <em>hot-spotów</em> w oprogramowaniu i podjąć próbę optymalizacji.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md2"></a>
+Temat projektu</h1>
+<p>Tematem projektu jest <b>automatyczny system monitorowania pogody</b>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md3"></a>
+Przyjęte założenia</h2>
+<p>W celu osadzenia projektu w rzeczywistości przyjęto, że zarządca Rodzinnych Ogródków Działkowych zamawia system monitorowania pogody na działkach. System powinien składać się z centralki (pod kontrolą zarządcy) oraz węzłów pomiarowych (udostępnianych działkowiczom) komunikujących się drogą radiową. Centralka agreguje dane z węzłów pomiarowych i umieszcza je w bazie danych. Zarządca otrzymuje do niej dostęp przez aplikację z interfejsem graficznym. Dodatkowo, centralka serwuje stronę www, na której działkowicze mogą monitorować pogodę na swojej działce w czasie rzeczywistym oraz przeglądać uśrednione dane pomiarowe ze wszystkich urządzeń podłączonych do centralki.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md4"></a>
+Projektowane rozwiązanie</h1>
+<p>Niniejsza sekcja opisuje ważniejsze aspekty projektowanego rozwiązania oraz zawiera odnośniki do bardziej szczegółowych dokumentów.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md5"></a>
+Interesariusze</h2>
+<p>Zidentyfikowano następujące strony zainteresowane projektem:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft">Interesariusz  </th><th class="markdownTableHeadLeft">Rola  </th><th class="markdownTableHeadLeft">Główne potrzeby / Oczekiwania  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Zarządca ROD  </td><td class="markdownTableBodyLeft">Klient  </td><td class="markdownTableBodyLeft">Dostęp do szczegółowych danych o pogodzie na terenie całego obiektu, generowanie raportów na podstawie zebranych danych.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Działkowicz  </td><td class="markdownTableBodyLeft">Użytkownik końcowy  </td><td class="markdownTableBodyLeft">Podgląd parametrów pogodowych na własnej działce w czasie rzeczywistym oraz dostęp do historii pomiarów przez stronę internetową.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Administrator IT  </td><td class="markdownTableBodyLeft">Wsparcie techniczne  </td><td class="markdownTableBodyLeft">Zapewnienie ciągłości działania oraz bezpieczeństwa bazy danych i strony, zarządzanie uprawnieniami i kontami użytkowników.  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Użytkownik pasma ISM  </td><td class="markdownTableBodyLeft">Osoba postronna  </td><td class="markdownTableBodyLeft">Minimalizacja negatywnego wpływu systemu na inne urządzenia działające w paśmie ISM.  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Urząd Komunikacji Elektronicznej  </td><td class="markdownTableBodyLeft">Organ regulacyjny  </td><td class="markdownTableBodyLeft">Zgodność urządzeń z obowiązującym prawem.  </td></tr>
+</table>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md6"></a>
+Wymagania</h2>
+<p>W oparciu o analizę potrzeb interesariuszy oraz założeń projektowych sformułowano wymagania funkcjonalne i pozafunkcjonalne. Kompletny wykaz wymagań znajduje się w specyfikacji funkcjonalnej systemu <a href="./specs/func/"><span class="tt">/specs/func</span></a>.</p>
+<h2 class="doxsection"><a class="anchor" id="autotoc_md7"></a>
+Model systemu</h2>
+<p>System został zaprojektowany w architekturze rozproszonej typu klient-serwer, z podziałem na warstwę zbierania danych (Edge), przetwarzania i składowania (Backend) oraz prezentacji (Frontend).</p>
+<p>Podstawowe scenariusze użycia to m.in. przeglądanie danych pogodowych przez działkowicza, zarządzanie użytkownikami i uprawnieniami przez administratora, czy gromadenie danych przez węzeł pomiarowy.</p>
+<p>Szczegółowy opis struktury systemu oraz przypadków użycia zawarto w specyfikacji funkcjonalnej systemu <a href="./specs/func/"><span class="tt">/specs/func</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md8"></a>
+Plan realizacji projektu</h1>
+<p>W celu profesjonalnej i terminowej realizacji projektu opracowano skład zespołu projektowego z podziałem na role i wyszczególniono odpowiedzialność każdej z nich. Przygotowano harmonogram prac z podziałem na kamienie milowe składające się z zadań; czas realizacji określono w tygodniach. Szczegółowy plan realizacji projektu znajduje się w <a class="el" href="project__plan_8md.html" title="/meta/project_plan.md"><span class="tt">/meta/project_plan</span></a>.</p>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md9"></a>
+Zawartość repozytorium</h1>
+<ul>
+<li><a href="./docs/"><span class="tt">/docs</span></a> zawiera dokumentację kodu wygenerowaną przy użyciu narzędzia Doxygen.</li>
+<li><a href="./meta/"><span class="tt">/meta</span></a> zawiera dokumentację wewnętrzną projektu oraz pliki pomocne w jego realizacji.</li>
+<li><a href="./specs/func"><span class="tt">/specs/func</span></a> zawiera specyfikację funkcjonalną systemu, w tym: wykaz wymagań funkcjonalnych i pozafunkcjonalnych oraz scenariusze użycia.</li>
+<li><a href="./specs/tech/"><span class="tt">/specs/tech</span></a> zawiera dokumentację techniczną systemu.</li>
+<li><a href="./src/database/"><span class="tt">/src/database</span></a> zawiera bazę danych pomiarowych opartą o <em>SQLite</em>.</li>
+<li><a href="./src/firmware/"><span class="tt">/src/firmware</span></a> zawiera kod urządzenia pomiarowego opartego o mikrokontroler STM32L073RZT6. Kod rozwijano z zastosowaniem <em>CubeIDE</em>.</li>
+<li><a href="./src/gateway/"><span class="tt">/src/gateway</span></a> zawiera kod urządzenia centranego w języku Python. Pozwala na odbieranie danych pomiarowych i obsługę bazy danych.</li>
+<li><a href="./src/gui/"><span class="tt">/src/gui</span></a> zawiera kod w jęzuku Python aplikacji okienkowej do obsługi systemu.</li>
+<li><a href="./src/web/backend/"><span class="tt">/src/web/backend</span></a> zawiera kod w jęzuku Python składający się na backend aplikacji webowej. Zastosowano <em>Flask</em>.</li>
+<li><a href="./src/web/frontend/"><span class="tt">/src/web/frontend</span></a> zawiera kod składający się na frontend aplikacji webowej. Zastosowano <em>Jinja</em> oraz <em>Chart.js</em>.</li>
+<li><a href="./tests/firmware/"><span class="tt">tests/firmware</span></a> zawiera testy jednostkowe kodu węzła pomiarowego.</li>
+<li><a href="./tests/gateway/"><span class="tt">tests/gateway</span></a> zawiera testy jednostkowe kodu urządzenia centralnego.</li>
+</ul>
+<h1 class="doxsection"><a class="anchor" id="autotoc_md10"></a>
+Autorzy</h1>
+<ul>
+<li>Adrian Czekański, <a href="#" onclick="location.href='mai'+'lto:'+'cze'+'ka'+'nsk'+'i.'+'adr'+'ia'+'n@w'+'p.'+'pl'; return false;">czeka<span class="obfuscator">.nosp@m.</span>nski<span class="obfuscator">.nosp@m.</span>.adri<span class="obfuscator">.nosp@m.</span>an@w<span class="obfuscator">.nosp@m.</span>p.pl</a>, 193216, EiT</li>
+<li>Hubert Mucha, <a href="#" onclick="location.href='mai'+'lto:'+'hu_'+'mu'+'@wp'+'.p'+'l'; return false;">hu_mu<span class="obfuscator">.nosp@m.</span>@wp.<span class="obfuscator">.nosp@m.</span>pl</a>, 193152, EiT </li>
+</ul>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

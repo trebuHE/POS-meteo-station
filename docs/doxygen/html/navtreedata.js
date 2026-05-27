@@ -25,6 +25,20 @@
 var NAVTREE =
 [
   [ "POS Meteo Station", "index.html", [
+    [ "Projektowanie Oprogramowania Systemów", "index.html", "index" ],
+    [ "Plan realizacji projektu", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html", [
+      [ "Cel", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md12", null ],
+      [ "Zespół projektowy", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md13", null ],
+      [ "Harmonogram prac", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md14", [
+        [ "Faza 1: Analiza i Planowanie (tydzień 1)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md15", null ],
+        [ "Faza 2: Warstwa Sprzętowa i Komunikacja Radiowa (tydzień 2-4)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md16", null ],
+        [ "Faza 3: Warstwa Danych i Backend (tydzień 5-6)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md17", null ],
+        [ "Faza 4: Warstwa Prezentacji i Interfejsy (tydzień 7-9)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md18", null ],
+        [ "Faza 5: Testy, Poprawki i Integracja (tydzień 9-13)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md19", null ],
+        [ "Faza 6: Raportowanie i Finalizacja (tydzień 14-15)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md20", null ],
+        [ "Faza 7: Wdrożenie (tydzień 16)", "md__2home_2hubert_2Studia_2POS_2POS-meteo-station_2meta_2project__plan.html#autotoc_md21", null ]
+      ] ]
+    ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,7 +65,7 @@ var NAVTREEINDEX =
 [
 "BME280__STM32_8c.html",
 "UV_8h.html#a34d3ff3206a4c34bb8bb8a8c2d56092ca9251f94437efefe66ce84928f8863779",
-"stm32l0xx__it_8c.html#aa0c7fca836406ade332e1e3f1039d8ab"
+"stm32l0xx__hal__conf_8h.html#acc33abd5393affd16cc4a1397839dfe4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

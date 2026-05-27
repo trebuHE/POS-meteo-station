@@ -8,7 +8,7 @@
 <area shape="poly" id="edge21_Node000001_Node000013" title=" " alt="" coords="44,219,90,219,86,223,46,224"/>
 <area shape="rect" id="Node000015" href="$PMS_8c.html#ae23e650ae5bf5744a713383cfc8724a5" title="Initialise the PMS5003 sensor (start DMA + enable power)." alt="" coords="103,259,178,285"/>
 <area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="45,227,97,250,92,253,45,232"/>
-<area shape="rect" id="Node000016" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title=" " alt="" coords="108,309,174,336"/>
+<area shape="rect" id="Node000016" href="$UV_8c.html#af810dcdf7bec26f74fe2ddd8b6b2eb62" title="Initialise the UV sensor (start ADC DMA)." alt="" coords="108,309,174,336"/>
 <area shape="poly" id="edge24_Node000001_Node000016" title=" " alt="" coords="36,232,62,264,94,295,100,301,95,301,91,299,58,267,36,238"/>
 <area shape="rect" id="Node000003" href="$BME280__STM32_8c.html#a4a2d33eb424306161e70516c4e68e430" title="Configure the BME280 sensor." alt="" coords="287,5,403,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="188,55,276,34,272,38,191,60"/>
